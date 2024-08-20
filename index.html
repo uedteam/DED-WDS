@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="stylesheet" href="style/globals.min.css" />
+    <link rel="stylesheet" href="style/custom.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DED-WDS</title>
+  </head>
+  <body>
+    <div id="app" style="padding: 1rem">
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="icon-account_circle">
+          <mask
+            id="mask0_2225_7766"
+            style="mask-type: alpha"
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="49"
+            height="48"
+          >
+            <rect x="0.5" width="48" height="48" fill="currentColor" />
+          </mask>
+          <g mask="url(#mask0_2225_7766)">
+            <path
+              d="M11.6 35.25C13.7 33.7833 15.7833 32.6583 17.85 31.875C19.9167 31.0917 22.1333 30.7 24.5 30.7C26.8667 30.7 29.0917 31.0917 31.175 31.875C33.2583 32.6583 35.35 33.7833 37.45 35.25C38.9167 33.45 39.9583 31.6333 40.575 29.8C41.1917 27.9667 41.5 26.0333 41.5 24C41.5 19.1667 39.875 15.125 36.625 11.875C33.375 8.625 29.3333 7 24.5 7C19.6667 7 15.625 8.625 12.375 11.875C9.125 15.125 7.5 19.1667 7.5 24C7.5 26.0333 7.81667 27.9667 8.45 29.8C9.08333 31.6333 10.1333 33.45 11.6 35.25ZM24.4905 25.5C22.5635 25.5 20.9417 24.8385 19.625 23.5155C18.3083 22.1928 17.65 20.5678 17.65 18.6405C17.65 16.7135 18.3115 15.0917 19.6345 13.775C20.9572 12.4583 22.5822 11.8 24.5095 11.8C26.4365 11.8 28.0583 12.4615 29.375 13.7845C30.6917 15.1072 31.35 16.7322 31.35 18.6595C31.35 20.5865 30.6885 22.2083 29.3655 23.525C28.0428 24.8417 26.4178 25.5 24.4905 25.5ZM24.5235 44C21.7745 44 19.1833 43.475 16.75 42.425C14.3167 41.375 12.1917 39.9417 10.375 38.125C8.55833 36.3083 7.125 34.1872 6.075 31.7615C5.025 29.3362 4.5 26.7445 4.5 23.9865C4.5 21.2288 5.025 18.6417 6.075 16.225C7.125 13.8083 8.55833 11.6917 10.375 9.875C12.1917 8.05833 14.3128 6.625 16.7385 5.575C19.1638 4.525 21.7555 4 24.5135 4C27.2712 4 29.8583 4.525 32.275 5.575C34.6917 6.625 36.8083 8.05833 38.625 9.875C40.4417 11.6917 41.875 13.8088 42.925 16.2265C43.975 18.6442 44.5 21.2275 44.5 23.9765C44.5 26.7255 43.975 29.3167 42.925 31.75C41.875 34.1833 40.4417 36.3083 38.625 38.125C36.8083 39.9417 34.6912 41.375 32.2735 42.425C29.8558 43.475 27.2725 44 24.5235 44ZM24.5 41C26.3333 41 28.125 40.7333 29.875 40.2C31.625 39.6667 33.35 38.7333 35.05 37.4C33.35 36.2 31.6167 35.2833 29.85 34.65C28.0833 34.0167 26.3 33.7 24.5 33.7C22.7 33.7 20.9167 34.0167 19.15 34.65C17.3833 35.2833 15.65 36.2 13.95 37.4C15.65 38.7333 17.375 39.6667 19.125 40.2C20.875 40.7333 22.6667 41 24.5 41ZM24.5 22.5C25.6333 22.5 26.5583 22.1417 27.275 21.425C27.9917 20.7083 28.35 19.7833 28.35 18.65C28.35 17.5167 27.9917 16.5917 27.275 15.875C26.5583 15.1583 25.6333 14.8 24.5 14.8C23.3667 14.8 22.4417 15.1583 21.725 15.875C21.0083 16.5917 20.65 17.5167 20.65 18.65C20.65 19.7833 21.0083 20.7083 21.725 21.425C22.4417 22.1417 23.3667 22.5 24.5 22.5Z"
+              fill="currentColor"
+            />
+          </g>
+        </symbol>
+        <!-- <symbol id=>
+          
+        </symbol>
+        <symbol id=>
+          
+        </symbol>
+        <symbol id=>
+          
+        </symbol> -->
+      </svg>
+      <h2
+        class="title-level-0"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 32px;
+        "
+      >
+        Buttons
+      </h2>
+      <h3
+        class="title-level-1"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 24px;
+        "
+      >
+        Text Button
+      </h3>
+      <!-- Primary Button -->
+      <button class="button component-medium button-text button-text-primary">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Secondary Button -->
+      <button class="button component-medium button-text button-text-secondary">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- tertiary Button -->
+      <button class="button component-medium button-text button-text-tertiary">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Error Button -->
+      <button class="button component-medium button-text button-text-error">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Success Button -->
+      <button class="button component-medium button-text button-text-success">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Warning Button -->
+      <button class="button component-medium button-text button-text-warning">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Infomation Button -->
+      <button class="button component-medium button-text button-text-info">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Disable Button -->
+      <button class="button component-medium button-text button-text-disable">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <h3
+        class="title-level-1"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 24px;
+        "
+      >
+        Contained Button
+      </h3>
+      <!-- Primary Button -->
+      <button
+        class="button component-medium button-contained button-contained-primary"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Secondary Button -->
+      <button
+        class="button component-medium button-contained button-contained-secondary"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- tertiary Button -->
+      <button
+        class="button component-medium button-contained button-contained-tertiary"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Error Button -->
+      <button
+        class="button component-medium button-contained button-contained-error"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Success Button -->
+      <button
+        class="button component-medium button-contained button-contained-success"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Warning Button -->
+      <button
+        class="button component-medium button-contained button-contained-warning"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Infomation Button -->
+      <button
+        class="button component-medium button-contained button-contained-info"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Disable Button -->
+      <button class="button component-medium button-container-disable">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <h3
+        class="title-level-1"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 24px;
+        "
+      >
+        Outlined Button
+      </h3>
+      <!-- Primary Button -->
+      <button
+        class="button component-medium button-outlined button-outlined-primary"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Secondary Button -->
+      <button
+        class="button component-medium button-outlined button-outlined-secondary"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- tertiary Button -->
+      <button
+        class="button component-medium button-outlined button-outlined-tertiary"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Error Button -->
+      <button
+        class="button component-medium button-outlined button-outlined-error"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Success Button -->
+      <button
+        class="button component-medium button-outlined button-outlined-success"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Warning Button -->
+      <button
+        class="button component-medium button-outlined button-outlined-warning"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Infomation Button -->
+      <button
+        class="button component-medium button-outlined button-outlined-info"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Disable Button -->
+      <button class="button component-medium button-container-disable">
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <h3
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 24px;
+        "
+      >
+        Size Buttons
+      </h3>
+      <!-- Small Button -->
+      <button
+        class="button component-small button-outlined button-outlined-primary"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+
+      <!-- Medium Button -->
+      <button
+        class="button component-medium button-outlined button-outlined-primary"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <!-- Large Button -->
+      <button
+        class="button component-large button-outlined button-outlined-primary"
+      >
+        <div class="icon-medium">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 49 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="#icon-account_circle"></use>
+          </svg>
+        </div>
+        <div class="text-medium">
+          <div class="title title- title-level-0">標題按鈕</div>
+        </div>
+      </button>
+      <h2
+        class="title-level-0"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 32px;
+        "
+      >
+        Checkbox
+      </h2>
+      <div class="checkbox-container checkbox-container-row">
+        <label for="option1" class="checkbox">
+          <input
+            class="checkbox-input"
+            id="option1"
+            name="option"
+            type="checkbox"
+            value="option1"
+          />
+          <div class="checkbox-icon checkbox-unchecked-primary"></div>
+          <span class="checkbox-text">選項一</span>
+        </label>
+        <label for="option2" class="checkbox">
+          <input
+            class="checkbox-input"
+            id="option2"
+            name="option"
+            type="checkbox"
+            value="option2"
+          />
+          <div class="checkbox-icon checkbox-checked-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="100%"
+              viewBox="0 -960 960 960"
+              width="100%"
+              fill="currentColor"
+            >
+              <path
+                d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"
+              ></path>
+            </svg>
+          </div>
+          <span class="checkbox-text">選項二</span></label
+        >
+        <label for="option3" class="checkbox">
+          <input
+            class="checkbox-input"
+            id="option3"
+            name="option"
+            type="checkbox"
+            value="option3"
+          />
+          <div class="checkbox-icon checkbox-unchecked-primary"></div>
+          <span class="checkbox-text">選項三</span>
+        </label>
+      </div>
+      <div class="checkbox-container checkbox-container-column">
+        <label for="option1" class="checkbox">
+          <input
+            class="checkbox-input"
+            id="option1"
+            name="option"
+            type="checkbox"
+            value="option1"
+          />
+          <div class="checkbox-icon checkbox-unchecked-primary"></div>
+          <span class="checkbox-text">選項一</span>
+        </label>
+        <label for="option2" class="checkbox">
+          <input
+            class="checkbox-input"
+            id="option2"
+            name="option"
+            type="checkbox"
+            value="option2"
+          />
+          <div class="checkbox-icon checkbox-checked-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="100%"
+              viewBox="0 -960 960 960"
+              width="100%"
+              fill="currentColor"
+            >
+              <path
+                d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"
+              ></path>
+            </svg>
+          </div>
+          <span class="checkbox-text">選項二</span></label
+        >
+        <label for="option3" class="checkbox">
+          <input
+            class="checkbox-input"
+            id="option3"
+            name="option"
+            type="checkbox"
+            value="option3"
+          />
+          <div class="checkbox-icon checkbox-unchecked-primary"></div>
+          <span class="checkbox-text">選項三</span>
+        </label>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
