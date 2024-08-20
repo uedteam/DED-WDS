@@ -1,0 +1,41 @@
+.tooltip-container {}
+
+.tooltip {
+  position: absolute;
+  z-index: 999;
+
+  &-top {
+    transform: translateY(-100%);
+  }
+
+  &-bottom {
+    transform: translate(-50%, 8px);
+  }
+
+  &-content {
+    color: $color-white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: $color-black;
+    font-size: 13px;
+  }
+
+  &-arrow {
+    position: absolute;
+
+    @each $position in $arrowPosition {
+      &-#{$position} {
+        top: getArrowPosition($position, 'top');
+        left: getArrowPosition($position, 'left');
+        transform: getArrowPosition($position, 'transform');
+      }
+    }
+
+    &-shape {
+      width: 10px;
+      height: 6px;
+      background: #000000;
+      clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    }
+  }
+}

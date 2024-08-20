@@ -1,0 +1,11 @@
+.search {
+  display: flex;
+  gap: 8px;
+  color: $color-gray40;
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    color: $color-gray40;
+  }
+}

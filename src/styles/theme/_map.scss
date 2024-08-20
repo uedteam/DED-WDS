@@ -1,0 +1,243 @@
+@use 'sass:map';
+
+// 定義 text 大小
+$text-size: (
+  'xsmall': $text-size-xsmall,
+  'small': $text-size-small,
+  'medium': $text-size-medium,
+  'large': $text-size-large,
+);
+
+// 定義 component 大小
+$component-size: (
+  'small': $component-size-small,
+  'medium': $component-size-medium,
+  'large': $component-size-large,
+);
+
+// 定義 icon 大小
+$avatar-size: (
+  'xsmall': $avatar-size-xsmall,
+  'small': $avatar-size-small,
+  'medium': $avatar-size-medium,
+  'large': $avatar-size-large,
+);
+
+// 定義 avatar 狀態
+$avatar-status-colors: (
+  'light': ('online': $light-color-success,
+    'idle': $light-color-warning,
+    'busy': $light-color-error,
+    'offline': $color-gray20, ),
+  'dark': ('online': $light-color-success,
+    'idle': $light-color-warning,
+    'busy': $light-color-error,
+    'offline': $color-gray20,
+  )
+);
+
+// 定義 avatar 形狀
+$avatar-shape: (
+  'circle': $size-circle,
+  'square': $avatar-size-rounded,
+);
+
+// 定義 icon 大小
+$icon-size: (
+  'small': $icon-size-small,
+  'medium': $icon-size-medium,
+  'large': $icon-size-large,
+);
+
+// 圖片比例
+$aspect-ratio: (
+  '11': $aspect-ratio-11,
+  '43': $aspect-ratio-43,
+  '54': $aspect-ratio-54,
+  '169': $aspect-ratio-169,
+);
+
+// 定義 icon 大小
+// $icon-position: (
+//   'top-left': $icon-size-small,
+//   'top-right': $icon-size-medium,
+//   'bottom-left': $icon-size-large,
+//   'bottom-right': $icon-size-large,
+// );
+
+// 定義色彩
+// 定義一個顏色 Map，包含 light 和 dark 版本的顏色
+$theme-colors: (
+  // 主要主題色
+  'primary': ('light': ('default': $light-color-primary,
+      'hover': blend-rgba($light-color-primary, $darkness20),
+      'focus': blend-rgba($light-color-primary, $darkness30),
+      'active': blend-rgba($light-color-primary, $darkness30)),
+    'dark': ('default': $dark-color-primary,
+      'hover': blend-rgba($dark-color-primary, $darkness20),
+      'focus': blend-rgba($dark-color-primary, $darkness30),
+      'active': blend-rgba($dark-color-primary, $lightness20))),
+  // 次要主題色
+  'secondary': ('light': ('default': $light-color-secondary,
+      'hover': blend-rgba($light-color-secondary, $darkness20),
+      'focus': blend-rgba($light-color-secondary, $darkness30),
+      'active': blend-rgba($light-color-secondary, $darkness50)),
+    'dark': ('default': $dark-color-secondary,
+      'hover': blend-rgba($dark-color-secondary, $darkness20),
+      'focus': blend-rgba($dark-color-secondary, $lightness30),
+      'active': blend-rgba($dark-color-secondary, $lightness20))),
+  // 第三主題色
+  'tertiary': ('light': ('default': $light-color-tertiary,
+      'hover': blend-rgba($light-color-tertiary, $darkness20),
+      'focus': blend-rgba($light-color-tertiary, $darkness30),
+      'active': blend-rgba($light-color-tertiary, $darkness30)),
+    'dark': ('default': $dark-color-tertiary,
+      'hover': blend-rgba($dark-color-tertiary, $darkness20),
+      'focus': blend-rgba($dark-color-tertiary, $lightness30),
+      'active': blend-rgba($dark-color-tertiary, $lightness20))),
+  // 成功主題色
+  'success': ('light': ('default': $light-color-success,
+      'hover': blend-rgba($light-color-success, $darkness20),
+      'focus': blend-rgba($light-color-success, $darkness20),
+      'active': blend-rgba($light-color-success, $darkness20)),
+    'dark': ('default': $dark-color-success,
+      'hover': blend-rgba($dark-color-success, $darkness20),
+      'focus': blend-rgba($dark-color-success, $lightness20),
+      'active': blend-rgba($dark-color-success, $lightness20))),
+  // 警告主題色
+  'warning': ('light': ('default': $light-color-warning,
+      'hover': blend-rgba($light-color-warning, $darkness20),
+      'focus': blend-rgba($light-color-warning, $darkness20),
+      'active': blend-rgba($light-color-warning, $darkness20)),
+    'dark': ('default': $dark-color-warning,
+      'hover': blend-rgba($dark-color-warning, $darkness20),
+      'focus': blend-rgba($dark-color-warning, $lightness20),
+      'active': blend-rgba($dark-color-warning, $lightness20))),
+  // 錯誤主題色
+  'error': ('light': ('default': $light-color-error,
+      'hover': blend-rgba($light-color-error, $darkness20),
+      'focus': blend-rgba($light-color-error, $darkness20),
+      'active': blend-rgba($light-color-error, $darkness20)),
+    'dark': ('default': $dark-color-error,
+      'hover': blend-rgba($dark-color-error, $darkness20),
+      'focus': blend-rgba($dark-color-error, $lightness20),
+      'active': blend-rgba($dark-color-error, $lightness20))),
+  // 資訊主題色
+  'info': ('light': ('default': $light-color-info,
+      'hover': blend-rgba($light-color-info, $darkness20),
+      'focus': blend-rgba($light-color-info, $darkness20),
+      'active': blend-rgba($light-color-info, $darkness20)),
+    'dark': ('default': $dark-color-info,
+      'hover': blend-rgba($dark-color-info, $darkness20),
+      'focus': blend-rgba($dark-color-info, $lightness20),
+      'active': blend-rgba($dark-color-info, $lightness20))) // 可以添加更多顏色主題
+);
+
+// 主題文字
+$text-colors: (
+  // 主要文字顏色
+  'primary': ('light': $color-gray90, 'dark': $color-white),
+  // 次要文字顏色
+  'secondary': ('light': $color-gray70, 'dark': $color-gray50),
+  // 第三文字顏色
+  'helper': ('light': $color-gray50, 'dark': $color-gray50),
+  // 占位文字顏色
+  'placeholder': ('light': $color-gray40, 'dark': $color-gray40),
+  // 錯誤文字顏色
+  'error': ('light': $light-color-error, 'dark': $dark-color-error),
+  // 停用文字顏色
+  'disabled': ('light': $color-gray20, 'dark': $color-gray20),
+  // 可以添加更多顏色主題
+);
+
+// 主題邊框
+$border-colors: (
+  // 主要主題色
+  'primary': ('light': ('default': $light-color-primary,
+      'hover': blend-rgba($light-color-primary, $lightness80),
+      'focus': blend-rgba($light-color-primary, $lightness50),
+      'selected': blend-rgba($light-color-primary, $darkness30)),
+    'dark': ('default': $dark-color-primary,
+      'hover': blend-rgba($dark-color-primary, $darkness80),
+      'focus': blend-rgba($dark-color-primary, $lightness50),
+      'selected': blend-rgba($dark-color-primary, $darkness30))),
+  // 次要主題色
+  'secondary': ('light': ('default': $light-color-secondary,
+      'hover': blend-rgba($light-color-secondary, $lightness80),
+      'focus': blend-rgba($light-color-secondary, $lightness50),
+      'selected': blend-rgba($light-color-secondary, $lightness50)),
+    'dark': ('default': $dark-color-secondary,
+      'hover': blend-rgba($dark-color-secondary, $lightness80),
+      'focus': blend-rgba($dark-color-secondary, $lightness50),
+      'selected': blend-rgba($dark-color-secondary, $lightness20))),
+  // 第三主題色
+  'tertiary': ('light': ('default': $light-color-tertiary,
+      'hover': blend-rgba($light-color-tertiary, $lightness80),
+      'focus': blend-rgba($light-color-tertiary, $lightness50),
+      'selected': blend-rgba($light-color-tertiary, $darkness30)),
+    'dark': ('default': $dark-color-tertiary,
+      'hover': blend-rgba($dark-color-tertiary, $lightness80),
+      'focus': blend-rgba($dark-color-tertiary, $lightness50),
+      'selected': blend-rgba($dark-color-tertiary, $lightness20))),
+  // 成功主題色
+  'success': ('light': ('default': $light-color-success,
+      'hover': blend-rgba($light-color-success, $lightness80),
+      'focus': blend-rgba($light-color-success, $lightness50),
+      'selected': blend-rgba($light-color-success, $lightness80)),
+    'dark': ('default': $dark-color-success,
+      'hover': blend-rgba($dark-color-success, $lightness80),
+      'focus': blend-rgba($dark-color-success, $lightness50),
+      'selected': blend-rgba($dark-color-success, $lightness20))),
+  // 警告主題色
+  'warning': ('light': ('default': $light-color-warning,
+      'hover': blend-rgba($light-color-warning, $lightness80),
+      'focus': blend-rgba($light-color-warning, $lightness50),
+      'selected': blend-rgba($light-color-warning, $lightness80)),
+    'dark': ('default': $dark-color-warning,
+      'hover': blend-rgba($dark-color-warning, $lightness80),
+      'focus': blend-rgba($dark-color-warning, $lightness50),
+      'selected': blend-rgba($dark-color-warning, $lightness20))),
+  // 錯誤主題色
+  'error': ('light': ('default': $light-color-error,
+      'hover': blend-rgba($light-color-error, $lightness80),
+      'focus': blend-rgba($light-color-error, $lightness50),
+      'selected': blend-rgba($light-color-error, $lightness80)),
+    'dark': ('default': $dark-color-error,
+      'hover': blend-rgba($dark-color-error, $lightness80),
+      'focus': blend-rgba($dark-color-error, $lightness50),
+      'selected': blend-rgba($dark-color-error, $lightness20))),
+  // 資訊主題色
+  'info': ('light': ('default': $light-color-info,
+      'hover': blend-rgba($light-color-info, $lightness80),
+      'focus': blend-rgba($light-color-info, $lightness50),
+      'selected': blend-rgba($light-color-info, $lightness80)),
+    'dark': ('default': $dark-color-info,
+      'hover': blend-rgba($dark-color-info, $lightness80),
+      'focus': blend-rgba($dark-color-info, $lightness50),
+      'selected': blend-rgba($dark-color-info, $lightness20))) // 可以添加更多顏色主題
+);
+
+// 固定邊框樣式
+$border-styles: (
+  'line': ('light': ('width': 1px, 'style': solid, 'color': $color-gray30),
+    'dark': ('width': 1px, 'style': solid, 'color': $color-gray30)),
+  'shadow': ('light': ('fill': $shadow-dark2),
+    'dark': ('fill': $shadow-light2)),
+);
+
+
+// 定義 tooltip arrow 位置
+$arrow-position: (
+  'top-left': ('top': 100%, 'left': 30%, 'transform': translateX(-50%) rotate(0deg)),
+  'top': ('top': 100%, 'left': 50%, 'transform': translateX(-50%) rotate(0deg)),
+  'top-right': ('top': 100%, 'left': 70%, 'transform': translateX(-50%) rotate(0deg)),
+  'bottom-left': ('top': calc(0% - 6px), 'left': 30%, 'transform': translateX(-50%) rotate(180deg)),
+  'bottom': ('top': calc(0% - 6px), 'left': 50%, 'transform': translateX(-50%) rotate(180deg)),
+  'bottom-right': ('top': calc(0% - 6px), 'left': 70%, 'transform': translateX(-50%) rotate(180deg)),
+  'left-top': ('top': 30%, 'left': calc(100% - 2px), 'transform': translateY(-50%) rotate(-90deg)),
+  'left': ('top': 50%, 'left': calc(100% - 2px), 'transform': translateY(-50%) rotate(-90deg)),
+  'left-bottom': ('top': 70%, 'left': calc(100% - 2px), 'transform': translateY(-50%) rotate(-90deg)),
+  'right-top': ('top': 30%, 'left': calc(0% - 8px), 'transform': translateY(-50%) rotate(90deg)),
+  'right': ('top': 50%, 'left': calc(0% - 8px), 'transform': translateY(-50%) rotate(90deg)),
+  'right-bottom': ('top': 70%, 'left': calc(0% - 8px), 'transform': translateY(-50%) rotate(90deg)),
+);

@@ -1,0 +1,96 @@
+.card-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &:has(:first-child) {
+    padding-top: 16px;
+  }
+
+  &:has(:last-child) {
+    padding-bottom: 16px;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: $image-size-rounded;
+  background-color: $color-white;
+  overflow: hidden;
+
+  &-pic {
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+
+      &-padding {
+        padding-inline: 16px;
+        padding-top: 16px;
+      }
+    }
+
+    &-padding {
+      padding-block: 16px;
+      padding-left: 16px;
+    }
+
+    img {
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-rounded {
+      border-radius: $image-size-rounded;
+    }
+
+    @each $ratio in $aspectRatio {
+      &-#{$ratio} {
+        aspect-ratio: getAspectRatio($ratio);
+      }
+    }
+  }
+
+  &-header {
+    width: 100%;
+    padding-inline: 16px;
+
+    .subtitle {
+      color: $text-color-helper;
+      padding-top: 16px;
+    }
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .card-icon {
+        width: 24px;
+        height: 24px;
+        color: $color-gray40;
+      }
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .card-desc {
+      padding-inline: 16px;
+      color: $text-color-primary;
+    }
+  }
+
+  &-footer {
+    width: 100%;
+    padding-inline: 16px;
+    margin-top: auto;
+  }
+}

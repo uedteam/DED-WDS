@@ -1,0 +1,61 @@
+  .avatar-container {
+    position: relative;
+    box-shadow: 0 0 0 2px $color-white;
+    border-radius: 50%;
+
+    &:not(:first-child) {
+      margin-left: -20px;
+    }
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $color-gray10;
+
+    &-pic {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-icon {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      border-radius: 50%;
+      background-color: $color-white;
+    }
+
+    &-text {
+      color: $color-gray60;
+    }
+  }
+
+  @each $size in $sizes {
+    .avatar-container-#{$size} {
+      width: map-get($avatar-size, $size);
+      height: map-get($avatar-size, $size);
+    }
+
+    .avatar-icon-#{$size} {
+      width: map-get($icon-size, $size);
+      height: map-get($icon-size, $size);
+    }
+  }
+
+  @each $status in $avatarStatus {
+    .avatar-icon-#{$status} {
+      color: getAvatarStatusColor($mode, $status);
+    }
+  }
+
+  @each $shape in $avatarShape {
+    .avatar-#{$shape} {
+      border-radius: getAvatarShape($mode, $shape);
+    }
+  }
