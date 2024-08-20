@@ -1,0 +1,68 @@
+  .tab {
+    color: $color-gray60;
+    background-color: transparent;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid $color-gray20;
+
+    &:hover {
+      box-shadow: unset;
+    }
+
+    &-active {
+      color: $color-white;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+    }
+
+    &-content {
+      padding: 8px;
+    }
+
+    @each $theme in $themes {
+      &-#{$theme} {
+        &:hover {
+          border-bottom: 2px solid getThemeColor($mode, $theme, 'default');
+          background-color: getBorderColor($mode, $theme, 'hover');
+          color: getThemeColor($mode, $theme, 'default');
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 2px getBorderColor($mode, $theme, 'focus') inset;
+        }
+      }
+
+      &-card-#{$theme} {
+        &:hover {
+          background-color: getBorderColor($mode, $theme, 'hover');
+          color: getThemeColor($mode, $theme, 'default');
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 2px getBorderColor($mode, $theme, 'focus') inset;
+        }
+      }
+
+      &-#{$theme}-active {
+        color: getThemeColor($mode, $theme, 'default');
+        border-bottom: 2px solid getThemeColor($mode, $theme, 'default');
+      }
+
+      &-card-#{$theme}-active {
+        color: getThemeColor($mode, $theme, 'default');
+        border: 1px solid $color-gray20;
+        border-bottom-width: 0px;
+      }
+    }
+  }
+
+  .tabs {
+    display: inline-flex;
+    // border-bottom: 1px solid $color-gray40;
+  }
+
+  .tab-disable {
+    pointer-events: none !important;
+    color: $color-gray20 !important;
+    background-color: transparent !important;
+    border-bottom-color: $color-gray40 !important;
+  }

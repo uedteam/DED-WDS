@@ -1,0 +1,91 @@
+.input-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-width: 300px;
+  color: $color-gray40;
+  padding-inline: 8px;
+  border-width: $input-border-width;
+  border-style: solid;
+  border-color: $border-color-default;
+  border-radius: $radius-size-xsmall;
+  background-color: $color-white;
+  overflow: hidden;
+
+  &:hover {
+    border: 1px solid getBorderColor($mode, 'primary', 'hover');
+    box-shadow: 0 0 0 2px getBorderColor($mode, 'primary', 'hover');
+  }
+
+
+  &:focus-within {
+    border: 1px solid getBorderColor($mode, 'primary', 'focus');
+    box-shadow: 0 0 0 3px getBorderColor($mode, 'primary', 'focus');
+  }
+
+  &::placeholder {
+    color: $text-color-placeholder;
+  }
+
+  &-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &-small {
+    font-size: $text-size-small;
+    height: $component-size-small
+  }
+
+  &-medium {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: $text-size-medium;
+    height: $component-size-medium ;
+  }
+
+  &-large {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: $text-size-large;
+    height: $component-size-large ;
+  }
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  padding-block: 4px;
+}
+
+.input-border-error {
+  border-color: getBorderColor($mode, 'error', 'default') !important;
+}
+
+.input-label {
+  font-size: $text-size-caption1;
+  color: $text-color-secondary;
+}
+
+.input-hint {
+  display: block;
+  font-size: $text-size-caption2;
+}
+
+.input-hint-desc {
+  color: $color-gray60;
+}
+
+.input-hint-error {
+  color: getTextColor($mode, 'error') !important;
+}
+
+.input-disable {
+  pointer-events: none !important;
+  color: $color-gray20 !important;
+  border-color: $color-gray20 !important;
+
+  &::placeholder {
+    color: $color-gray20 !important;
+  }
+}

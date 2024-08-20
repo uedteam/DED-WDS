@@ -1,0 +1,57 @@
+.progress-circle-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.progress {
+  &-circle-track {
+    stroke: $color-gray10;
+  }
+
+  &-circle-percent {
+    @each $theme in $themes {
+      &-#{$theme} {
+        stroke: getThemeColor($mode, $theme, 'default');
+      }
+    }
+  }
+
+  &-line {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &-track {
+      width: 100%;
+      background-color: $color-gray10;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    &-percent {
+      @each $theme in $themes {
+        &-#{$theme} {
+          height: 100%;
+          background-color: getThemeColor($mode, $theme, 'default');
+          transition: width 0.35s ease;
+        }
+      }
+    }
+  }
+}
+
+.progress-circle-label {
+  display: flex;
+  gap: 4px;
+
+  span {
+    font-size: 14px;
+  }
+}
+
+// 後續要確認百分比間距是否正確
+.progress-line-percent {
+  width: calc(3ch + 1em);
+  font-size: 14px;
+}

@@ -1,0 +1,36 @@
+:root {
+  $light-link: navy;
+  $dark-link: gold;
+
+  /* Define each variable in their light and dark mode */
+  --text: #{ light-dark(black, white) };
+  --bg: #{ light-dark(orchid, rebeccapurple) };
+  --accent: #{ light-dark(mix(orchid, black), mix(rebeccapurple, white)) };
+  --link: #{ light-dark($light-link, $dark-link) };
+}
+
+@function light-dark($light, $dark) {
+  // If light mode is --ON, we get the `initial` value thus the var() fallback is used, and the --OFF value is set to a whitespace, returning `$light  `. Vice-versa for dark mode.
+  @return var(--light, #{ $light }) var(--dark, #{ $dark });
+}
+
+/* Light theme is on by default */
+.theme-default,
+.theme-light {
+  --light: var(--ON);
+  --dark: var(--OFF);
+}
+
+/* Dark theme is off by default */
+.theme-dark {
+  --light: var(--OFF);
+  --dark: var(--ON);
+}
+
+/* If user prefers dark, then that's what they'll get */
+@media (prefers-color-scheme: dark) {
+  .theme-default {
+    --light: var(--OFF);
+    --dark: var(--ON);
+  }
+}

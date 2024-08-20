@@ -1,0 +1,22 @@
+.accordion {}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-bottom: 1px solid $color-gray20;
+
+  &-header {
+    display: flex;
+    align-items: center;
+  }
+
+  &-icon {
+    color: $color-gray40;
+  }
+
+  &-content {
+    margin-left: 32px;
+  }
+}

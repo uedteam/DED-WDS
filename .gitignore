@@ -1,3 +1,13 @@
+# .gitignore
+# commonly ignored file patterns.
 *.DS_Store
 *.vscode
 env.js
+node_modules/
+dist/
+src/assets
+# compiled output
+build
+dist
+tmp
+/out-tsc

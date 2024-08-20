@@ -1,0 +1,70 @@
+@use 'sass:color';
+
+.checkbox-container {
+  display: inline-flex;
+  gap: 8px;
+
+  &-row {
+    flex-direction: row;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+}
+
+.checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+
+
+
+  &-input {
+    display: none;
+  }
+
+  &-text {
+    color: getTextColor($mode, 'primary');
+  }
+
+  &-icon {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color-gray40;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @each $theme in $themes {
+    &-checked-#{$theme} {
+      background-color: getThemeColor($mode, $theme, 'default');
+      border-color: getThemeColor($mode, $theme, 'default');
+      color: $color-white;
+
+      &:hover {
+        border-color: getThemeColor($mode, $theme, 'default');
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px blend-rgba(getThemeColor($mode, $theme, 'default'), $lightness80);
+      }
+    }
+
+    &-unchecked-#{$theme} {
+      background-color: transparent;
+
+      &:hover {
+        border-color: getThemeColor($mode, $theme, 'default');
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px blend-rgba(getThemeColor($mode, $theme, 'default'), $lightness80);
+      }
+    }
+  }
+}

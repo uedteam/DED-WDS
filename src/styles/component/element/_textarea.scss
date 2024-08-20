@@ -1,0 +1,84 @@
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.textarea-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  border-width: $input-border-width;
+  border-style: solid;
+  border-color: $border-color-default;
+  border-radius: $textarea-size-rounded;
+  background-color: $color-white;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 0 0 2px getBorderColor($mode, 'primary', 'hover');
+    border: 1px solid getBorderColor($mode, 'primary', 'hover');
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 3px getBorderColor($mode, 'primary', 'focus');
+    border: 1px solid getBorderColor($mode, 'primary', 'focus');
+  }
+
+  .textarea {
+    display: flex;
+    align-items: center;
+    height: 128px;
+    min-width: 300px;
+    resize: none;
+    margin-bottom: 8px;
+    word-break: break-all;
+    padding-top: 16px;
+    padding-inline: 16px;
+
+    &::placeholder {
+      color: $text-color-placeholder;
+    }
+  }
+
+  .textarea-hint-count {
+    position: absolute;
+    font-size: $text-size-caption2;
+    color: $color-gray40;
+    right: 12px;
+    bottom: 4px;
+  }
+}
+
+.textarea-disable {
+  pointer-events: none !important;
+  color: $color-gray20 !important;
+  border-color: $color-gray20 !important;
+
+  &::placeholder {
+    color: $color-gray20 !important;
+  }
+}
+
+.textarea-border-error {
+  border-color: getBorderColor($mode, 'error', 'default') !important;
+}
+
+.textarea-label {
+  font-size: $text-size-caption1;
+  color: $text-color-secondary;
+}
+
+.textarea-hint {
+  display: block;
+  font-size: $text-size-caption2;
+}
+
+.textarea-hint-desc {
+  color: $color-gray60;
+}
+
+.textarea-hint-error {
+  color: getTextColor($mode, 'error') !important;
+}
