@@ -6,6 +6,7 @@ env.js
 node_modules/
 dist/
 src/assets
+public/styles
 # compiled output
 build
 dist
