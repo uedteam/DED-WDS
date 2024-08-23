@@ -43,9 +43,11 @@
 
   @each $theme in $themes {
     &-checked-#{$theme} {
-      background-color: getThemeColor($mode, $theme, 'default');
+      background-color: $color-white;
       border-color: getThemeColor($mode, $theme, 'default');
+      border-width: 5px;
       color: $color-white;
+      transition: border-width 0.1s;
 
       &:hover {
         border-color: getThemeColor($mode, $theme, 'default');
@@ -57,7 +59,7 @@
     }
 
     &-unchecked-#{$theme} {
-      background-color: transparent;
+      background-color: $color-white;
 
       &:hover {
         border-color: getThemeColor($mode, $theme, 'default');
