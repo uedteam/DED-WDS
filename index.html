@@ -30,6 +30,12 @@
             />
           </g>
         </symbol>
+        <symbol id="progress_circle">
+          <circle class="progress-circle-track" fill="transparent" stroke-width="10" r="45" cx="50" cy="50"></circle>
+          <circle class="progress-circle-percent-primary" fill="transparent" stroke-width="10" stroke-dasharray="282.7433388230814" stroke-dashoffset="226.1946710584651" stroke-linecap="round" r="45" cx="50" cy="50" transform="rotate(-90 50 50)" style="transition: stroke-dashoffset 0.35s;"></circle>
+          <text x="50%" y="45%" text-anchor="middle" font-size="1em" fill="black"></text>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="1.5em" fill="black">20%</text>
+        </symbol>
         <!-- <symbol id=>
           
         </symbol>
@@ -949,25 +955,112 @@
         </div>
 
       </div>
-      <div>
-
-        <div class="progress-circle-container">
-          <svg class="progress" width="100" height="100">
-            <circle class="progress-circle-track" fill="transparent" stroke-width="10" r="45" cx="50" cy="50"></circle>
-            <circle class="progress-circle-percent-primary" fill="transparent" stroke-width="10" stroke-dasharray="282.7433388230814" stroke-dashoffset="282.7433388230814" stroke-linecap="round" r="45" cx="50" cy="50" transform="rotate(-90 50 50)" style="transition: stroke-dashoffset 0.35s;"></circle>
-            <text x="50%" y="45%" text-anchor="middle" font-size="1em" fill="black"></text>
-            <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="1.5em" fill="black">0%</text>
-          </svg>
-        </div>
-
-        <div class="progress-line"><div class="progress-line-track" style="height: 10px;"><div class="progress-line-percent-primary" style="width: 0%;"></div></div><div class="progress-line-percent">0%</div></div>
+      <h2
+        class="title-level-0"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 32px;
+        "
+      >
+        progress-circle
+      </h2>
+      <!-- progress-circle -->
+      <!-- primary-prgress-circle -->
+      <div class="progress-circle-container">
+        <svg class="progress" width="100" height="100">
+          <circle class="progress-circle-track" fill="transparent" stroke-width="10" r="45" cx="50" cy="50"></circle>
+          <circle class="progress-circle-percent-primary" fill="transparent" stroke-width="10" stroke-dasharray="282.7433388230814" stroke-dashoffset="226.1946710584651" stroke-linecap="round" r="45" cx="50" cy="50" transform="rotate(-90 50 50)" style="transition: stroke-dashoffset 0.35s;"></circle>
+          <text x="50%" y="45%" text-anchor="middle" font-size="1em" fill="black"></text>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="1.5em" fill="black">20%</text>
+        </svg>
       </div>
+      <!-- secondary-prgress-circle -->
+      <div class="progress-circle-container">
+        <svg class="progress" width="100" height="100">
+          <circle class="progress-circle-track" fill="transparent" stroke-width="10" r="45" cx="50" cy="50"></circle>
+          <circle class="progress-circle-percent-success" fill="transparent" stroke-width="10" stroke-dasharray="282.7433388230814" stroke-dashoffset="226.1946710584651" stroke-linecap="round" r="45" cx="50" cy="50" transform="rotate(-90 50 50)" style="transition: stroke-dashoffset 0.35s;"></circle>
+          <text x="50%" y="45%" text-anchor="middle" font-size="1em" fill="black"></text>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="1.5em" fill="black">20%</text>
+        </svg>
+      </div>
+      <!-- info-progress-circle -->
+      <div class="progress-circle-container">
+        <svg class="progress" width="100" height="100">
+          <circle class="progress-circle-track" fill="transparent" stroke-width="10" r="45" cx="50" cy="50"></circle>
+          <circle class="progress-circle-percent-info" fill="transparent" stroke-width="10" stroke-dasharray="282.7433388230814" stroke-dashoffset="226.1946710584651" stroke-linecap="round" r="45" cx="50" cy="50" transform="rotate(-90 50 50)" style="transition: stroke-dashoffset 0.35s;"></circle>
+          <text x="50%" y="45%" text-anchor="middle" font-size="1em" fill="black"></text>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="1.5em" fill="black">20%</text>
+        </svg>
+      </div>
+      <!-- warning-progress-circle -->
+      <div class="progress-circle-container">
+        <svg class="progress" width="100" height="100">
+          <circle class="progress-circle-track" fill="transparent" stroke-width="10" r="45" cx="50" cy="50"></circle>
+          <circle class="progress-circle-percent-warning" fill="transparent" stroke-width="10" stroke-dasharray="282.7433388230814" stroke-dashoffset="226.1946710584651" stroke-linecap="round" r="45" cx="50" cy="50" transform="rotate(-90 50 50)" style="transition: stroke-dashoffset 0.35s;"></circle>
+          <text x="50%" y="45%" text-anchor="middle" font-size="1em" fill="black"></text>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="1.5em" fill="black">20%</text>
+        </svg>
+      </div>
+      <!-- error-progress-circle -->
+      <div class="progress-circle-container">
+        <svg class="progress" width="100" height="100">
+          <circle class="progress-circle-track" fill="transparent" stroke-width="10" r="45" cx="50" cy="50"></circle>
+          <circle class="progress-circle-percent-error" fill="transparent" stroke-width="10" stroke-dasharray="282.7433388230814" stroke-dashoffset="226.1946710584651" stroke-linecap="round" r="45" cx="50" cy="50" transform="rotate(-90 50 50)" style="transition: stroke-dashoffset 0.35s;"></circle>
+          <text x="50%" y="45%" text-anchor="middle" font-size="1em" fill="black"></text>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="1.5em" fill="black">20%</text>
+        </svg>
+      </div>
+
+      <!-- progress-line -->
+      <!-- primary-progress-line-percent -->
+      <div class="progress-line">
+        <div class="progress-line-track" style="height: 10px;">
+          <div class="progress-line-percent-primary" style="width: 20%;"></div>
+        </div>
+        <div class="progress-line-percent">20%</div>
+      </div>
+      <!-- success-progress-line-percent -->
+      <div class="progress-line">
+        <div class="progress-line-track" style="height: 10px;">
+          <div class="progress-line-percent-success" style="width: 40%;"></div>
+        </div>
+        <div class="progress-line-percent">40%</div>
+      </div>
+      <!-- infomation-progress-line-percent -->
+      <div class="progress-line">
+        <div class="progress-line-track" style="height: 10px;">
+          <div class="progress-line-percent-info" style="width: 60%;"></div>
+        </div>
+        <div class="progress-line-percent">60%</div>
+      </div>
+      <!-- warning-progress-line-percent -->
+      <div class="progress-line">
+        <div class="progress-line-track" style="height: 10px;">
+          <div class="progress-line-percent-warning" style="width: 80%;"></div>
+        </div>
+        <div class="progress-line-percent">80%</div>
+      </div>
+      <!-- error-progress-line-percent -->
+      <div class="progress-line">
+        <div class="progress-line-track" style="height: 10px;">
+          <div class="progress-line-percent-error" style="width: 100%;"></div>
+        </div>
+        <div class="progress-line-percent">100%</div>
+      </div>
+
       
-      <div class="input-container "><div class=" 
-        input-group
-        component-medium 
-        undefined
-        "><input type="number" class="input text-medium" placeholder="請輸入帳號 ..." value=""></div><small class="input-hint undefined"></small></div>
+      <div class="input-container ">
+        <div class=" 
+          input-group
+          component-medium 
+          undefined
+          ">
+          <input type="number" class="input text-medium" placeholder="請輸入帳號 ..." value="">
+        </div>
+        <small class="input-hint undefined"></small>
+      </div>
     </div>
   </body>
 </html>
