@@ -3338,16 +3338,198 @@
       >
         Input
       </h2>
+      <!-- Text input typing -->
       <div class="input-container ">
-        <div class=" 
-          input-group
-          component-medium 
-          undefined
-          ">
-          <input type="number" class="input text-medium" placeholder="請輸入帳號 ..." value="">
+        <label class="input-label">帳號</label>
+        <div class="input-group component-medium input-border-desc">
+          <input type="text" class="input text-medium" placeholder="請輸入文字 ..." value="">
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint input-hint-desc">文字輸入中</small>
+      </div>
+      <!-- Prefix Text input typing -->
+      <div class="input-container ">
+        <label class="input-label">帳號</label>
+        <div class="input-group component-medium input-border-desc">
+          <div class="icon-medium">
+            <svg width="100%" height="100%" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_2225_7766" maskUnits="userSpaceOnUse" x="0" y="0" width="49" height="48" style="mask-type: alpha;">
+                <rect x="0.5" width="48" height="48" fill="currentColor"></rect>
+              </mask>
+              <g mask="url(#mask0_2225_7766)">
+                <path d="M11.6 35.25C13.7 33.7833 15.7833 32.6583 17.85 31.875C19.9167 31.0917 22.1333 30.7 24.5 30.7C26.8667 30.7 29.0917 31.0917 31.175 31.875C33.2583 32.6583 35.35 33.7833 37.45 35.25C38.9167 33.45 39.9583 31.6333 40.575 29.8C41.1917 27.9667 41.5 26.0333 41.5 24C41.5 19.1667 39.875 15.125 36.625 11.875C33.375 8.625 29.3333 7 24.5 7C19.6667 7 15.625 8.625 12.375 11.875C9.125 15.125 7.5 19.1667 7.5 24C7.5 26.0333 7.81667 27.9667 8.45 29.8C9.08333 31.6333 10.1333 33.45 11.6 35.25ZM24.4905 25.5C22.5635 25.5 20.9417 24.8385 19.625 23.5155C18.3083 22.1928 17.65 20.5678 17.65 18.6405C17.65 16.7135 18.3115 15.0917 19.6345 13.775C20.9572 12.4583 22.5822 11.8 24.5095 11.8C26.4365 11.8 28.0583 12.4615 29.375 13.7845C30.6917 15.1072 31.35 16.7322 31.35 18.6595C31.35 20.5865 30.6885 22.2083 29.3655 23.525C28.0428 24.8417 26.4178 25.5 24.4905 25.5ZM24.5235 44C21.7745 44 19.1833 43.475 16.75 42.425C14.3167 41.375 12.1917 39.9417 10.375 38.125C8.55833 36.3083 7.125 34.1872 6.075 31.7615C5.025 29.3362 4.5 26.7445 4.5 23.9865C4.5 21.2288 5.025 18.6417 6.075 16.225C7.125 13.8083 8.55833 11.6917 10.375 9.875C12.1917 8.05833 14.3128 6.625 16.7385 5.575C19.1638 4.525 21.7555 4 24.5135 4C27.2712 4 29.8583 4.525 32.275 5.575C34.6917 6.625 36.8083 8.05833 38.625 9.875C40.4417 11.6917 41.875 13.8088 42.925 16.2265C43.975 18.6442 44.5 21.2275 44.5 23.9765C44.5 26.7255 43.975 29.3167 42.925 31.75C41.875 34.1833 40.4417 36.3083 38.625 38.125C36.8083 39.9417 34.6912 41.375 32.2735 42.425C29.8558 43.475 27.2725 44 24.5235 44ZM24.5 41C26.3333 41 28.125 40.7333 29.875 40.2C31.625 39.6667 33.35 38.7333 35.05 37.4C33.35 36.2 31.6167 35.2833 29.85 34.65C28.0833 34.0167 26.3 33.7 24.5 33.7C22.7 33.7 20.9167 34.0167 19.15 34.65C17.3833 35.2833 15.65 36.2 13.95 37.4C15.65 38.7333 17.375 39.6667 19.125 40.2C20.875 40.7333 22.6667 41 24.5 41ZM24.5 22.5C25.6333 22.5 26.5583 22.1417 27.275 21.425C27.9917 20.7083 28.35 19.7833 28.35 18.65C28.35 17.5167 27.9917 16.5917 27.275 15.875C26.5583 15.1583 25.6333 14.8 24.5 14.8C23.3667 14.8 22.4417 15.1583 21.725 15.875C21.0083 16.5917 20.65 17.5167 20.65 18.65C20.65 19.7833 21.0083 20.7083 21.725 21.425C22.4417 22.1417 23.3667 22.5 24.5 22.5Z" fill="currentColor"></path>
+              </g>
+            </svg>
+          </div>
+          <input type="text" class="input text-medium" placeholder="請輸入文字 ..." value="">
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint input-hint-desc">文字輸入中</small>
+      </div>
+      <!-- Number input typing -->
+      <div class="input-container ">
+        <label class="input-label">數字</label>
+        <div class="input-group component-medium input-border-desc">
+          <input type="number" class="input text-medium" placeholder="請輸入數字 ..." value="">
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint input-hint-desc">數字輸入中</small>
+      </div>
+      <!-- Prefix Number input typing -->
+      <div class="input-container ">
+        <label class="input-label">數字</label>
+        <div class="input-group component-medium input-border-desc">
+          <div class="icon-medium">
+            <svg width="100%" height="100%" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_2225_7766" maskUnits="userSpaceOnUse" x="0" y="0" width="49" height="48" style="mask-type: alpha;">
+                <rect x="0.5" width="48" height="48" fill="currentColor"></rect>
+              </mask>
+              <g mask="url(#mask0_2225_7766)">
+                <path d="M11.6 35.25C13.7 33.7833 15.7833 32.6583 17.85 31.875C19.9167 31.0917 22.1333 30.7 24.5 30.7C26.8667 30.7 29.0917 31.0917 31.175 31.875C33.2583 32.6583 35.35 33.7833 37.45 35.25C38.9167 33.45 39.9583 31.6333 40.575 29.8C41.1917 27.9667 41.5 26.0333 41.5 24C41.5 19.1667 39.875 15.125 36.625 11.875C33.375 8.625 29.3333 7 24.5 7C19.6667 7 15.625 8.625 12.375 11.875C9.125 15.125 7.5 19.1667 7.5 24C7.5 26.0333 7.81667 27.9667 8.45 29.8C9.08333 31.6333 10.1333 33.45 11.6 35.25ZM24.4905 25.5C22.5635 25.5 20.9417 24.8385 19.625 23.5155C18.3083 22.1928 17.65 20.5678 17.65 18.6405C17.65 16.7135 18.3115 15.0917 19.6345 13.775C20.9572 12.4583 22.5822 11.8 24.5095 11.8C26.4365 11.8 28.0583 12.4615 29.375 13.7845C30.6917 15.1072 31.35 16.7322 31.35 18.6595C31.35 20.5865 30.6885 22.2083 29.3655 23.525C28.0428 24.8417 26.4178 25.5 24.4905 25.5ZM24.5235 44C21.7745 44 19.1833 43.475 16.75 42.425C14.3167 41.375 12.1917 39.9417 10.375 38.125C8.55833 36.3083 7.125 34.1872 6.075 31.7615C5.025 29.3362 4.5 26.7445 4.5 23.9865C4.5 21.2288 5.025 18.6417 6.075 16.225C7.125 13.8083 8.55833 11.6917 10.375 9.875C12.1917 8.05833 14.3128 6.625 16.7385 5.575C19.1638 4.525 21.7555 4 24.5135 4C27.2712 4 29.8583 4.525 32.275 5.575C34.6917 6.625 36.8083 8.05833 38.625 9.875C40.4417 11.6917 41.875 13.8088 42.925 16.2265C43.975 18.6442 44.5 21.2275 44.5 23.9765C44.5 26.7255 43.975 29.3167 42.925 31.75C41.875 34.1833 40.4417 36.3083 38.625 38.125C36.8083 39.9417 34.6912 41.375 32.2735 42.425C29.8558 43.475 27.2725 44 24.5235 44ZM24.5 41C26.3333 41 28.125 40.7333 29.875 40.2C31.625 39.6667 33.35 38.7333 35.05 37.4C33.35 36.2 31.6167 35.2833 29.85 34.65C28.0833 34.0167 26.3 33.7 24.5 33.7C22.7 33.7 20.9167 34.0167 19.15 34.65C17.3833 35.2833 15.65 36.2 13.95 37.4C15.65 38.7333 17.375 39.6667 19.125 40.2C20.875 40.7333 22.6667 41 24.5 41ZM24.5 22.5C25.6333 22.5 26.5583 22.1417 27.275 21.425C27.9917 20.7083 28.35 19.7833 28.35 18.65C28.35 17.5167 27.9917 16.5917 27.275 15.875C26.5583 15.1583 25.6333 14.8 24.5 14.8C23.3667 14.8 22.4417 15.1583 21.725 15.875C21.0083 16.5917 20.65 17.5167 20.65 18.65C20.65 19.7833 21.0083 20.7083 21.725 21.425C22.4417 22.1417 23.3667 22.5 24.5 22.5Z" fill="currentColor"></path>
+              </g>
+            </svg>
+          </div>
+          <input type="number" class="input text-medium" placeholder="請輸入數字 ..." value="">
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint input-hint-desc">數字輸入中</small>
+      </div>
+      <!-- Password input typing -->
+      <div class="input-container ">
+        <label class="input-label">密碼</label>
+        <div class="input-group component-medium input-border-desc">
+          <input type="password" class="input text-medium" placeholder="請輸入密碼 ..." value="">
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m644-428-58-58q9-47-27-88t-93-32l-58-58q17-8 34.5-12t37.5-4q75 0 127.5 52.5T660-500q0 20-4 37.5T644-428Zm128 126-58-56q38-29 67.5-63.5T832-500q-50-101-143.5-160.5T480-720q-29 0-57 4t-55 12l-62-62q41-17 84-25.5t90-8.5q151 0 269 83.5T920-500q-23 59-60.5 109.5T772-302Zm20 246L624-222q-35 11-70.5 16.5T480-200q-151 0-269-83.5T40-500q21-53 53-98.5t73-81.5L56-792l56-56 736 736-56 56ZM222-624q-29 26-53 57t-41 67q50 101 143.5 160.5T480-280q20 0 39-2.5t39-5.5l-36-38q-11 3-21 4.5t-21 1.5q-75 0-127.5-52.5T300-500q0-11 1.5-21t4.5-21l-84-82Zm319 93Zm-151 75Z"/>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint input-hint-desc">密碼輸入中</small>
+      </div>
+      <!-- Prefix Password input typing -->
+      <div class="input-container ">
+        <label class="input-label">密碼</label>
+        <div class="input-group component-medium input-border-desc">
+          <div class="icon-medium">
+            <svg width="100%" height="100%" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_2225_7766" maskUnits="userSpaceOnUse" x="0" y="0" width="49" height="48" style="mask-type: alpha;">
+                <rect x="0.5" width="48" height="48" fill="currentColor"></rect>
+              </mask>
+              <g mask="url(#mask0_2225_7766)">
+                <path d="M11.6 35.25C13.7 33.7833 15.7833 32.6583 17.85 31.875C19.9167 31.0917 22.1333 30.7 24.5 30.7C26.8667 30.7 29.0917 31.0917 31.175 31.875C33.2583 32.6583 35.35 33.7833 37.45 35.25C38.9167 33.45 39.9583 31.6333 40.575 29.8C41.1917 27.9667 41.5 26.0333 41.5 24C41.5 19.1667 39.875 15.125 36.625 11.875C33.375 8.625 29.3333 7 24.5 7C19.6667 7 15.625 8.625 12.375 11.875C9.125 15.125 7.5 19.1667 7.5 24C7.5 26.0333 7.81667 27.9667 8.45 29.8C9.08333 31.6333 10.1333 33.45 11.6 35.25ZM24.4905 25.5C22.5635 25.5 20.9417 24.8385 19.625 23.5155C18.3083 22.1928 17.65 20.5678 17.65 18.6405C17.65 16.7135 18.3115 15.0917 19.6345 13.775C20.9572 12.4583 22.5822 11.8 24.5095 11.8C26.4365 11.8 28.0583 12.4615 29.375 13.7845C30.6917 15.1072 31.35 16.7322 31.35 18.6595C31.35 20.5865 30.6885 22.2083 29.3655 23.525C28.0428 24.8417 26.4178 25.5 24.4905 25.5ZM24.5235 44C21.7745 44 19.1833 43.475 16.75 42.425C14.3167 41.375 12.1917 39.9417 10.375 38.125C8.55833 36.3083 7.125 34.1872 6.075 31.7615C5.025 29.3362 4.5 26.7445 4.5 23.9865C4.5 21.2288 5.025 18.6417 6.075 16.225C7.125 13.8083 8.55833 11.6917 10.375 9.875C12.1917 8.05833 14.3128 6.625 16.7385 5.575C19.1638 4.525 21.7555 4 24.5135 4C27.2712 4 29.8583 4.525 32.275 5.575C34.6917 6.625 36.8083 8.05833 38.625 9.875C40.4417 11.6917 41.875 13.8088 42.925 16.2265C43.975 18.6442 44.5 21.2275 44.5 23.9765C44.5 26.7255 43.975 29.3167 42.925 31.75C41.875 34.1833 40.4417 36.3083 38.625 38.125C36.8083 39.9417 34.6912 41.375 32.2735 42.425C29.8558 43.475 27.2725 44 24.5235 44ZM24.5 41C26.3333 41 28.125 40.7333 29.875 40.2C31.625 39.6667 33.35 38.7333 35.05 37.4C33.35 36.2 31.6167 35.2833 29.85 34.65C28.0833 34.0167 26.3 33.7 24.5 33.7C22.7 33.7 20.9167 34.0167 19.15 34.65C17.3833 35.2833 15.65 36.2 13.95 37.4C15.65 38.7333 17.375 39.6667 19.125 40.2C20.875 40.7333 22.6667 41 24.5 41ZM24.5 22.5C25.6333 22.5 26.5583 22.1417 27.275 21.425C27.9917 20.7083 28.35 19.7833 28.35 18.65C28.35 17.5167 27.9917 16.5917 27.275 15.875C26.5583 15.1583 25.6333 14.8 24.5 14.8C23.3667 14.8 22.4417 15.1583 21.725 15.875C21.0083 16.5917 20.65 17.5167 20.65 18.65C20.65 19.7833 21.0083 20.7083 21.725 21.425C22.4417 22.1417 23.3667 22.5 24.5 22.5Z" fill="currentColor"></path>
+              </g>
+            </svg>
+          </div>
+          <input type="password" class="input text-medium" placeholder="請輸入密碼 ..." value="">
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m644-428-58-58q9-47-27-88t-93-32l-58-58q17-8 34.5-12t37.5-4q75 0 127.5 52.5T660-500q0 20-4 37.5T644-428Zm128 126-58-56q38-29 67.5-63.5T832-500q-50-101-143.5-160.5T480-720q-29 0-57 4t-55 12l-62-62q41-17 84-25.5t90-8.5q151 0 269 83.5T920-500q-23 59-60.5 109.5T772-302Zm20 246L624-222q-35 11-70.5 16.5T480-200q-151 0-269-83.5T40-500q21-53 53-98.5t73-81.5L56-792l56-56 736 736-56 56ZM222-624q-29 26-53 57t-41 67q50 101 143.5 160.5T480-280q20 0 39-2.5t39-5.5l-36-38q-11 3-21 4.5t-21 1.5q-75 0-127.5-52.5T300-500q0-11 1.5-21t4.5-21l-84-82Zm319 93Zm-151 75Z"/>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint input-hint-desc">密碼輸入中</small>
+      </div>
+      <!-- E-mail input typing -->
+      <div class="input-container ">
+        <label class="input-label">信箱</label>
+        <div class="input-group component-medium input-border-desc">
+          <input type="email" class="input text-medium" placeholder="請輸入E-mail ..." value="">
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint input-hint-desc">E-mail輸入中</small>
+      </div>
+      <!-- Prefix E-mail input typing -->
+      <div class="input-container ">
+        <label class="input-label">信箱</label>
+        <div class="input-group component-medium input-border-desc">
+          <div class="icon-medium">
+            <svg width="100%" height="100%" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_2225_7766" maskUnits="userSpaceOnUse" x="0" y="0" width="49" height="48" style="mask-type: alpha;">
+                <rect x="0.5" width="48" height="48" fill="currentColor"></rect>
+              </mask>
+              <g mask="url(#mask0_2225_7766)">
+                <path d="M11.6 35.25C13.7 33.7833 15.7833 32.6583 17.85 31.875C19.9167 31.0917 22.1333 30.7 24.5 30.7C26.8667 30.7 29.0917 31.0917 31.175 31.875C33.2583 32.6583 35.35 33.7833 37.45 35.25C38.9167 33.45 39.9583 31.6333 40.575 29.8C41.1917 27.9667 41.5 26.0333 41.5 24C41.5 19.1667 39.875 15.125 36.625 11.875C33.375 8.625 29.3333 7 24.5 7C19.6667 7 15.625 8.625 12.375 11.875C9.125 15.125 7.5 19.1667 7.5 24C7.5 26.0333 7.81667 27.9667 8.45 29.8C9.08333 31.6333 10.1333 33.45 11.6 35.25ZM24.4905 25.5C22.5635 25.5 20.9417 24.8385 19.625 23.5155C18.3083 22.1928 17.65 20.5678 17.65 18.6405C17.65 16.7135 18.3115 15.0917 19.6345 13.775C20.9572 12.4583 22.5822 11.8 24.5095 11.8C26.4365 11.8 28.0583 12.4615 29.375 13.7845C30.6917 15.1072 31.35 16.7322 31.35 18.6595C31.35 20.5865 30.6885 22.2083 29.3655 23.525C28.0428 24.8417 26.4178 25.5 24.4905 25.5ZM24.5235 44C21.7745 44 19.1833 43.475 16.75 42.425C14.3167 41.375 12.1917 39.9417 10.375 38.125C8.55833 36.3083 7.125 34.1872 6.075 31.7615C5.025 29.3362 4.5 26.7445 4.5 23.9865C4.5 21.2288 5.025 18.6417 6.075 16.225C7.125 13.8083 8.55833 11.6917 10.375 9.875C12.1917 8.05833 14.3128 6.625 16.7385 5.575C19.1638 4.525 21.7555 4 24.5135 4C27.2712 4 29.8583 4.525 32.275 5.575C34.6917 6.625 36.8083 8.05833 38.625 9.875C40.4417 11.6917 41.875 13.8088 42.925 16.2265C43.975 18.6442 44.5 21.2275 44.5 23.9765C44.5 26.7255 43.975 29.3167 42.925 31.75C41.875 34.1833 40.4417 36.3083 38.625 38.125C36.8083 39.9417 34.6912 41.375 32.2735 42.425C29.8558 43.475 27.2725 44 24.5235 44ZM24.5 41C26.3333 41 28.125 40.7333 29.875 40.2C31.625 39.6667 33.35 38.7333 35.05 37.4C33.35 36.2 31.6167 35.2833 29.85 34.65C28.0833 34.0167 26.3 33.7 24.5 33.7C22.7 33.7 20.9167 34.0167 19.15 34.65C17.3833 35.2833 15.65 36.2 13.95 37.4C15.65 38.7333 17.375 39.6667 19.125 40.2C20.875 40.7333 22.6667 41 24.5 41ZM24.5 22.5C25.6333 22.5 26.5583 22.1417 27.275 21.425C27.9917 20.7083 28.35 19.7833 28.35 18.65C28.35 17.5167 27.9917 16.5917 27.275 15.875C26.5583 15.1583 25.6333 14.8 24.5 14.8C23.3667 14.8 22.4417 15.1583 21.725 15.875C21.0083 16.5917 20.65 17.5167 20.65 18.65C20.65 19.7833 21.0083 20.7083 21.725 21.425C22.4417 22.1417 23.3667 22.5 24.5 22.5Z" fill="currentColor"></path>
+              </g>
+            </svg>
+          </div>
+          <input type="email" class="input text-medium" placeholder="請輸入E-mail ..." value="">
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint input-hint-desc">E-mail輸入中</small>
+      </div>
+
+      <!-- small input -->
+      <div class="input-container">
+        <div class="input-group component-small undefined">
+          <input type="email" class="input text-small" placeholder="請輸入帳號 ..." value="">
+          <div class="icon-small" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
         </div>
         <small class="input-hint undefined"></small>
       </div>
+      <!-- medium input -->
+      <div class="input-container">
+        <div class="input-group component-medium undefined">
+          <input type="email" class="input text-medium" placeholder="請輸入帳號 ..." value="">
+          <div class="icon-medium" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint undefined"></small>
+      </div>
+      <!-- large input -->
+      <div class="input-container">
+        <div class="input-group component-large undefined">
+          <input type="email" class="input text-large" placeholder="請輸入帳號 ..." value="">
+          <div class="icon-large" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+            </svg>
+          </div>
+        </div>
+        <small class="input-hint undefined"></small>
+      </div>
+      
       <h2
         class="title-level-0"
         style="
@@ -3678,7 +3860,7 @@
       >
         Avatar-group
       </h2>
-      <div class="avatar-group">
+      <!-- <div class="avatar-group">
         <div class="avatar-container avatar-container-medium">
           <div class="avatar avatar-circle">
             <span class="avatar-text text-medium">EA</span>
@@ -3735,9 +3917,64 @@
             </ul>
           </div>
         </div>
+      </div> -->
+
+      <div id="table-header">
+        <h2>用戶列表</h2>
+        <p>這是所有用戶的列表</p>
       </div>
-
-
+      <div class="table-container">
+          <table class="table">
+              <colgroup>
+                  <col style="width: 70px" />
+                  <col />
+                  <col />
+                  <col />
+              </colgroup>
+              <thead>
+                  <tr>
+                      <th class="table__header text--left">
+                          <input type="checkbox" id="select-all">
+                      </th>
+                      <th class="table__header text--left">
+                          姓名
+                          <button class="sort-btn">排序</button>
+                      </th>
+                      <th class="table__header text--left">
+                          年齡
+                          <button class="sort-btn">排序</button>
+                      </th>
+                      <th class="table__header text--left">城市</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td class="table__cell text--left">
+                          <input type="checkbox">
+                      </td>
+                      <td class="table__cell text--left text--ellipsis">張三</td>
+                      <td class="table__cell text--left text--ellipsis">25</td>
+                      <td class="table__cell text--left text--ellipsis">台北</td>
+                  </tr>
+                  <tr class="zebra">
+                      <td class="table__cell text--left">
+                          <input type="checkbox">
+                      </td>
+                      <td class="table__cell text--left text--ellipsis">李四</td>
+                      <td class="table__cell text--left text--ellipsis">30</td>
+                      <td class="table__cell text--left text--ellipsis">高雄</td>
+                  </tr>
+                  <tr>
+                      <td class="table__cell text--left">
+                          <input type="checkbox">
+                      </td>
+                      <td class="table__cell text--left text--ellipsis">王五</td>
+                      <td class="table__cell text--left text--ellipsis">28</td>
+                      <td class="table__cell text--left text--ellipsis">台中</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
 
     </div>
   </body>
