@@ -1,0 +1,44 @@
+@use "sass:math";
+
+/*///////////////////////////
+===== component - Image =====
+///////////////////////////*/
+$image-ratios: (
+    "1x1": math.div(1, 1),
+    "4x3": math.div(4, 3),
+    "5x4": math.div(5, 4),
+    "16x9": math.div(16, 9),
+);
+
+.image-container {
+    background-color: #e4e4e4;
+    overflow: hidden;
+
+    @each $key, $ratio in $image-ratios {
+        &.ratio-#{$key} {
+            aspect-ratio: $ratio;
+        }
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+
+        &.cover {
+            object-fit: cover;
+        }
+
+        &.contain {
+            object-fit: contain;
+        }
+
+        &.fill {
+            object-fit: fill;
+        }
+
+        &.none {
+            object-fit: none;
+        }
+    }
+}
