@@ -3411,6 +3411,7 @@
       <h2
         class="title-level-0"
         style="
+        margin-top: 180px;
           margin-bottom: 0.5rem;
           font-weight: 700;
           line-height: 1.2;
@@ -3983,25 +3984,43 @@
               </tbody>
           </table>
       </div>
+      <h2
+        class="title-level-0"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 32px;
+        "
+      >
+        Table
+      </h2>
       <div class="table-container">
-        <caption>表格標題</caption>
+        <!-- <caption>表格標題</caption> -->
         <table class="table">
           <thead>
             <tr>
-              <th>姓名</th>
-              <th>居住地</th>
-              <th>年齡</th>
-              <th>性別</th>
+              <th class="table-cell">姓名</th>
+              <th class="table-cell">居住地</th>
+              <th class="table-cell">年齡</th>
+              <th class="table-cell">性別</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Peter</td>
-              <td>台灣</td>
-              <td>30</td>
-              <td>男</td>
+            <tr class="table-primary">
+              <td class="table-cell">Peter</td>
+              <td class="table-cell">台灣</td>
+              <td class="table-cell">30</td>
+              <td class="table-cell">男</td>
             </tr>
           </tbody>
+          <tfoot>
+            <tr>
+              <td class="table-cell" colspan="4">
+                總共1筆資料
+              </td>
+            </tr>
+          </tfoot>
         </table>
       </div>
       
