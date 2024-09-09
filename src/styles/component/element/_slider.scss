@@ -1,0 +1,168 @@
+@use 'sass:color';
+
+:root {
+    --thumbDiameter: 20px;
+}
+/*-- slider - 進度條底色 ---*/
+.single-slider,
+.double-slider {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    margin: 30px 0;
+    background-color: $color-gray10;
+    border-radius: 30px;
+}
+
+.single-slider .slide-track-container,
+.double-slider .slide-track-container {
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+/*-- slider - 選取範圍樣式 ---*/
+@each $theme in $themes {
+    .single-slider.slider-#{$theme} .slide-track,
+    .double-slider.slider-#{$theme} .slide-track {
+        height: 100%;
+        position: absolute;
+        background-color: getThemeColor($mode, $theme, "default");
+        transform: translateX(0%);
+    }
+}
+
+/*-- slider - 隱藏原生進度條樣式 ---*/
+.single-slider input[type="range"],
+.double-slider input[type="range"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    appearance: none;
+    margin: 0;
+}
+
+/*-- slider - 改寫原生進度 thumb 條樣式 ---*/
+@each $theme in $themes {
+    .slider-#{$theme} input[type="range"]::-webkit-slider-thumb {
+        height: var(--thumbDiameter);
+        width: var(--thumbDiameter);
+        border-radius: 999px;
+        border: 2px solid getThemeColor($mode, $theme, "default");
+        background: rgba(255,255,255);
+        pointer-events: auto;
+        appearance: none;
+        cursor: pointer;
+        box-shadow: 0 .125rem .5625rem -0.125rem rgba(0, 0, 0, .25);
+        transition: border-width 0.08s;
+    }
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    border-width: 5px;
+}
+
+/*-- slider - 自訂 thumb ---*/
+/*.slider-thumb{*/
+/*  height: var(--thumbDiameter);*/
+/*  width: var(--thumbDiameter);*/
+/*  border: 1px solid #F00;*/
+/*  background: rgba(255,255,255);*/
+/*  pointer-events: none;*/
+/*  appearance: none;*/
+/*  cursor: pointer;*/
+/*  box-shadow: 0 .125rem .5625rem -0.125rem rgba(0, 0, 0, .25);*/
+/*  transition: border-width 0.08s;*/
+/*  top:50%;*/
+/*  position: absolute;*/
+/*}*/
+/*.slider-thumb.min-slider-thumb {*/
+/*  transform: translateX(-50%) translateY(-50%);*/
+/*}*/
+/*.slider-thumb.max-slider-thumb {*/
+/*  transform: translateX(50%);*/
+/*}*/
+
+/*-- slider - 提示標籤樣式 ---*/
+/*.tooltip {*/
+/*  padding: .25rem .5rem;*/
+/*  border: 1px solid #ddd;*/
+/*  background-color: black;*/
+/*  color: #fff;*/
+/*  font-size: .75rem;*/
+/*  line-height: 1.2;*/
+/*  border-radius: .25rem;*/
+/*  bottom: 120%;*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  text-align: center;*/
+/*  white-space: nowrap;*/
+/*}*/
+/*.min-tooltip {*/
+/*  !*left: 50%;*!*/
+/*  left: 0;*/
+/*  z-index: 5;*/
+/*}*/
+/*.max-tooltip {*/
+/*  !*right: 50%;*!*/
+/*  right: 0;*/
+/*  !*transform: translateX(50%) translateY(-100%);*!*/
+/*  z-index: 5;*/
+/*}*/
+
+
+/*-- slider - input 輸入框 ---*/
+.input-box {
+    display: flex;
+    gap: 1rem;
+}
+.min-box,
+.max-box{
+    width: 100%;
+}
+.input-wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.input-addon {
+    display: flex;
+    align-items: center;
+    padding: .625rem 1rem;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4b566b;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: .25rem 0 0 .25rem;
+}
+.input-field {
+    margin-left: -1px;
+    padding: .425rem .75rem;
+    font-size: .8125rem;
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    color: #4b566b;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ddd;
+    border-radius: .25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.input-field:focus {
+    outline: none;
+}

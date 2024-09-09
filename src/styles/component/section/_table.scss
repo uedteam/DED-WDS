@@ -1,0 +1,55 @@
+.table-container {
+    position: relative;
+
+    
+}
+.table {
+    // padding: 16px;
+    background-color: $color-white;
+    border-radius: $table-size-rounded;
+    border-collapse: collapse;
+    overflow: hidden;
+    & thead {
+        
+        tr th:first-child {
+            border-start-start-radius: $table-size-rounded;
+        }
+        tr th:last-child {
+            border-start-end-radius: $table-size-rounded;
+        }
+    }
+    & tbody {}
+    & tfoot {
+        tr td {
+            border-end-start-radius: $table-size-rounded;
+            border-end-end-radius: $table-size-rounded;
+        }
+    }
+    &-cell {
+        padding: 8px;
+        border: 1px solid $color-gray20;
+    }
+    @each $theme in $themes {
+        &-#{$theme} {
+            &:hover {
+                background-color: getThemeColor($mode, $theme, 'hover');
+            }
+        }
+    
+    }
+        // 移除單元格之間的間隔
+        & th,
+        & td {
+            border-collapse: collapse;
+            // border: none;
+        }
+    
+        // Hover 效果不會產生間隔
+        & tr:hover {
+            & td,
+            & th {
+                // border: none;
+                background-clip: padding-box; // 確保背景色不會溢出
+            }
+        }
+}
