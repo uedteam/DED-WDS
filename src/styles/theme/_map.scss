@@ -57,6 +57,30 @@ $aspect-ratio: (
   '169': $aspect-ratio-169,
 );
 
+// 定義 table 尺寸
+$table-size: (
+  'xsmall': $table-size-xsmall,
+  'small': $table-size-small,
+  'medium': $table-size-medium,
+  'large': $table-size-large,
+);
+
+// 定義 table-cell 尺寸
+$table-cell: (
+  'xsmall': $table-cell-xsmall,
+  'small': $table-cell-small,
+  'medium': $table-cell-medium,
+  'large': $table-cell-large,
+);
+
+// 定義 table-text 
+$table-text: (
+  'xsmall': $table-text-xsmall,
+  'small': $table-text-small,
+  'medium': $table-text-medium,
+  'large': $table-text-large,
+);
+
 // 定義 icon 大小
 // $icon-position: (
 //   'top-left': $icon-size-small,

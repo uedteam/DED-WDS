@@ -1,55 +1,104 @@
 .table-container {
     position: relative;
+    width: 100%;
+    overflow: auto;
 
-    
+}
+.caption-top {
+    caption-side: top;
+}
+.caption-bottom {
+    caption-side: bottom;
+}
+.table-striped {
+    tbody tr:nth-of-type(even) {
+        background-color: $color-gray10;
+    }
 }
 .table {
-    // padding: 16px;
+
+    width: 100%;
     background-color: $color-white;
+    border-spacing: 0;
     border-radius: $table-size-rounded;
-    border-collapse: collapse;
     overflow: hidden;
+
     & thead {
-        
-        tr th:first-child {
+        background-color: $color-gray20;
+        font-weight: 700;
+        th:first-of-type {
             border-start-start-radius: $table-size-rounded;
         }
-        tr th:last-child {
+        th:last-of-type {
             border-start-end-radius: $table-size-rounded;
         }
+        
     }
-    & tbody {}
+    & tbody {
+        tr:hover {
+            background-color: $color-gray20;
+        }
+        td:last-of-type {
+            border-right: 1px solid $color-gray40;
+        }
+    }
     & tfoot {
-        tr td {
+        td:first-of-type {
             border-end-start-radius: $table-size-rounded;
+        }
+        td:last-of-type {
             border-end-end-radius: $table-size-rounded;
+            border-right: 1px solid $color-gray40;
         }
     }
     &-cell {
-        padding: 8px;
-        border: 1px solid $color-gray20;
+        // padding: 8px;
+        border-left: 1px solid $color-gray40;
+        border-bottom: 1px solid $color-gray40;
+
     }
-    @each $theme in $themes {
-        &-#{$theme} {
-            &:hover {
-                background-color: getThemeColor($mode, $theme, 'hover');
-            }
+}
+@each $theme in $themes {
+    .table-#{$theme} {
+        background-color: getThemeColor($mode, $theme, 'default');
+        color: white;
+        &:hover {
+            background-color: getThemeColor($mode, $theme, 'hover') !important;
+            color: white;
+            
         }
-    
     }
-        // 移除單元格之間的間隔
-        & th,
-        & td {
-            border-collapse: collapse;
-            // border: none;
-        }
-    
-        // Hover 效果不會產生間隔
-        & tr:hover {
-            & td,
-            & th {
-                // border: none;
-                background-clip: padding-box; // 確保背景色不會溢出
-            }
-        }
+}
+.table-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .icon-small, .icon-medium, .icon-large {
+        cursor: pointer;
+    }
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.table-disable {
+    color: $color-gray20 !important;
+    background-color: transparent !important;
+}
+@each $size in $sizes {
+    .table-container-#{$size} {
+        width: map-get($table-size, $size);
+
+    }
+    .table-cell-#{$size} {
+        padding: map-get($table-cell, $size);
+    }
+    .table-text-#{$size} {
+        font-size: map-get($table-text, $size);
+    }
 }
