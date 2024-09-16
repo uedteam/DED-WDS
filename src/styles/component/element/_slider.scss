@@ -18,7 +18,7 @@
 .double-slider .slide-track-container {
     height: 100%;
     border-radius: 30px;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
 }
 
@@ -61,6 +61,13 @@
         cursor: pointer;
         box-shadow: 0 .125rem .5625rem -0.125rem rgba(0, 0, 0, .25);
         transition: border-width 0.08s;
+    }
+    
+    .slider-range-#{$theme} {
+        background: getThemeColor($mode, $theme, "default");
+    //   overflow: hidden;
+        // margin: 0 1px;
+    //   z-index: 2;
     }
 }
 
@@ -165,4 +172,14 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 .input-field:focus {
     outline: none;
+}
+.slider-track,
+.slider-range {
+  position: absolute;
+  height: 100%;
+}
+
+.slider-track {
+  background: #ddd;
+//   z-index: 1;
 }
