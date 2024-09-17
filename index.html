@@ -5595,7 +5595,7 @@
           <textarea id="id" class="textarea textarea-disable" maxlength="50" placeholder="請輸入此筆訂單備註 ..."></textarea>
         </div>
       </div>
-
+    <div>
       <h2
         class="title-level-0"
         style="
@@ -5719,75 +5719,17 @@
           最大值: <span id="maxValue"></span>
       </div>
     </div>
-    <script>
-  // 處理單滑塊
-  const singleSliders = document.querySelectorAll('.single-slider');
-  singleSliders.forEach(setupSingleSlider);
-
-  // 處理雙滑塊
-  const doubleSliders = document.querySelectorAll('.double-slider');
-  doubleSliders.forEach(setupDoubleSlider);
-
-  function setupSingleSlider(slider) {
-    const input = slider.querySelector('input[type="range"]');
-    const range = slider.querySelector('.slider-range');
-    const valueDisplay = slider.nextElementSibling.querySelector('.slider-values span');
-
-    function updateSingleSlider() {
-      const value = input.value;
-      const percent = (value / input.max) * 100;
-      range.style.width = `${percent}%`;
-      valueDisplay.textContent = value;
-    }
-
-    input.addEventListener('input', updateSingleSlider);
-    updateSingleSlider(); // 初始化顯示
-  }
-
-  function setupDoubleSlider(slider) {
-    const minInput = slider.querySelector('#sliderMin');
-    const maxInput = slider.querySelector('#sliderMax');
-    const range = slider.querySelector('.slider-range');
-    const minValueDisplay = document.getElementById('minValue');
-    const maxValueDisplay = document.getElementById('maxValue');
-
-    function updateDoubleSlider() {
-      const minValue = parseInt(minInput.value);
-      const maxValue = parseInt(maxInput.value);
-      const minPercent = (minValue / minInput.max) * 100;
-      const maxPercent = (maxValue / maxInput.max) * 100;
-
-      range.style.left = `${minPercent}%`;
-      range.style.width = `${maxPercent - minPercent}%`;
-
-      minValueDisplay.textContent = minValue;
-      maxValueDisplay.textContent = maxValue;
-    }
-
-    function handleMinInputChange() {
-      const minValue = parseInt(minInput.value);
-      const maxValue = parseInt(maxInput.value);
-      if (minValue >= maxValue) {
-        minInput.value = maxValue - 1;
-      }
-      updateDoubleSlider();
-    }
-
-    function handleMaxInputChange() {
-      const minValue = parseInt(minInput.value);
-      const maxValue = parseInt(maxInput.value);
-      if (maxValue <= minValue) {
-        maxInput.value = minValue + 1;
-      }
-      updateDoubleSlider();
-    }
-
-    minInput.addEventListener('input', handleMinInputChange);
-    maxInput.addEventListener('input', handleMaxInputChange);
-    updateDoubleSlider(); // 初始化顯示
-  }
-    </script>
-    </div>
+      <h2
+      class="title-level-0"
+      style="
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 32px;
+      "
+    >
+      Dropdown
+    </h2>
     <div class="dropdown" tabindex="0" onclick="handleClick()">
       <div class="input-container undefined">
         <div class="input-group component-medium undefined">
@@ -5816,9 +5758,77 @@
         </ul>
       </div>
     </div>
-
-  </body>
+  </div>
   <script>
+    // slider start
+    // 處理單滑塊
+    const singleSliders = document.querySelectorAll('.single-slider');
+    singleSliders.forEach(setupSingleSlider);
+
+    // 處理雙滑塊
+    const doubleSliders = document.querySelectorAll('.double-slider');
+    doubleSliders.forEach(setupDoubleSlider);
+
+    function setupSingleSlider(slider) {
+      const input = slider.querySelector('input[type="range"]');
+      const range = slider.querySelector('.slider-range');
+      const valueDisplay = slider.nextElementSibling.querySelector('.slider-values span');
+
+      function updateSingleSlider() {
+        const value = input.value;
+        const percent = (value / input.max) * 100;
+        range.style.width = `${percent}%`;
+        valueDisplay.textContent = value;
+      }
+
+      input.addEventListener('input', updateSingleSlider);
+      updateSingleSlider(); // 初始化顯示
+    }
+
+    function setupDoubleSlider(slider) {
+      const minInput = slider.querySelector('#sliderMin');
+      const maxInput = slider.querySelector('#sliderMax');
+      const range = slider.querySelector('.slider-range');
+      const minValueDisplay = document.getElementById('minValue');
+      const maxValueDisplay = document.getElementById('maxValue');
+
+      function updateDoubleSlider() {
+        const minValue = parseInt(minInput.value);
+        const maxValue = parseInt(maxInput.value);
+        const minPercent = (minValue / minInput.max) * 100;
+        const maxPercent = (maxValue / maxInput.max) * 100;
+
+        range.style.left = `${minPercent}%`;
+        range.style.width = `${maxPercent - minPercent}%`;
+
+        minValueDisplay.textContent = minValue;
+        maxValueDisplay.textContent = maxValue;
+      }
+
+      function handleMinInputChange() {
+        const minValue = parseInt(minInput.value);
+        const maxValue = parseInt(maxInput.value);
+        if (minValue >= maxValue) {
+          minInput.value = maxValue - 1;
+        }
+        updateDoubleSlider();
+      }
+
+      function handleMaxInputChange() {
+        const minValue = parseInt(minInput.value);
+        const maxValue = parseInt(maxInput.value);
+        if (maxValue <= minValue) {
+          maxInput.value = minValue + 1;
+        }
+        updateDoubleSlider();
+      }
+
+      minInput.addEventListener('input', handleMinInputChange);
+      maxInput.addEventListener('input', handleMaxInputChange);
+      updateDoubleSlider(); // 初始化顯示
+    }
+    // slider end
+    // dropDown start
     let isVisible = false;
 
     function handleClick() {
@@ -5835,5 +5845,7 @@
     function handleInputChange(event) {
       console.log('輸入值:', event.target.value);
     }
+    // dropDown end
   </script>
+  </body>
 </html>
