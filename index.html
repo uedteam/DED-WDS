@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="public/styles/custom.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DED-WDS</title>
+  
   </head>
+  <style>
+
+  </style>
   <body>
     <div id="app" style="padding: 1rem">
       <h2
@@ -5592,6 +5596,197 @@
         </div>
       </div>
 
+      <h2
+        class="title-level-0"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 32px;
+        "
+      >
+        Slider
+      </h2>
+      <h3
+        class="title-level-1"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 24px;
+        "
+      >
+        Single Slider
+      </h3>
+      <!-- Primary Single Slider  -->
+      <div class="single-slider slider-primary">
+        <div class="slide-track-container">
+          <div class="slide-track"></div>
+          <div class="slider-range slider-range-primary"></div>
+        </div>
+        <input type="range" min="0" max="5000" value="200" id="sliderMin">
+      </div>
+      <div class="slider-values">
+        值: <span id="singleValue"></span>
+      </div>
+      <!-- Secondary Single Slider  -->
+      <div class="single-slider slider-secondary">
+        <div class="slide-track-container">
+          <div class="slide-track"></div>
+          <div class="slider-range slider-range-secondary"></div>
+        </div>
+        <input type="range" min="0" max="5000" value="200" id="sliderMin">
+      </div>
+      <div class="slider-values">
+        值: <span id="singleValue"></span>
+      </div>
+      <!-- Tertiary Single Slider  -->
+      <div class="single-slider slider-tertiary">
+        <div class="slide-track-container">
+          <div class="slide-track"></div>
+          <div class="slider-range slider-range-tertiary"></div>
+        </div>
+        <input type="range" min="0" max="5000" value="200" id="sliderMin">
+      </div>
+      <div class="slider-values">
+        值: <span id="singleValue"></span>
+      </div>
+      <!-- Error Single Slider  -->
+      <div class="single-slider slider-error">
+        <div class="slide-track-container">
+          <div class="slide-track"></div>
+          <div class="slider-range slider-range-error"></div>
+        </div>
+        <input type="range" min="0" max="5000" value="200" id="sliderMin">
+      </div>
+      <div class="slider-values">
+        值: <span id="singleValue"></span>
+      </div>
+      <!-- Success Single Slider  -->
+      <div class="single-slider slider-success">
+        <div class="slide-track-container">
+          <div class="slide-track"></div>
+          <div class="slider-range slider-range-success"></div>
+        </div>
+        <input type="range" min="0" max="5000" value="200" id="sliderMin">
+      </div>
+      <div class="slider-values">
+        值: <span id="singleValue"></span>
+      </div>
+      <!-- Warning Single Slider  -->
+      <div class="single-slider slider-warning">
+        <div class="slide-track-container">
+          <div class="slide-track"></div>
+          <div class="slider-range slider-range-warning"></div>
+        </div>
+        <input type="range" min="0" max="5000" value="200" id="sliderMin">
+      </div>
+      <div class="slider-values">
+        值: <span id="singleValue"></span>
+      </div>
+      <!-- info Single Slider  -->
+      <div class="single-slider slider-info">
+        <div class="slide-track-container">
+          <div class="slide-track"></div>
+          <div class="slider-range slider-range-info"></div>
+        </div>
+        <input type="range" min="0" max="5000" value="200" id="sliderMin">
+      </div>
+      <div class="slider-values">
+        值: <span id="singleValue"></span>
+      </div>
+      <h3
+        class="title-level-1"
+        style="
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 24px;
+        "
+      >
+        Double Slider
+      </h3>
+      <div class="double-slider slider-primary">
+        <div class="slider-container">
+          <div class="slider-track"></div>
+          <div class="slider-range slider-range-primary"></div>
+          <input type="range" min="0" max="5000" value="200" id="sliderMin">
+          <input type="range" min="0" max="5000" value="514" id="sliderMax">
+        </div>
+      </div>
+      <div class="slider-values">
+          最小值: <span id="minValue"></span>
+          最大值: <span id="maxValue"></span>
+      </div>
+    </div>
+    <script>
+  // 處理單滑塊
+  const singleSliders = document.querySelectorAll('.single-slider');
+  singleSliders.forEach(setupSingleSlider);
+
+  // 處理雙滑塊
+  const doubleSliders = document.querySelectorAll('.double-slider');
+  doubleSliders.forEach(setupDoubleSlider);
+
+  function setupSingleSlider(slider) {
+    const input = slider.querySelector('input[type="range"]');
+    const range = slider.querySelector('.slider-range');
+    const valueDisplay = slider.nextElementSibling.querySelector('.slider-values span');
+
+    function updateSingleSlider() {
+      const value = input.value;
+      const percent = (value / input.max) * 100;
+      range.style.width = `${percent}%`;
+      valueDisplay.textContent = value;
+    }
+
+    input.addEventListener('input', updateSingleSlider);
+    updateSingleSlider(); // 初始化顯示
+  }
+
+  function setupDoubleSlider(slider) {
+    const minInput = slider.querySelector('#sliderMin');
+    const maxInput = slider.querySelector('#sliderMax');
+    const range = slider.querySelector('.slider-range');
+    const minValueDisplay = document.getElementById('minValue');
+    const maxValueDisplay = document.getElementById('maxValue');
+
+    function updateDoubleSlider() {
+      const minValue = parseInt(minInput.value);
+      const maxValue = parseInt(maxInput.value);
+      const minPercent = (minValue / minInput.max) * 100;
+      const maxPercent = (maxValue / maxInput.max) * 100;
+
+      range.style.left = `${minPercent}%`;
+      range.style.width = `${maxPercent - minPercent}%`;
+
+      minValueDisplay.textContent = minValue;
+      maxValueDisplay.textContent = maxValue;
+    }
+
+    function handleMinInputChange() {
+      const minValue = parseInt(minInput.value);
+      const maxValue = parseInt(maxInput.value);
+      if (minValue >= maxValue) {
+        minInput.value = maxValue - 1;
+      }
+      updateDoubleSlider();
+    }
+
+    function handleMaxInputChange() {
+      const minValue = parseInt(minInput.value);
+      const maxValue = parseInt(maxInput.value);
+      if (maxValue <= minValue) {
+        maxInput.value = minValue + 1;
+      }
+      updateDoubleSlider();
+    }
+
+    minInput.addEventListener('input', handleMinInputChange);
+    maxInput.addEventListener('input', handleMaxInputChange);
+    updateDoubleSlider(); // 初始化顯示
+  }
+    </script>
     </div>
     <div class="dropdown" tabindex="0" onclick="handleClick()">
       <div class="input-container undefined">
