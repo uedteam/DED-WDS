@@ -5593,5 +5593,52 @@
       </div>
 
     </div>
+    <div class="dropdown" tabindex="0" onclick="handleClick()">
+      <div class="input-container undefined">
+        <div class="input-group component-medium undefined">
+          <input type="text" class="input text-medium" value="" onchange="handleInputChange(event)" />
+        </div>
+        <small class="input-hint undefined"></small>
+      </div>
+      <span class="dropdown-selected">請選擇項目</span>
+      <div class="tooltip" id="dropdownMenu" style="top: calc(100% + 8px); width: 300px; color: #000; display: none;">
+        <ul class="list menu">
+          <li onclick="handleSelect('選項1')">
+            <div class="item">
+              <div class="item-label">選項一</div>
+            </div>
+          </li>
+          <li onclick="handleSelect('選項2')">
+            <div class="item">
+              <div class="item-label">選項二</div>
+            </div>
+          </li>
+          <li onclick="handleSelect('選項3')">
+            <div class="item">
+              <div class="item-label">選項三</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </body>
+  <script>
+    let isVisible = false;
+
+    function handleClick() {
+      isVisible = !isVisible;
+      document.getElementById('dropdownMenu').style.display = isVisible ? 'block' : 'none';
+    }
+
+    function handleSelect(value) {
+      document.querySelector('.dropdown-selected').innerText = value;
+      isVisible = false;
+      document.getElementById('dropdownMenu').style.display = 'none';
+    }
+
+    function handleInputChange(event) {
+      console.log('輸入值:', event.target.value);
+    }
+  </script>
 </html>

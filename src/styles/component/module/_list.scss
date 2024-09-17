@@ -1,0 +1,50 @@
+.list {
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 200px;
+    width: 100%;
+    padding-block: 8px;
+    border-radius: 8px;
+}
+
+.menu {
+    box-shadow: $shadow-light2;
+    list-style: none;
+    background-color: $color-white;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+
+    &-label {
+        margin-right: auto;
+    }
+}
+
+.list-link {
+    cursor: pointer;
+
+    &:hover {
+        color: $color-gray10;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px inset $color-gray60;
+    }
+}
+
+.menu-link {
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-gray10;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px inset $color-gray60;
+    }
+}
