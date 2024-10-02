@@ -1,0 +1,153 @@
+@use "sass:color";
+
+/*--- Divider layout ---*/
+.divider-horizontal {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.divider-horizontal:before {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    content: "";
+}
+
+.divider-vertical {
+    min-height: 100%;
+    margin: 0 1rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.divider-vertical:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "";
+}
+
+/*--- Divider content ---*/
+.divider-content {
+    z-index: 1;
+}
+.divider .divider-content {
+    background-color: $color-white;
+}
+.divider.divider-horizontal .divider-content {
+    padding: 0 0.5rem;
+}
+.divider.divider-vertical .divider-content {
+    padding: 0.5rem 0;
+}
+
+/*--- Divider border type ---*/
+.divider.divider-solid.divider-horizontal:before {
+    border-top-style: solid;
+}
+.divider.divider-solid.divider-vertical:before {
+    border-left-style: solid;
+}
+.divider.divider-dashed.divider-horizontal:before {
+    border-top-style: dashed;
+}
+.divider.divider-dashed.divider-vertical:before {
+    border-left-style: dashed;
+}
+.divider.divider-dotted.divider-horizontal:before {
+    border-top-style: dotted;
+}
+.divider.divider-dotted.divider-vertical:before {
+    border-left-style: dotted;
+}
+
+/*--- Divider horizontal border width ---*/
+.divider.divider-horizontal {
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+.divider.divider-horizontal:before {
+    // border-top-width: 1px;
+    border-top-color: $color-gray20;
+}
+@each $theme in $themes {
+    .divider.divider-#{$theme}.divider-horizontal:before {
+        // border-top-width: 1px;
+        border-top-color: getThemeColor($mode, $theme, "default");
+    }
+}
+.divider.divider-width-xsmall.divider-horizontal:before {
+    border-top-width: 1px;
+}
+.divider.divider-width-small.divider-horizontal:before {
+    border-top-width: 2px;
+}
+.divider.divider-width-medium.divider-horizontal:before {
+    border-top-width: 4px;
+}
+.divider.divider-width-large.divider-horizontal:before {
+    border-top-width: 6px;
+}
+.divider.divider-width-xlarge.divider-horizontal:before {
+    border-top-width: 8px;
+}
+
+/*--- Divider vertical border width ---*/
+.divider.divider-vertical {
+    margin: 0 1rem;
+    padding: 1rem 0;
+}
+.divider.divider-vertical:before {
+    // border-left-width: 1px;
+    border-left-color: $color-gray20;
+}
+@each $theme in $themes {
+    .divider.divider-#{$theme}.divider-vertical:before {
+        // border-left-width: 1px;
+        border-left-color: getThemeColor($mode, $theme, "default");
+    }
+}
+.divider.divider-width-xsmall.divider-vertical:before {
+    border-left-width: 1px;
+}
+.divider.divider-width-small.divider-vertical:before {
+    border-left-width: 2px;
+}
+.divider.divider-width-medium.divider-vertical:before {
+    border-left-width: 4px;
+}
+.divider.divider-width-large.divider-vertical:before {
+    border-left-width: 6px;
+}
+.divider.divider-width-xlarge.divider-vertical:before {
+    border-left-width: 8px;
+}
+
+/*--- Divider horizontal align ---*/
+.divider-start.divider-horizontal {
+    justify-content: flex-start;
+}
+.divider-center.divider-horizontal {
+    justify-content: center;
+}
+.divider-end.divider-horizontal {
+    justify-content: flex-end;
+}
+
+/*--- Divider vertical align ---*/
+.divider-start.divider-vertical {
+    align-items: flex-start;
+}
+.divider-center.divider-vertical {
+    align-items: center;
+}
+.divider-end.divider-vertical {
+    align-items: flex-end;
+}
