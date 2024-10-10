@@ -1,0 +1,48 @@
+.tag__container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-gray90;
+    border-radius: 999px;
+    flex-shrink: 0;
+    //background-color: #ff0;
+    padding: 4px 8px;
+    gap: 6px;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid #ddd8f6;
+        background-color: #ddd8f6;
+    }
+}
+
+.tag__label {
+    font-size: 14px;
+}
+
+.tag-disable {
+    pointer-events: none !important;
+    color: $color-gray20 !important;
+    border-color: $color-gray20 !important;
+}
+
+@each $theme in $themes {
+    .tag-#{$theme} {
+        // border-top-width: 1px;
+        background-color: getThemeColor($mode, $theme, "default");
+        color: #fff;
+        border-color: getThemeColor($mode, $theme, "default");
+
+        &:hover {
+                background-color: getThemeColor($mode, $theme, 'hover');
+                border-color: getThemeColor($mode, $theme, 'hover');
+        }
+    }
+}
+
+.tag-disalbe {
+    pointer-events: none !important;
+    color: $color-gray20 !important;
+    background-color: $color-gray20 !important;
+    color: $color-white !important;
+}
