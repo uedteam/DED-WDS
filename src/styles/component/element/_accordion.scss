@@ -1,0 +1,95 @@
+.accordion__container {
+
+  .accordion__list {
+    list-style: none;
+  }
+  .accordion__item {
+    border-bottom: 1px solid #EEEEEE;
+    border-radius: 4px;
+
+    // &:hover {
+    //   background-color: blend-rgba($light-color-primary, $lightness80);
+      
+    // }
+
+  }
+  .accordion-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 16px;
+    //outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+  }
+
+
+  // 展開部分
+  .accordion-content {
+    padding-top: 0 ;
+    max-height: 0; /* 初始時不顯示 */
+    overflow: hidden; /* 隱藏溢出內容 */
+    opacity: 0;
+    transition: all 0.1s;  /* 添加過渡效果 */
+  }
+  .accordion-content.expanded {
+    //height: auto;
+    //height: calc-size(auto);
+    max-height: 800px;
+    opacity: 1;
+    padding: 0 16px 16px 16px;
+
+  }
+}
+.accordion-primary {
+  &:hover {
+    background-color: blend-rgba($light-color-primary, $lightness80);
+  }
+}
+.accordion-secondary {
+  &:hover {
+    background-color: blend-rgba($light-color-secondary, $lightness80);
+  }
+}
+
+.accordion-tertiary {
+  &:hover {
+    background-color: blend-rgba($light-color-tertiary, $lightness80);
+  }
+}
+
+.accordion-success {
+  &:hover {
+    background-color: blend-rgba($light-color-success, $lightness80);
+  }
+}
+
+.accordion-warning {
+  &:hover {
+    background-color: blend-rgba($light-color-warning, $lightness80);
+  }
+}
+
+.accordion-error {
+  &:hover {
+    background-color: blend-rgba($light-color-error, $lightness80);
+  }
+}
+
+.accordion-info {
+  &:hover {
+    background-color: blend-rgba($light-color-info, $lightness80);
+  }
+}
+.accordion-disable {
+  pointer-events: none !important;
+}
+.accordion-disable span, .accordion-disable svg{
+  color: $color-gray20 !important;
+}
