@@ -34,12 +34,12 @@
             border-bottom: 2px solid #ccc;
           "
         >
-          v1.2.0
+          v1.3.0
         </h3>
         <p>New Item :</p>
         <ul style="list-style: none; text-indent: 1rem; border-bottom: 2px solid #ccc; margin-bottom: 2rem;">
           <li>🆙update： update Changelog</li>
-          <li>✨feature: add menu</li>
+          <li>✨feature: add accordion</li>
         </ul>
 
       </div>
@@ -6363,6 +6363,169 @@
           <span class="tag__label">Label</span>
         </span>
       </div>
+      <h2
+      class="title-level-0"
+      style="
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 32px;
+      "
+      >
+        Accordion
+      </h2>
+      <!-- primary accordion -->
+      <div class="accordion__container accordion-primary">
+        <ul aria-label="Accordion" class="accordion__list">
+          <li class="accordion__item">
+            <button class="accordion-header" onClick="toggleAccordion(this)">
+              <span>Apples</span>
+              <div class="icon-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+                  <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-content">
+              <p>Apples are a fine fruit often associated with good health, and fewer doctor's appointments.</p>
+              <p>Example: An apple a day keeps the doctor away.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- secondary accordion -->
+      <div class="accordion__container accordion-secondary">
+        <ul aria-label="Accordion" class="accordion__list">
+          <li class="accordion__item">
+            <button class="accordion-header" onClick="toggleAccordion(this)">
+              <span>Apples</span>
+                <div class="icon-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+                  <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-content">
+              <p>Apples are a fine fruit often associated with good health, and fewer doctor's appointments.</p>
+              <p>Example: An apple a day keeps the doctor away.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- tertiary accordion -->
+      <div class="accordion__container accordion-tertiary">
+        <ul aria-label="Accordion" class="accordion__list">
+          <li class="accordion__item">
+            <button class="accordion-header" onClick="toggleAccordion(this)">
+              <span>Apples</span>
+              <div class="icon-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+                  <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-content">
+              <p>Apples are a fine fruit often associated with good health, and fewer doctor's appointments.</p>
+              <p>Example: An apple a day keeps the doctor away.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- error accordion -->
+      <div class="accordion__container accordion-error">
+        <ul aria-label="Accordion" class="accordion__list">
+          <li class="accordion__item">
+            <button class="accordion-header" onClick="toggleAccordion(this)">
+              <span>Apples</span>
+              <div class="icon-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+                  <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-content">
+              <p>Apples are a fine fruit often associated with good health, and fewer doctor's appointments.</p>
+              <p>Example: An apple a day keeps the doctor away.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- success accordion -->
+      <div class="accordion__container accordion-success">
+        <ul aria-label="Accordion" class="accordion__list">
+          <li class="accordion__item">
+            <button class="accordion-header" onClick="toggleAccordion(this)">
+              <span>Apples</span>
+              <div class="icon-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+                  <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-content">
+              <p>Apples are a fine fruit often associated with good health, and fewer doctor's appointments.</p>
+              <p>Example: An apple a day keeps the doctor away.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- warning accordion -->
+      <div class="accordion__container accordion-warning">
+        <ul aria-label="Accordion" class="accordion__list">
+          <li class="accordion__item">
+            <button class="accordion-header" onClick="toggleAccordion(this)">
+              <span>Apples</span>
+              <div class="icon-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+                  <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-content">
+              <p>Apples are a fine fruit often associated with good health, and fewer doctor's appointments.</p>
+              <p>Example: An apple a day keeps the doctor away.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- info accordion -->
+      <div class="accordion__container accordion-info">
+        <ul aria-label="Accordion" class="accordion__list">
+          <li class="accordion__item">
+            <button class="accordion-header" onClick="toggleAccordion(this)">
+              <span>Apples</span>
+              <div class="icon-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+                  <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-content">
+              <p>Apples are a fine fruit often associated with good health, and fewer doctor's appointments.</p>
+              <p>Example: An apple a day keeps the doctor away.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- disable accordion -->
+      <div class="accordion__container accordion-disable">
+        <ul aria-label="Accordion" class="accordion__list">
+          <li class="accordion__item">
+            <button class="accordion-header" onClick="toggleAccordion(this)">
+              <span>Apples</span>
+              <div class="icon-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor">
+                  <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-content">
+              <p>Apples are a fine fruit often associated with good health, and fewer doctor's appointments.</p>
+              <p>Example: An apple a day keeps the doctor away.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   <script>
     // slider start
@@ -6461,6 +6624,20 @@
         }
     }
     // menu end
+      // accordion start
+      function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.accordion__container svg path');
+
+        content.classList.toggle('expanded'); // 切換展開的 class
+        
+        if (content.classList.contains('expanded')) {
+          icon.setAttribute('d', 'M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z'); // 更新 SVG 路徑
+        } else {
+          icon.setAttribute('d', 'M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'); // 還原 SVG 路徑
+        }
+      }
+    // accordion end
   </script>
   </body>
 </html>
