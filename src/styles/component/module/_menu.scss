@@ -1,5 +1,5 @@
 .menu-container {
-  margin-inline: 8px;
+  padding-inline: 8px;
   .menu-list {
     list-style: none;
     .menu-item {
@@ -16,19 +16,13 @@
   }
   .menu-subList {
     list-style-type: none;
-    margin-left: 1em;
     .menu-subItem {
       border-bottom: 1px solid #eee;
       &:last-child {
         border-bottom: none;
       }
       .menu-link {
-        display: flex;
-        padding: 8px;
-        gap: 8px;
-        align-items: center;
-        text-decoration: none;
-        color: $color-gray10;
+        padding-left: 1em;
       }
     }
   }
