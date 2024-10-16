@@ -19,7 +19,7 @@
     z-index: 5;
 }
 
-// position-default - 顯示文字
+// position-default - 顯示數字
 .badge__content.badge__position-default {
     margin-left: 4px;
 }
@@ -32,21 +32,32 @@
     padding: 0;
 }
 
-// position-top-right - 顯示文字
+// position-top-right - 顯示數字
 .badge__content.badge__position-top-right {
     position: absolute;
     bottom: calc(100% - 20%);
     left: calc(100% - 10%);
 }
 
-// position-top-right - 顯示文字 (isIcon)
-.badge__content.badge__position-top-right.badge__content-isIcon {
+// position-top-right - 顯示數字 (withIcon)
+.badge__content.badge__position-top-right.badge__content-withIcon {
     bottom: calc(100% - 38%);
     left: calc(100% - 15%);
 }
 
-// position-top-right - 顯示文字 (isIcon)
-.badge__content.badge__position-top-right.badge__content-isIcon.badge__content-isDot {
+
+// position-top-right - 顯示點點
+.badge__content.badge__position-top-right.badge__content-isDot {
+    width: 8px;
+    height: 8px;
+    margin-left: 4px;
+    padding: 0;
+    bottom: calc(100% - 20%);
+    left: calc(100% - 10%);
+}
+
+// position-top-right - 顯示點點 (withIcon)
+.badge__content.badge__position-top-right.badge__content-withIcon.badge__content-isDot {
     width: 8px;
     height: 8px;
     margin-left: 4px;
