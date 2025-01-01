@@ -1,0 +1,117 @@
+@use "sass:color";
+@use "sass:list";
+
+/*--- Divider ---*/
+.ded-divider {
+  --line-weight: #{$border-width};
+  --line-style: solid;
+
+  display: flex;
+  min-height: 5em;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    flex-grow: 1;
+  }
+
+  &-content {
+    z-index: 1;
+    padding: 0.5em;
+  }
+}
+
+/*--- Divider 方向 ---*/
+.ded-divider-horizontal {
+  align-items: center;
+}
+
+.ded-divider-vertical {
+  flex-direction: column;
+  align-items: center;
+}
+
+.ded-divider-horizontal.ded-divider::before,
+.ded-divider-horizontal.ded-divider::after {
+  border-top-width: var(--line-weight);
+  border-top-style: var(--line-style);
+  border-top-color: list.nth($neutral-700, $site);
+}
+
+.ded-divider-vertical.ded-divider::before,
+.ded-divider-vertical.ded-divider::after {
+  border-left-width: var(--line-weight);
+  border-left-style: var(--line-style);
+  border-left-color: list.nth($neutral-700, $site);
+}
+
+
+/*--- Divider 線條粗細 ---*/
+.ded-divider-1px {
+  --line-weight: #{$border-width-1};
+}
+
+.ded-divider-2px {
+  --line-weight: #{$border-width-2};
+}
+
+.ded-divider-3px {
+  --line-weight: #{$border-width-3};
+}
+
+.ded-divider-4px {
+  --line-weight: #{$border-width-4};
+}
+
+.ded-divider-5px {
+  --line-weight: #{$border-width-5};
+}
+
+/*--- Divider 線條樣式 ---*/
+.ded-divider-solid {
+  --line-style: solid;
+}
+
+.ded-divider-dashed {
+  --line-style: dashed;
+}
+
+.ded-divider-dotted {
+  --line-style: dotted;
+}
+
+/*--- Divider 對齊位置 - Horizontal ---*/
+.ded-divider-start.ded-divider-horizontal::before,
+.ded-divider-end.ded-divider-horizontal::after {
+  flex-grow: 0;
+  width: 1rem;
+}
+
+/*--- Divider 對齊位置 - vertical ---*/
+.ded-divider-start.ded-divider-vertical::before,
+.ded-divider-end.ded-divider-vertical::after {
+  flex-grow: 0;
+  height: 1rem;
+}
+
+@each $theme in $themes {
+  .ded-divider-#{$theme}.ded-divider-vertical::before {
+    border-left-color: getThemeColor($theme, "default");
+  }
+
+  .ded-divider-#{$theme}.ded-divider-vertical::after {
+    border-left-color: getThemeColor($theme, "default");
+  }
+}
+
+@each $theme in $themes {
+  .ded-divider-#{$theme}.ded-divider-horizontal::before {
+    border-top-color: getThemeColor($theme, "default");
+  }
+
+  .ded-divider-#{$theme}.ded-divider-horizontal::after {
+    border-top-color: getThemeColor($theme, "default");
+  }
+}

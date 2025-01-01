@@ -1,0 +1,111 @@
+@use 'sass:list';
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: list.nth($neutral-0, $site);
+
+  &-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-prefix {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &-dot {
+    margin: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    &-white {
+      background-color: list.nth($neutral-0, $site);
+    }
+
+    @each $variant in $variants {
+      @each $theme in $themes {
+        &-#{$theme} {
+
+          @if($variant =='filled') {
+            background-color: list.nth($neutral-0, $site);
+          }
+
+          @else {
+            background-color: getStatusColor($theme, 'dark');
+          }
+        }
+      }
+    }
+  }
+
+  &-text {
+    font-size: 16px;
+
+    @each $variant in $variants {
+      @each $theme in $themes {
+        &-#{$theme} {
+
+          @if($variant =='filled') {
+            color: list.nth($neutral-0, $site);
+          }
+
+          @if($variant =='text') {
+            color: getStatusColor($theme, 'dark');
+          }
+        }
+      }
+    }
+  }
+
+  /* 大小設定 */
+  // &-small {
+  //   .status-indicator-dot {
+  //     width: 6px;
+  //     height: 6px;
+  //   }
+
+  //   .status-indicator-text {
+  //     font-size: 12px;
+  //   }
+  // }
+
+  // &-medium {
+  //   .status-indicator-dot {
+  //     width: 8px;
+  //     height: 8px;
+  //   }
+
+  //   .status-indicator-text {
+  //     font-size: 14px;
+  //   }
+  // }
+
+  // &-large {
+  //   .status-indicator-dot {
+  //     width: 12px;
+  //     height: 12px;
+  //   }
+
+  //   .status-indicator-text {
+  //     font-size: 16px;
+  //   }
+  // }
+
+  @each $variant in $variants {
+    @each $theme in $themes {
+      &-#{$variant}-#{$theme} {
+
+        @if($variant =='filled') {
+          background-color: getStatusColor($theme, 'dark');
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@use 'sass:color';
+@use 'sass:list';
+
+.ded-checkbox-container {
+  display: inline-flex;
+  gap: $spacing-8;
+
+  &-row {
+    flex-direction: row;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+}
+
+.ded-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-4;
+  cursor: pointer;
+
+  &-input {
+    display: none;
+  }
+
+  &-text {
+    font-size: inherit;
+    color: list.nth($text-primary, $site);
+  }
+
+  &-icon {
+    border-width: $border-width;
+    border-style: solid;
+    border-color: list.nth($neutral-200, $site);
+    border-radius: $radius;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-checked {
+    background-color: $auo-form-default;
+    border-color: $auo-form-default;
+    color: $color-white;
+
+    &:hover {
+      border-color: $auo-form-hover;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $auo-form-outline;
+    }
+  }
+
+  &-unchecked {
+    background-color: transparent;
+
+    &:hover {
+      border-color: $auo-form-hover;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $auo-form-outline;
+    }
+  }
+
+  // @each $theme in $themes {
+  //   &-checked-#{$theme} {
+  //     background-color: list.nth($form-default, $site);
+  //     border-color: list.nth($form-default, $site);
+  //     color: $color-white;
+
+  //     &:hover {
+  //       border-color: list.nth($form-hover, $site);
+  //     }
+
+  //     &:focus {
+  //       box-shadow: 0 0 0 3px list.nth($form-outline, $site);
+  //     }
+  //   }
+
+  //   &-unchecked-#{$theme} {
+  //     background-color: transparent;
+
+  //     &:hover {
+  //       border-color: list.nth($form-hover, $site);
+  //     }
+
+  //     &:focus {
+  //       box-shadow: 0 0 0 3px list.nth($form-outline, $site);
+  //     }
+  //   }
+  // }
+}
+
+.ded-checkbox-input-disabled {
+  pointer-events: none !important;
+}
+
+.ded-checkbox-icon-disabled {
+  background-color: list.nth($disabled-background, $site) !important;
+  border-color: list.nth($disabled-border, $site) !important;
+}
+
+.ded-checkbox-text-disabled {
+  color: list.nth($disabled-text, $site) !important;
+}

@@ -1,0 +1,47 @@
+@use "sass:color";
+@use "sass:list";
+
+.ded-badge-container {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+
+  // 基礎設定
+  .ded-badge {
+    position: absolute;
+    bottom: calc(100% - 20%);
+    left: calc(100% - 10%);
+    z-index: 5;
+    border-radius: 999px;
+    text-align: center;
+
+    &-dot {
+      min-width: 0px;
+      width: 8px;
+      height: 8px;
+      margin-left: 4px;
+      padding: 0;
+      bottom: calc(100% - 20%);
+      left: calc(100% - 30%);
+    }
+
+    .ded-badge-content {
+      line-height: 1;
+      padding: 2px 4px;
+      min-width: calc(1em + 4px);
+      font-size: 12px;
+
+      &-text {
+        line-height: inherit;
+        font-size: inherit;
+        color: list.nth($neutral-0, $site);
+      }
+    }
+  }
+
+  @each $theme in $themes {
+    .ded-badge-color-#{$theme} {
+      background-color: getThemeColor($theme, "default");
+    }
+  }
+}

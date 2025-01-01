@@ -1,0 +1,29 @@
+.ded-layout {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.ded-header {
+  width: 100%;
+  min-height: 40px;
+}
+
+
+.ded-side {
+  display: flex;
+  min-width: 40px;
+}
+
+
+.ded-content {
+  flex: 1;
+  display: flex;
+  min-height: 80px;
+}
+
+.ded-footer {
+  width: 100%;
+  min-height: 40px;
+}

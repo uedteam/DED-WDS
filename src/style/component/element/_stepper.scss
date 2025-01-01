@@ -1,0 +1,146 @@
+@use 'sass:list';
+
+.ded-stepper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+
+  .ded-step-title {
+    margin-top: 0.5em;
+    font-weight: 700;
+    color: list.nth($disabled-text, $site);
+  }
+
+  .ded-step-description {
+    font-size: 0.75em;
+    color: default(list.nth($text-helper, $site), $neutral-400);
+  }
+
+  &.ded-stepper-horizontal {
+    .ded-stepper-header {
+      display: flex;
+      margin-bottom: 1rem;
+
+      .ded-step {
+        width: 0;
+        text-align: center;
+        justify-content: center;
+        flex-grow: 1;
+        position: relative;
+        display: grid;
+        position: relative;
+
+        .ded-step-circle {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 18px;
+          height: 4px;
+          background-color: list.nth($disabled-text, $site);
+        }
+
+        &::before {
+          left: 0%;
+          right: 50%;
+          margin-right: 24px;
+        }
+
+        &::after {
+          left: 50%;
+          right: 0;
+          margin-left: 24px;
+        }
+
+        &.ded-step-active .ded-step-circle {
+          background-color: $share-yellow;
+        }
+
+        &:first-child::before,
+        &:last-child::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.ded-stepper-vertical {
+    flex-direction: row;
+
+    .ded-stepper-header {
+      display: flex;
+      flex-direction: column;
+      margin-right: 1rem;
+
+      .ded-step {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 3rem;
+
+        .ded-step-circle {
+          margin-right: 1rem;
+        }
+
+        .ded-step-title {
+          flex-grow: 1;
+        }
+
+        .ded-step-connector {
+          width: 2px;
+          height: 3rem;
+          background-color: #ccc;
+          position: absolute;
+          left: 20px;
+          top: 100%;
+        }
+      }
+    }
+  }
+
+  .ded-step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: list.nth($disabled-background, $site);
+    color: list.nth($disabled-text, $site);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  & .ded-step-active .ded-step-circle {
+    background-color: $share-yellow;
+  }
+
+  & .ded-step-active .ded-step-circle {
+    color: $primary-default;
+  }
+
+  & .ded-step-active.ded-step .ded-step-group .ded-step-title {
+    color: $primary-default;
+  }
+
+  & .ded-step-active.ded-step .ded-step-group .ded-step-description {
+    color: default(list.nth($disabled-border, $site), $neutral-400)
+  }
+
+  .ded-stepper-content {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+}

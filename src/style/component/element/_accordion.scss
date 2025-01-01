@@ -1,0 +1,99 @@
+@use 'sass:list';
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
+.ded-accordion {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  &-solid {
+    gap: 8px;
+  }
+
+  &-item {
+    background-color: list.nth($neutral-0, $site);
+
+    &-highlight {
+      border-bottom-width: $border-width;
+      border-bottom-style: solid;
+      border-bottom-color: $auo-form-border;
+    }
+
+    &-solid {
+      border-width: $border-width;
+      border-style: solid;
+      border-color: $auo-form-border;
+      border-radius: $radius-4;
+    }
+
+    &:hover {
+      border-width: $auo-form-border;
+      border-color: list.nth($link-hover, $site);
+    }
+
+    &-open {
+      transition: transform .3s;
+      transform: rotate(180deg);
+    }
+
+    &-close {
+      transition: transform .3s;
+      transform: rotate(0deg);
+    }
+  }
+
+  .ded-accordion-detail {
+    .ded-accordion-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+      padding: 16px;
+
+
+      &::marker {
+        content: '';
+      }
+
+      &-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $auo-icon-default;
+        border-radius: $radius-999;
+      }
+    }
+
+    &-content {
+      padding: 0 52px 16px;
+      overflow: hidden;
+      font-size: 16px;
+      color: list.nth($text-secondary, $site);
+    }
+  }
+}
+
+/* Animation */
+::details-content {
+  transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+  height: 0;
+  overflow: clip;
+  content-visibility: visible !important;
+}
+
+[open]::details-content {
+  height: auto;
+  height: calc-size(auto);
+}

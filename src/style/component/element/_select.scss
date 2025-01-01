@@ -1,0 +1,49 @@
+// .ded-select-container {
+//   position: relative;
+//   display: inline-block;
+//   width: 200px;
+
+//   .ded-select {
+//     appearance: none; // 移除原生樣式
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     width: 100%;
+//     padding: 10px 30px 10px 10px;
+//     border: 1px solid #d1d5db;
+//     border-radius: 4px;
+//     font-size: 16px;
+//     color: #333;
+//     background-color: #fff;
+//     cursor: pointer;
+//     outline: none;
+
+//     &:focus {
+//       border-color: #4f46e5; // 藍色聚焦
+//       box-shadow: 0 0 5px rgba(79, 70, 229, 0.3);
+//     }
+//   }
+
+//   // 添加一個下拉箭頭
+//   &::after {
+//     content: '▼';
+//     position: absolute;
+//     top: 50%;
+//     right: 10px;
+//     transform: translateY(-50%);
+//     pointer-events: none;
+//     color: #888;
+//   }
+// }
+
+// 下拉選單的樣式
+// .ded-select option {
+//   background-color: #fff;
+//   color: #333;
+//   padding: 10px;
+//   font-size: 16px;
+// }
+
+// .ded-select option:hover,
+// .ded-select option:checked {
+//   background-color: #f0f4ff; // 藍色背景
+// }

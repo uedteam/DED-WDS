@@ -1,0 +1,68 @@
+@use 'sass:list';
+
+.ded-card-simple {
+  background: #fff;
+  border-radius: $radius-16;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &-horizontal {
+    flex-direction: row;
+  }
+
+  @media screen and (max-width: 765px) {
+    &-horizontal {
+      flex-direction: column;
+    }
+  }
+
+  &-image {
+    flex: 1;
+  }
+
+  &-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+
+    &-button-group {
+      padding-inline: 1em;
+      padding-block: 0 1em;
+    }
+
+    &-button-group-left {
+      text-align: left;
+    }
+
+    &-button-group-right {
+      text-align: right;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-12;
+    padding: 1.125em;
+
+    &-subtitle {
+      font-size: $font-size-14;
+      color: list.nth($text-helper, $site);
+    }
+
+    &-desc {
+      font-size: $font-size-15;
+      color: list.nth($text-secondary, $site);
+    }
+
+    &-horizontal {
+      flex-direction: column;
+    }
+  }
+}
+
+.ded-card-simple-border {
+  box-shadow: $shadow-light-200;
+}

@@ -1,0 +1,32 @@
+.ded-side-nav {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  padding: 16px 12px;
+
+  .side-nav-toggle {
+    position: absolute;
+    top: 16px;
+    left: 100%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: #7cc6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: center;
+
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: auto;
+    }
+  }
+}

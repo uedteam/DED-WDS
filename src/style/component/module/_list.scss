@@ -1,0 +1,55 @@
+@use 'sass:list';
+
+.ded-list {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+}
+
+.ded-outline {
+  box-shadow: $shadow-light-200;
+  list-style: none;
+  background-color: list.nth($neutral-0, $site);
+  border-radius: $radius;
+}
+
+.ded-list-item-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+
+  .ded-list-item-label {
+    width: 100%;
+  }
+}
+
+
+.ded-list-item-link {
+  text-decoration: none;
+  color: $color-gray80;
+
+  &:hover {
+    background-color: $color-gray10;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px inset $color-gray60;
+  }
+}
+
+.ded-list-item-link-disabled {
+  cursor: not-allowed;
+  color: $color-gray40;
+}
+
+.ded-list-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

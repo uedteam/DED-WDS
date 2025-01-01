@@ -1,0 +1,87 @@
+@use 'sass:list';
+
+.ded-textarea-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ded-textarea-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  border-width: $input-border-width;
+  border-style: solid;
+  border-color: $auo-form-border;
+  border-radius: $radius;
+  background-color: $auo-form-background;
+  overflow: hidden;
+
+  &:hover {
+    // box-shadow: 0 0 0 2px getBorderColor('primary', 'hover');
+    border: 1px solid $auo-form-hover;
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 3px $auo-form-hover;
+    // border: 1px solid getBorderColor('primary', 'focus');
+  }
+
+  .ded-textarea {
+    display: flex;
+    align-items: center;
+    height: 128px;
+    min-width: 300px;
+    resize: none;
+    margin-bottom: 8px;
+    word-break: break-all;
+    padding-top: 16px;
+    padding-inline: 16px;
+    color: list.nth($text-secondary, $site);
+
+    &::placeholder {
+      color: list.nth($text-placeholder, $site);
+    }
+
+    &-hint-count {
+      position: absolute;
+      font-size: $text-size-caption2;
+      color: $color-gray40;
+      right: 12px;
+      bottom: 4px;
+    }
+  }
+}
+
+.ded-textarea-disable {
+  pointer-events: none !important;
+  color: list.nth($disabled-text, $site) !important;
+  border-color: list.nth($disabled-border, $site) !important;
+
+  &::placeholder {
+    color: list.nth($text-placeholder, $site) !important;
+  }
+}
+
+.ded-textarea-border-error {
+  border-color: getThemeColor('error', 'default');
+}
+
+.ded-textarea-label {
+  font-size: $text-size-caption1;
+  color: $auo-form-label;
+}
+
+.ded-textarea-hint {
+  display: block;
+  font-size: $text-size-caption2;
+}
+
+.ded-textarea-hint-desc {
+  color: $color-gray60;
+}
+
+.ded-textarea-hint-error {
+  color: getThemeColor('error', 'default');
+}

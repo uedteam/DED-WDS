@@ -1,0 +1,105 @@
+@use 'sass:list';
+
+.ded-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-width: $border-width;
+  border-style: solid;
+  border-radius: $radius;
+  padding-inline: 24px;
+
+  &-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    .ded-tag-close {
+      display: block;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    display: none;
+
+    &-disabled {
+      color: list.nth($disabled-text, $site);
+    }
+  }
+
+  &-filled {
+    color: list.nth($neutral-0, $site);
+  }
+
+  &-ghost {
+    background-color: transparent;
+    border-width: $border-width;
+    border-style: solid;
+  }
+
+  &-filled-disabled {
+    pointer-events: none;
+    background-color: list.nth($disabled-background, $site) !important;
+    border-color: list.nth($disabled-border, $site) !important;
+    color: list.nth($disabled-text, $site) !important;
+  }
+
+  &-ghost-disabled {
+    pointer-events: none;
+    background-color: transparent !important;
+    border-color: list.nth($disabled-border, $site) !important;
+    color: list.nth($disabled-text, $site) !important;
+  }
+
+  // 主題色與樣式回圈
+  @each $variant in $variants {
+    @each $theme in $themes {
+      &-#{$variant}-#{$theme} {
+
+        @if($variant =='filled') {
+          border-color: getThemeColor($theme, 'default');
+          background-color: getThemeColor($theme, 'default');
+        }
+
+        @else {
+          border-color: getThemeColor($theme, 'default');
+          color: getThemeColor($theme, 'default');
+        }
+
+        &:focus {
+
+          @if($variant =='ghost') {
+            box-shadow: 0 0 0 3px getThemeColor($theme, 'outline');
+          }
+
+          @else if($variant =='filled') {
+            border-color: getThemeColor($theme, 'focus');
+            background-color: getThemeColor($theme, 'focus');
+          }
+
+          @else {
+            border-color: getThemeColor($theme, 'focus');
+            color: getThemeColor($theme, 'focus');
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,210 @@
+@use "sass:list";
+@use "sass:color";
+
+.ded-button {
+  display: inline-flex;
+  gap: $spacing-8;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: $radius;
+  border-width: $border-width;
+
+  &-content {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    font-size: inherit;
+  }
+
+  &-only-icon {
+    padding: 0.5em;
+  }
+
+  &-fit {
+    width: fit-content;
+  }
+
+  &-fluid {
+    width: 100%;
+  }
+
+  &-radius-none {
+    border-radius: $radius-0;
+  }
+
+  &-radius-2px {
+    border-radius: $radius-2;
+  }
+
+  &-radius-4px {
+    border-radius: $radius-4;
+  }
+
+  &-radius-8px {
+    border-radius: $radius-8;
+  }
+
+  &-radius-12px {
+    border-radius: $radius-12;
+  }
+
+  &-radius-16px {
+    border-radius: $radius-16;
+  }
+
+  &-radius-32px {
+    border-radius: $radius-16;
+  }
+
+  &-radius-full {
+    border-radius: $radius-999;
+  }
+
+  &-border-width-none {
+    border-width: $border-width-0;
+  }
+
+  &-border-width-1px {
+    border-width: $border-width-1;
+  }
+
+  &-border-width-2px {
+    border-width: $border-width-2;
+  }
+
+  &-border-width-3px {
+    border-width: $border-width-3;
+  }
+
+  &-border-width-4px {
+    border-width: $border-width-4;
+  }
+
+  &-border-width-5px {
+    border-width: $border-width-5;
+  }
+
+  &:hover {
+    box-shadow: $shadow-dark-100;
+  }
+
+  &:active {
+    box-shadow: unset;
+  }
+
+  &-filled,
+  &-soft {
+    color: list.nth($neutral-0, $site);
+  }
+
+  &-ghost {
+    background-color: transparent;
+    border-style: solid;
+
+    &:active {
+      box-shadow: unset;
+    }
+  }
+
+  &-text {
+    background-color: transparent;
+    color: list.nth($text-primary, $site);
+
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+
+  // 主題色與樣式回圈
+  @each $variant in $variants {
+    @each $theme in $themes {
+      &-#{$variant}-#{$theme} {
+        @if ($variant == "filled") {
+          background-color: getThemeColor($theme, "default");
+        } @else if($variant == "soft") {
+          background-color: getThemeColor($theme, "active");
+          color: getThemeColor($theme, "default");
+        } @else {
+          border-color: getThemeColor($theme, "default");
+          color: getThemeColor($theme, "default");
+        }
+
+        &:hover {
+          @if ($variant == "filled") {
+            background-color: getThemeColor($theme, "hover");
+          } @else if($variant == "soft") {
+            background-color: blend-rgba(
+              $button-primary-default,
+              $alpha-light-40
+            );
+            color: list.nth($neutral-0, $site);
+          } @else {
+            border-color: getThemeColor($theme, "hover");
+            color: getThemeColor($theme, "hover");
+          }
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 3px getThemeColor($theme, "outline");
+
+          @if ($variant == "filled") {
+            background-color: getThemeColor($theme, "focus");
+          } @else if($variant == "soft") {
+            background-color: getThemeColor($theme, "active");
+            color: list.nth($neutral-0, $site);
+            background-color: getThemeColor($theme, "focus");
+          } @else {
+            border-color: getThemeColor($theme, "focus");
+            color: getThemeColor($theme, "focus");
+          }
+        }
+
+        &:active {
+          @if ($variant == "filled") {
+            background-color: getThemeColor($theme, "active");
+            color: getThemeColor($theme, "default");
+          } @else if($variant == "soft") {
+            background-color: getThemeColor($theme, "default");
+            color: getThemeColor($theme, "active");
+          } @else if ($variant == "text") {
+            background-color: getThemeColor($theme, "active");
+            color: getThemeColor($theme, "default");
+          } @else {
+            border-color: getThemeColor($theme, "active");
+            color: getThemeColor($theme, "active");
+          }
+        }
+      }
+    }
+  }
+}
+
+.ded-button-filled-disabled {
+  pointer-events: none !important;
+  background-color: list.nth($disabled-background, $site) !important;
+  color: list.nth($disabled-text, $site) !important;
+}
+
+.ded-button-soft-disabled {
+  pointer-events: none !important;
+  background-color: list.nth($disabled-background, $site) !important;
+  color: list.nth($disabled-text, $site) !important;
+}
+
+.ded-button-ghost-disabled {
+  pointer-events: none !important;
+  color: list.nth($disabled-text, $site) !important;
+  background-color: transparent !important;
+  border-width: $border-width !important;
+  border-style: solid !important;
+  border-color: list.nth($disabled-border, $site) !important;
+}
+
+.ded-button-text-disabled {
+  pointer-events: none !important;
+  color: list.nth($disabled-text, $site) !important;
+  background-color: list.nth($disabled-background, $site) !important;
+}

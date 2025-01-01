@@ -1,0 +1,8 @@
+.ded-search {
+  display: flex;
+  gap: $spacing-8;
+
+  &-input {
+    flex: 1;
+  }
+}

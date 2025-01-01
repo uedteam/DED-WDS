@@ -1,0 +1,84 @@
+@use "sass:color";
+@use "sass:list";
+
+.ded-toast-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(23rem, 27rem);
+}
+
+.ded-toast {
+  position: relative;
+  border-top-right-radius: $radius-4;
+  border-bottom-right-radius: $radius-4;
+  margin: 20px;
+  border-left-width: $border-width-4;
+  border-left-style: solid;
+  background-color: list.nth($neutral-0, $site);
+  box-shadow: $shadow-dark-300;
+  z-index: 999;
+
+  .ded-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    color: $auo-icon-default;
+    background-color: transparent;
+  }
+
+  .ded-toast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0 0 12px;
+
+    &-message {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: $spacing-4;
+      font-size: 14px;
+      font-weight: 500;
+      color: $support-success;
+
+      @each $theme in $themes {
+        &-#{$theme} {
+          color: getThemeColor($theme, "default");
+        }
+      }
+    }
+
+    &-action {
+      display: flex;
+      align-items: center;
+      padding-right: 40px;
+      font-size: 14px;
+      text-decoration: none;
+      color: list.nth($link-default, $site);
+      cursor: pointer;
+    }
+  }
+
+  .ded-description {
+    font-size: 14px;
+    padding: 0 2.5em 4px;
+    color: list.nth($text-helper, $site);
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+}
+
+@each $theme in $themes {
+  .ded-toast-#{$theme} {
+    background-color: getThemeColor($theme, "default");
+  }
+}
+
+@each $theme in $themes {
+  .ded-toast-border-#{$theme} {
+    border-left-color: getThemeColor($theme, "default");
+  }
+}
