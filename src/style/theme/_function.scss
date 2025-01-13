@@ -1,0 +1,104 @@
+@use "sass:map";
+@use "sass:color";
+@use "sass:meta";
+
+// 動態獲取新主題顏色
+@function getThemeColor($theme, $state) {
+  @return map.get(map.get($theme-colors, $theme), $state);
+}
+
+// 動態獲取文字顏色
+@function getTextColor($mode, $type) {
+  @return map.get(map.get($text-colors, $type), $mode);
+}
+
+// 動態獲取文字層級
+@function getTextLevel($type, $level) {
+  @return map.get(map.get($text-levels, $level), $type);
+}
+
+// 動態獲取邊框顏色
+@function getBorderColor($theme, $state) {
+  @return map.get(map.get($border-colors, $theme), $state);
+}
+
+// 動態獲取邊框樣式
+@function getBorderStyle($style, $type) {
+  @return map.get(map.get($border-styles, $style), $type);
+}
+
+// 動態獲取狀態顏色
+@function getStatusColor($type, $color) {
+  @return map.get(map.get($status-colors, $type), $color);
+}
+
+// 動態獲取 avatar 狀態顏色
+@function getAvatarStatusColor($status) {
+  @return map.get($avatar-status-colors, $status);
+}
+
+// 動態獲取 avatar 形狀
+@function getAvatarShape($shape) {
+  @return map.get($avatar-shape, $shape);
+}
+
+// 動態獲取圖片比例
+@function getAspectRatio($ratio) {
+  @return map.get($aspect-ratio, $ratio);
+}
+
+// 動態獲取 Tooltip Arrow 位置
+@function getArrowPosition($position, $attribute) {
+  @return map.get(map.get($arrow-position, $position), $attribute);
+}
+
+// 函式：判斷色彩是否為 RGBA，否則轉換為 RGBA
+@function to-rgba($color) {
+  @if meta.type-of($color) == "color" {
+    $alpha: color.alpha($color);
+    // @return rgba(color.channel($color, 'red'), color.channel($color, 'green'), color.channel($color, 'blue'), $alpha);
+    @return rgba(red($color), green($color), blue($color), $alpha);
+  } @else {
+    @return rgba(0, 0, 0, 0); // 預設為透明黑色
+  }
+}
+
+// 函式：計算兩個 RGBA 色彩的疊加效果
+@function blend-rgba($color1, $color2) {
+  $rgba1: to-rgba($color1);
+  $rgba2: to-rgba($color2);
+
+  // $r1: color.channel($rgba1, "red");
+  // $g1: color.channel($rgba1, "green");
+  // $b1: color.channel($rgba1, "blue");
+  // $a1: color.alpha($rgba1);
+
+  // $r2: color.channel($rgba2, "red");
+  // $g2: color.channel($rgba2, "green");
+  // $b2: color.channel($rgba2, "blue");
+  // $a2: color.alpha($rgba2);
+  $r1: red($rgba1);
+  $g1: green($rgba1);
+  $b1: blue($rgba1);
+  $a1: alpha($rgba1);
+
+  $r2: red($rgba2);
+  $g2: green($rgba2);
+  $b2: blue($rgba2);
+  $a2: alpha($rgba2);
+
+  // 混合公式
+  $r: $r2 * $a2 + $r1 * (1 - $a2);
+  $g: $g2 * $a2 + $g1 * (1 - $a2);
+  $b: $b2 * $a2 + $b1 * (1 - $a2);
+
+  @return rgba($r, $g, $b, 1);
+}
+
+@function default($variable, $default: null) {
+  @if $variable !=null {
+    @return $variable;
+  }
+
+  @return $default;
+}

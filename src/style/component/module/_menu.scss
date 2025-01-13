@@ -1,0 +1,87 @@
+.ded-nav-item {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &-link {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  &-icon {
+    min-width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-label {
+    flex: 1;
+    transition: opacity 0.3s;
+  }
+
+  &-arrow {
+    padding: 8px;
+  }
+}
+
+.ded-nav-item-side {
+  border-bottom: 1px solid #ccc;
+}
+
+.ded-nav-subitem {
+  position: relative;
+  // margin-left: 24px;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  .ded-nav-item {
+    &-link {
+      padding-left: 24px;
+    }
+
+    &:first-child {
+      border-top: 1px solid #ccc;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.ded-nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  height: 100%;
+
+  .ded-nav {
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    height: 100%;
+
+    &-list {
+      list-style: none;
+      padding: 0;
+
+      &-horizontal {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+      }
+    }
+  }
+}

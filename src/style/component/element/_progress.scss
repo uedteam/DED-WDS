@@ -1,0 +1,80 @@
+@use 'sass:list';
+
+.ded-progress-circle-container {
+  display: flex;
+  gap: $spacing-8;
+  align-items: center;
+}
+
+.ded-progress {
+  &-circle-track {
+    stroke: list.nth($neutral-100, $site);
+  }
+
+  &-circle-percent-form {
+    // @each $theme in $themes {
+    //   &-#{$theme} {
+    //     stroke: getThemeColor($theme, 'default');
+    //   }
+    // }
+    stroke: $auo-form-default;
+  }
+
+  &-line {
+    display: flex;
+    gap: $spacing-8;
+    align-items: center;
+  }
+
+  &-line-track {
+    width: 100%;
+    background-color: list.nth($neutral-100, $site);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &-line-percent-form {
+    // @each $theme in $themes {
+    //   &-#{$theme} {
+    //     height: 100%;
+    //     background-color: getThemeColor($theme, 'default');
+    //     transition: width 0.35s ease;
+    //   }
+    // }
+    height: 100%;
+    background-color: $auo-form-default;
+    transition: width 0.35s ease;
+  }
+
+}
+
+.ded-progress-circle-label {
+  display: flex;
+  gap: $spacing-4;
+
+  .ded-progress-label {
+    font-size: 14px;
+    color: $auo-form-label
+  }
+
+  .ded-progress-percent {
+    font-size: 14px;
+    color: $primary-default
+  }
+}
+
+// 後續要確認百分比間距是否正確
+.ded-progress-line-label {
+  width: calc(3ch + 1em);
+  font-size: 14px;
+}
+
+.ded-progress-label {
+  fill: $auo-form-label;
+  color: $auo-form-label;
+}
+
+.ded-progress-percent-text {
+  fill: $primary-default;
+  color: $primary-default;
+}

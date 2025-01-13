@@ -1,0 +1,369 @@
+@use "sass:map";
+
+// 定義 text 大小
+$text-size: (
+  "xsmall": $text-size-xsmall,
+  "small": $text-size-small,
+  "medium": $text-size-medium,
+  "large": $text-size-large,
+);
+
+// 定義 component 大小
+$component-size: (
+  "small": $component-size-small,
+  "medium": $component-size-medium,
+  "large": $component-size-large,
+);
+
+// 定義 icon 大小
+$avatar-size: (
+  "small": $avatar-size-small,
+  "medium": $avatar-size-medium,
+  "large": $avatar-size-large,
+);
+
+// 定義 avatar 狀態
+$avatar-status-colors: (
+  "online": $light-color-success,
+  "idle": $light-color-warning,
+  "busy": $light-color-error,
+  "offline": $color-gray20,
+);
+
+// 定義 avatar 形狀
+$avatar-shape: (
+  "circle": $size-circle,
+  "square": $avatar-size-rounded,
+);
+
+// 定義 icon 大小
+$icon-size: (
+  "small": $icon-size-small,
+  "medium": $icon-size-medium,
+  "large": $icon-size-large,
+);
+
+// 圖片比例
+$aspect-ratio: (
+  "11": $aspect-ratio-11,
+  "43": $aspect-ratio-43,
+  "54": $aspect-ratio-54,
+  "169": $aspect-ratio-169,
+);
+
+// 定義 icon 大小
+// $icon-position: (
+//   'top-left': $icon-size-small,
+//   'top-right': $icon-size-medium,
+//   'bottom-left': $icon-size-large,
+//   'bottom-right': $icon-size-large,
+// );
+
+$theme-colors: (
+  "neutral": (
+    "default": $button-neutral-default,
+    "hover": $button-neutral-hover,
+    "focus": $button-neutral-focus,
+    "active": $button-neutral-active,
+    "outline": $button-neutral-outline,
+  ),
+  "primary": (
+    "default": $button-primary-default,
+    "hover": $button-primary-hover,
+    "focus": $button-primary-focus,
+    "active": $button-primary-active,
+    "outline": $button-primary-outline,
+  ),
+  "secondary": (
+    "default": $button-secondary-default,
+    "hover": $button-secondary-hover,
+    "focus": $button-secondary-focus,
+    "active": $button-secondary-active,
+    "outline": $button-secondary-outline,
+  ),
+  "info": (
+    "default": $button-info-default,
+    "hover": $button-info-hover,
+    "focus": $button-info-focus,
+    "active": $button-info-active,
+    "outline": $button-info-outline,
+  ),
+  "success": (
+    "default": $button-success-default,
+    "hover": $button-success-hover,
+    "focus": $button-success-focus,
+    "active": $button-success-active,
+    "outline": $button-success-outline,
+  ),
+  "warning": (
+    "default": $button-warning-default,
+    "hover": $button-warning-hover,
+    "focus": $button-warning-focus,
+    "active": $button-warning-active,
+    "outline": $button-warning-outline,
+  ),
+  "error": (
+    "default": $button-error-default,
+    "hover": $button-error-hover,
+    "focus": $button-error-focus,
+    "active": $button-error-active,
+    "outline": $button-error-outline,
+  ),
+);
+
+// 主題文字
+$text-colors: (
+  // 主要文字顏色
+  "primary":
+    (
+      "light": $color-gray90,
+      "dark": $color-white,
+    ),
+  // 次要文字顏色
+  "secondary":
+    (
+      "light": $color-gray70,
+      "dark": $color-gray50,
+    ),
+  // 第三文字顏色
+  "helper":
+    (
+      "light": $color-gray50,
+      "dark": $color-gray50,
+    ),
+  // 占位文字顏色
+  "placeholder":
+    (
+      "light": $color-gray40,
+      "dark": $color-gray40,
+    ),
+  // 錯誤文字顏色
+  "error":
+    (
+      "light": $light-color-error,
+      "dark": $dark-color-error,
+    ),
+  // 停用文字顏色
+  "disabled":
+    (
+      "light": $color-gray20,
+      "dark": $color-gray20,
+    ),
+  // 可以添加更多顏色主題
+);
+
+// 連結狀態
+$link-colors: (
+  "primary": (
+    "light": (
+      "default": $light-color-primary,
+      "hover": $light-color-primary,
+      "visited": $light-color-primary,
+    ),
+  ),
+);
+
+// 主題邊框
+$border-colors: (
+  // 預設主題色
+  "neutral":
+    (
+      "default": $light-color-primary,
+      "hover": blend-rgba($light-color-primary, $lightness80),
+      "focus": blend-rgba($light-color-primary, $lightness50),
+      "selected": blend-rgba($light-color-primary, $darkness30),
+    ),
+  // 主要主題色
+  "primary":
+    (
+      "default": $light-color-primary,
+      "hover": blend-rgba($light-color-primary, $lightness80),
+      "focus": blend-rgba($light-color-primary, $lightness50),
+      "selected": blend-rgba($light-color-primary, $darkness30),
+    ),
+  // 次要主題色
+  "secondary":
+    (
+      "default": $light-color-secondary,
+      "hover": blend-rgba($light-color-secondary, $lightness80),
+      "focus": blend-rgba($light-color-secondary, $lightness50),
+      "selected": blend-rgba($light-color-secondary, $lightness50),
+    ),
+  // 第三主題色
+  "tertiary":
+    (
+      "default": $light-color-tertiary,
+      "hover": blend-rgba($light-color-tertiary, $lightness80),
+      "focus": blend-rgba($light-color-tertiary, $lightness50),
+      "selected": blend-rgba($light-color-tertiary, $darkness30),
+    ),
+  // 成功主題色
+  "success":
+    (
+      "default": $light-color-success,
+      "hover": blend-rgba($light-color-success, $lightness80),
+      "focus": blend-rgba($light-color-success, $lightness50),
+      "selected": blend-rgba($light-color-success, $lightness80),
+    ),
+  // 警告主題色
+  "warning":
+    (
+      "default": $light-color-warning,
+      "hover": blend-rgba($light-color-warning, $lightness80),
+      "focus": blend-rgba($light-color-warning, $lightness50),
+      "selected": blend-rgba($light-color-warning, $lightness80),
+    ),
+  // 錯誤主題色
+  "error":
+    (
+      "default": $light-color-error,
+      "hover": blend-rgba($light-color-error, $lightness80),
+      "focus": blend-rgba($light-color-error, $lightness50),
+      "selected": blend-rgba($light-color-error, $lightness80),
+    ),
+  // 資訊主題色
+  "info":
+    (
+      "default": $light-color-info,
+      "hover": blend-rgba($light-color-info, $lightness80),
+      "focus": blend-rgba($light-color-info, $lightness50),
+      "selected": blend-rgba($light-color-info, $lightness80),
+    ),
+  // 可以添加更多顏色主題
+);
+
+// 固定邊框樣式
+$border-styles: (
+  "line": (
+    "light": (
+      "width": 1px,
+      "style": solid,
+      "color": $color-gray30,
+    ),
+    "dark": (
+      "width": 1px,
+      "style": solid,
+      "color": $color-gray30,
+    ),
+  ),
+  "shadow": (
+    "light": (
+      "fill": $shadow-dark2,
+    ),
+    "dark": (
+      "fill": $shadow-light2,
+    ),
+  ),
+);
+
+// 定義 tooltip arrow 位置
+$arrow-position: (
+  "top-left": (
+    "top": calc(100% - 2px),
+    "left": 50%,
+    "transform": translateX(-50%) rotate(0deg),
+  ),
+  "top": (
+    "top": calc(100% - 2px),
+    "left": 50%,
+    "transform": translateX(-50%) rotate(0deg),
+  ),
+  "top-right": (
+    "top": calc(100% - 2px),
+    "left": 50%,
+    "transform": translateX(-50%) rotate(0deg),
+  ),
+  "bottom-left": (
+    "top": calc(0% - 4px),
+    "left": 50%,
+    "transform": translateX(-50%) rotate(180deg),
+  ),
+  "bottom": (
+    "top": calc(0% - 4px),
+    "left": 50%,
+    "transform": translateX(-50%) rotate(180deg),
+  ),
+  "bottom-right": (
+    "top": calc(0% - 4px),
+    "left": 50%,
+    "transform": translateX(-50%) rotate(180deg),
+  ),
+  "left-top": (
+    "top": 50%,
+    "left": calc(100% - 2px),
+    "transform": translateY(-50%) rotate(-90deg),
+  ),
+  "left": (
+    "top": 50%,
+    "left": calc(100% - 2px),
+    "transform": translateY(-50%) rotate(-90deg),
+  ),
+  "left-bottom": (
+    "top": 50%,
+    "left": calc(100% - 2px),
+    "transform": translateY(-50%) rotate(-90deg),
+  ),
+  "right-top": (
+    "top": 50%,
+    "left": calc(0% - 8px),
+    "transform": translateY(-50%) rotate(90deg),
+  ),
+  "right": (
+    "top": 50%,
+    "left": calc(0% - 8px),
+    "transform": translateY(-50%) rotate(90deg),
+  ),
+  "right-bottom": (
+    "top": 50%,
+    "left": calc(0% - 8px),
+    "transform": translateY(-50%) rotate(90deg),
+  ),
+);
+
+$status-colors: (
+  "primary": (
+    "default": $primary-default,
+    "dark": $primary-dark,
+    "light": $primary-light,
+    "soft": $primary-soft,
+  ),
+  "secondary": (
+    "default": $secondary-default,
+    "dark": $secondary-dark,
+    "light": $secondary-light,
+    "soft": $secondary-soft,
+  ),
+  "neutral": (
+    "default": $neutral-default,
+    "dark": $neutral-dark,
+    "light": $neutral-light,
+    "soft": $neutral-soft,
+  ),
+  "info": (
+    "default": $support-info,
+    "dark": $support-info-dark,
+    "light": $support-info-light,
+    "soft": $support-info-soft,
+  ),
+  "success": (
+    "default": $support-success,
+    "dark": $support-success-dark,
+    "light": $support-success-light,
+    "soft": $support-success-soft,
+  ),
+  "warning": (
+    "default": $support-warning,
+    "dark": $support-warning-dark,
+    "light": $support-warning-light,
+    "soft": $support-warning-soft,
+  ),
+  "error": (
+    "default": $support-error,
+    "dark": $support-error-dark,
+    "light": $support-error-light,
+    "soft": $support-error-soft,
+  ),
+);
+
+// accordion 狀態
+$accordion-colors: blend-rgba($dark-color-primary, $lightness80);

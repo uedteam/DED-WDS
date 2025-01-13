@@ -1,0 +1,80 @@
+@use 'sass:list';
+
+.ded-tab {
+  color: $color-gray60;
+  background-color: transparent;
+  border-radius: 4px 4px 0 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: list.nth($neutral-200, $site);
+
+  &:hover {
+    box-shadow: unset;
+  }
+
+  &-active {
+    color: list.nth($neutral-0, $site);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+  }
+
+  &-content {
+    padding: 8px;
+  }
+
+  @each $theme in $themes {
+    &-#{$theme} {
+      &:hover {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: getThemeColor($theme, 'default');
+        background-color: getThemeColor($theme, 'hover');
+        color: list.nth($neutral-0, $site);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px getThemeColor($theme, 'outline') inset;
+      }
+    }
+
+    &-card-#{$theme} {
+      &:hover {
+        background-color: getThemeColor($theme, 'hover');
+        color: list.nth($neutral-0, $site);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px getThemeColor($theme, 'outline') inset;
+      }
+    }
+
+    &-#{$theme}-active {
+      color: getThemeColor($theme, 'default');
+      border-bottom: 2px solid getThemeColor($theme, 'default');
+    }
+
+    &-card-#{$theme}-active {
+      color: getThemeColor($theme, 'default');
+      border-width: 1px;
+      border-style: solid;
+      border-color: list.nth($neutral-200, $site);
+      border-bottom-width: 0px;
+    }
+  }
+}
+
+.ded-tab.ded-button-text {
+  padding: 0.5em 1em;
+}
+
+.ded-tabs {
+  display: inline-flex;
+  // border-bottom: 1px solid $color-gray40;
+}
+
+.ded-tab-disable {
+  pointer-events: none !important;
+  color: list.nth($disabled-text, $site) !important;
+  background-color: transparent !important;
+  border-bottom-color: list.nth($disabled-border, $site) !important;
+}

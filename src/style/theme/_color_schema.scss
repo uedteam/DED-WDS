@@ -1,0 +1,118 @@
+@use 'sass:list';
+
+// AUO-Reshape
+$auo-blue: #005087;
+$auo-light-blue: #84D9ED;
+$auo-yellow: #FFE664;
+$auo-green: #9BDA73;
+$auo-purple: #AE92D2;
+
+// AUO-Share
+$share-blue: #64DCF0;
+$share-yellow: #FFD94D;
+$share-purple: #AF6AC3;
+$share-green: #A9E240;
+$share-orange: #FF8542;
+
+// AUO-Support
+$support-info: #00BAD1;
+$support-info-dark: blend-rgba($support-info, $alpha-dark-20);
+$support-info-light: blend-rgba($support-info, $alpha-light-20);
+$support-info-soft: blend-rgba($support-info, $alpha-light-85);
+
+$support-success: #28C76F;
+$support-success-dark: blend-rgba($support-success, $alpha-dark-20);
+$support-success-light: blend-rgba($support-success, $alpha-light-20);
+$support-success-soft: blend-rgba($support-success, $alpha-light-85);
+
+$support-warning: #FF9F43;
+$support-warning-dark: blend-rgba($support-warning, $alpha-dark-20);
+$support-warning-light: blend-rgba($support-warning, $alpha-light-20);
+$support-warning-soft: blend-rgba($support-warning, $alpha-light-85);
+
+$support-error: #FF4C51;
+$support-error-dark: blend-rgba($support-error, $alpha-dark-20);
+$support-error-light: blend-rgba($support-error, $alpha-light-20);
+$support-error-soft: blend-rgba($support-error, $alpha-light-85);
+
+$primary-default: list.nth($primary, $site);
+$primary-dark: blend-rgba($primary-default, $alpha-light-10);
+$primary-light: blend-rgba($primary-default, $alpha-light-80);
+$primary-soft: blend-rgba($primary-default, $alpha-light-40);
+
+$secondary-default: list.nth($secondary, $site);
+$secondary-dark: blend-rgba($secondary-default, $alpha-light-10);
+$secondary-light: blend-rgba($secondary-default, $alpha-light-80);
+$secondary-soft: blend-rgba($secondary-default, $alpha-light-40);
+
+$neutral-default: list.nth($neutral-600, $site);
+$neutral-dark: blend-rgba($neutral-default, $alpha-light-10);
+$neutral-light: blend-rgba($neutral-default, $alpha-light-80);
+$neutral-soft: blend-rgba($neutral-default, $alpha-light-40);
+
+// AUO-Button
+$button-primary-default: list.nth($button-primary, $site);
+$button-primary-hover: blend-rgba($button-primary-default, $alpha-light-40);
+$button-primary-focus: blend-rgba($button-primary-default, $alpha-light-10);
+$button-primary-active: blend-rgba($button-primary-default, $alpha-light-90);
+$button-primary-outline: blend-rgba($button-primary-default, $alpha-light-80);
+
+$button-secondary-default: list.nth($button-secondary, $site);
+$button-secondary-hover: blend-rgba($button-secondary-default, $alpha-light-40);
+$button-secondary-focus: blend-rgba($button-secondary-default, $alpha-light-10);
+$button-secondary-active: blend-rgba($button-secondary-default, $alpha-light-90);
+$button-secondary-outline: blend-rgba($button-secondary-default, $alpha-light-80);
+
+$button-neutral-default: list.nth($neutral-600, $site);
+$button-neutral-hover: blend-rgba($button-neutral-default, $alpha-light-40);
+$button-neutral-focus: blend-rgba($button-neutral-default, $alpha-light-10);
+$button-neutral-active: blend-rgba($button-neutral-default, $alpha-light-90);
+$button-neutral-outline: blend-rgba($button-neutral-default, $alpha-light-80);
+
+$button-info-default: $support-info;
+$button-info-hover: blend-rgba($button-info-default, $alpha-light-40);
+$button-info-focus: blend-rgba($button-info-default, $alpha-light-10);
+$button-info-active: blend-rgba($button-info-default, $alpha-light-90);
+$button-info-outline: blend-rgba($button-info-default, $alpha-light-80);
+
+$button-success-default: $support-success;
+$button-success-hover: blend-rgba($button-success-default, $alpha-light-40);
+$button-success-focus: blend-rgba($button-success-default, $alpha-light-10);
+$button-success-active: blend-rgba($button-success-default, $alpha-light-90);
+$button-success-outline: blend-rgba($button-success-default, $alpha-light-80);
+
+$button-warning-default: $support-warning;
+$button-warning-hover: blend-rgba($button-warning-default, $alpha-light-40);
+$button-warning-focus: blend-rgba($button-warning-default, $alpha-light-10);
+$button-warning-active: blend-rgba($button-warning-default, $alpha-light-90);
+$button-warning-outline: blend-rgba($button-warning-default, $alpha-light-80);
+
+$button-error-default: $support-error;
+$button-error-hover: blend-rgba($button-error-default, $alpha-light-40);
+$button-error-focus: blend-rgba($button-error-default, $alpha-light-10);
+$button-error-active: blend-rgba($button-error-default, $alpha-light-90);
+$button-error-outline: blend-rgba($button-error-default, $alpha-light-80);
+
+// AUO-Link
+$auo-link-default: list.nth($link-default, $site);
+$auo-link-hover: blend-rgba($auo-link-default, $alpha-light-40);
+$auo-link-focus: blend-rgba($auo-link-default, $alpha-light-20);
+$auo-link-active: blend-rgba($auo-link-default, $alpha-light-90);
+$auo-link-outline: blend-rgba($auo-link-default, $alpha-light-80);
+
+// AUO-From
+$auo-form-default: list.nth($form-default, $site);
+$auo-form-hover: blend-rgba($auo-form-default, $alpha-light-30);
+$auo-form-focus: blend-rgba($auo-form-default, $alpha-light-20);
+$auo-form-active: blend-rgba($auo-form-default, $alpha-light-90);
+$auo-form-outline: blend-rgba($auo-form-default, $alpha-light-80);
+
+$auo-form-border: list.nth($neutral-300, $site);
+$auo-form-background: list.nth($neutral-0, $site);
+$auo-form-label: list.nth($neutral-700, $site);
+
+// AUO-Icon
+$auo-icon-default: list.nth($neutral-700, $site);
+$auo-icon-dark: blend-rgba($auo-icon-default, $alpha-dark-20);
+$auo-icon-light: blend-rgba($auo-icon-default, $alpha-light-20);
+$auo-icon-soft: blend-rgba($auo-icon-default, $alpha-light-80);

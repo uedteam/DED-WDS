@@ -1,0 +1,122 @@
+@use 'sass:list';
+
+.ded-input-container {
+  width: 100%;
+  min-width: 240px;
+}
+
+.ded-input-group {
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: $spacing-8;
+  align-items: center;
+  border-width: $input-border-width;
+  border-style: solid;
+  border-color: $auo-form-border;
+  border-radius: $radius;
+  background-color: $auo-form-background;
+  overflow: hidden;
+
+  &:hover {
+    border-width: $border-width-1;
+    border-style: solid;
+    border-color: $auo-form-hover;
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 3px $auo-form-hover;
+  }
+}
+
+/* one icon */
+.ded-input-group:has(.ded-input-feat-icon :only-child) .ded-input {
+  padding-right: 1.25em;
+}
+
+/* two icon */
+.ded-input-group:has(.ded-input-feat-icon :nth-of-type(2)) .ded-input {
+  padding-right: 2.5em;
+}
+
+.ded-input {
+  height: 100%;
+  width: 100%;
+  padding: 0.5em 0.75em;
+  color: list.nth($text-secondary, $site);
+
+  &::placeholder {
+    color: list.nth($text-placeholder, $site);
+  }
+
+  &-prefix {
+    padding-left: 2.25em;
+  }
+
+  &-icon {
+    position: absolute;
+    left: 0.75em;
+    color: $auo-icon-default;
+
+    &-error {
+      color: getThemeColor('error', 'default');
+    }
+
+    &-disable {
+      color: list.nth($disabled-text, $site) !important;
+    }
+  }
+}
+
+.ded-input-feat-icon {
+  position: absolute;
+  right: 0.75em;
+  display: flex;
+  gap: $spacing-4;
+  color: $auo-icon-default;
+}
+
+.ded-input-border-error {
+  border-color: getThemeColor('error', 'default') !important;
+}
+
+.ded-input-label {
+  font-size: $text-size-caption1;
+  color: $auo-form-label;
+}
+
+.ded-input-hint {
+  display: block;
+  font-size: $text-size-caption2;
+}
+
+.ded-input-hint-desc {
+  color: $color-gray60;
+}
+
+.ded-input-hint-error {
+  color: getThemeColor('error', 'default') !important;
+}
+
+.ded-input-disable {
+  pointer-events: none !important;
+  color: list.nth($disabled-text, $site) !important;
+  border-color: list.nth($disabled-border, $site) !important;
+
+  &::placeholder {
+    color: list.nth($text-placeholder, $site) !important;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,58 @@
+@use 'sass:list';
+
+.dialog-content {
+  background: list.nth($neutral-0, $site);
+  border-radius: $radius-16;
+  box-shadow: $shadow-light-400;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+.dialog-header {
+  margin-bottom: 16px;
+}
+
+.dialog-body {
+  font-size: 1rem;
+  color: #333;
+}
+
+.dialog-close-btn {
+  line-height: 1;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: $radius-4;
+  transition: background-color 0.3s ease;
+}
+
+.dialog-close-btn:hover {
+  background-color: list.nth($neutral-100, $site);
+}
+
+.dialog-trigger {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+
+  &:hover {
+    background-color: #999;
+  }
+}

@@ -1,0 +1,34 @@
+.ded-avatar-group {
+  display: flex;
+  align-items: center;
+  gap: $spacing-8;
+  position: relative;
+
+  &-overlay {
+    position: relative;
+    margin-left: -16px;
+  }
+}
+
+.ded-avatar-overlay {
+  margin-left: -16px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+
+// jony 自訂 class
+.rest-container {
+  position: relative;
+  margin-left: -16px;
+
+  &-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: -50%;
+    min-width: 200px;
+    border-radius: 4px;
+  }
+}
