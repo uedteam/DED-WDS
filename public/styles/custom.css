@@ -1,14 +1,14 @@
-.button-custom {
+.ded-button-custom {
   background-color: rgba(11, 192, 134, 0.6666666667);
   color: #ffffff;
   border-color: #f8f9fa;
 }
-.button-custom:hover {
+.ded-button-custom:hover {
   background-color: hsla(161, 89%, 40%, 0.667);
   color: #ffffff;
   border-color: #f8f9fa;
 }
-.button-custom:active {
+.ded-button-custom:active {
   background-color: rgba(11, 192, 134, 0.6666666667);
   color: #ffffff;
   border-color: #f8f9fa;
@@ -40,4 +40,46 @@
   border-radius: 50%;
   background-color: #f26940;
   color: #ffffff;
+}
+
+.ded-card-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ded-card-feature {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ded-card-button {
+  width: 60px;
+  height: 76px;
+  padding: 8px;
+  background-color: #ccc;
+  color: #5B5B5B;
+}
+
+.ded-card-button-active {
+  background-color: #ff9f43;
+  color: #000000;
+}
+
+.ded-card-button-empty {
+  background-color: transparent;
+}
+
+.social-button {
+  background-color: #EBEBEB;
+  color: #4D4D4D;
+}
+.social-button:hover {
+  background-color: #d6d8db;
+  color: #4D4D4D;
+}
+
+.link-button {
+  color: #CA25FC;
 }/*# sourceMappingURL=custom.css.map */
