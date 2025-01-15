@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../public/styles/globals.css" />
+    <link rel="stylesheet" href="../public/styles/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+  </head>
+  <body>
+    <div id="app" style="padding: 1rem">
+      <button style="margin-bottom: 24px">
+        <a href="../index.html">Back</a>
+      </button>
+      <div>
+        <h2 style="font-size: 24px">Progress-Circle</h2>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          預設項目
+        </h3>
+        <div class="ded-progress-circle-container">
+          <svg class="ded-progress" width="100" height="100">
+            <circle
+              class="ded-progress-circle-track"
+              fill="transparent"
+              stroke-width="10"
+              r="45"
+              cx="50"
+              cy="50"
+            ></circle>
+            <circle
+              class="ded-progress-circle-percent-form ded-progress-circle-percent-form-none"
+              fill="transparent"
+              stroke-width="10"
+              stroke-dasharray="282.7433388230814"
+              stroke-dashoffset="98.96016858807849"
+              stroke-linecap="round"
+              r="45"
+              cx="50"
+              cy="50"
+              transform="rotate(-90 50 50)"
+              style="transition: stroke-dashoffset 0.35s"
+            ></circle>
+            <text
+              class="ded-progress-label"
+              x="50%"
+              y="45%"
+              text-anchor="middle"
+              font-size="1em"
+            >
+              Label
+            </text>
+            <text
+              class="ded-progress-percent-text ded-progress-percent-text-none"
+              x="50%"
+              y="60%"
+              text-anchor="middle"
+              dy=".3em"
+              font-size="1.5em"
+            >
+              65%
+            </text>
+          </svg>
+        </div>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          顯示標籤
+        </h3>
+        <div style="display: flex; gap: 8px">
+          <div class="ded-progress-circle-container">
+            <svg class="ded-progress" width="70" height="70">
+              <circle
+                class="ded-progress-circle-track"
+                fill="transparent"
+                stroke-width="10"
+                r="30"
+                cx="35"
+                cy="35"
+              ></circle>
+              <circle
+                class="ded-progress-circle-percent-form ded-progress-circle-percent-form-none"
+                fill="transparent"
+                stroke-width="10"
+                stroke-dasharray="188.49555921538757"
+                stroke-dashoffset="65.97344572538564"
+                stroke-linecap="round"
+                r="30"
+                cx="35"
+                cy="35"
+                transform="rotate(-90 35 35)"
+                style="transition: stroke-dashoffset 0.35s"
+              ></circle>
+            </svg>
+            <div class="ded-progress-circle-label">
+              <span class="ded-progress-label">Label</span
+              ><span class="ded-progress-percent">65%</span>
+            </div>
+          </div>
+          <div class="ded-progress-circle-container">
+            <svg class="ded-progress" width="100" height="100">
+              <circle
+                class="ded-progress-circle-track"
+                fill="transparent"
+                stroke-width="10"
+                r="45"
+                cx="50"
+                cy="50"
+              ></circle>
+              <circle
+                class="ded-progress-circle-percent-form ded-progress-circle-percent-form-none"
+                fill="transparent"
+                stroke-width="10"
+                stroke-dasharray="282.7433388230814"
+                stroke-dashoffset="98.96016858807849"
+                stroke-linecap="round"
+                r="45"
+                cx="50"
+                cy="50"
+                transform="rotate(-90 50 50)"
+                style="transition: stroke-dashoffset 0.35s"
+              ></circle>
+              <text
+                class="ded-progress-label"
+                x="50%"
+                y="45%"
+                text-anchor="middle"
+                font-size="1em"
+              >
+                Label
+              </text>
+              <text
+                class="ded-progress-percent-text ded-progress-percent-text-none"
+                x="50%"
+                y="60%"
+                text-anchor="middle"
+                dy=".3em"
+                font-size="1.5em"
+              >
+                65%
+              </text>
+            </svg>
+          </div>
+        </div>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          主題色彩
+        </h3>
+        <div style="display: flex; gap: 8px">
+          <div class="ded-progress-circle-container">
+            <svg class="ded-progress" width="100" height="100">
+              <circle
+                class="ded-progress-circle-track"
+                fill="transparent"
+                stroke-width="10"
+                r="45"
+                cx="50"
+                cy="50"
+              ></circle>
+              <circle
+                class="ded-progress-circle-percent-form ded-progress-circle-percent-form-neutral"
+                fill="transparent"
+                stroke-width="10"
+                stroke-dasharray="282.7433388230814"
+                stroke-dashoffset="113.09733552923257"
+                stroke-linecap="round"
+                r="45"
+                cx="50"
+                cy="50"
+                transform="rotate(-90 50 50)"
+                style="transition: stroke-dashoffset 0.35s"
+              ></circle>
+              <text
+                class="ded-progress-label"
+                x="50%"
+                y="45%"
+                text-anchor="middle"
+                font-size="1em"
+              >
+                Label
+              </text>
+              <text
+                class="ded-progress-percent-text ded-progress-percent-text-neutral"
+                x="50%"
+                y="60%"
+                text-anchor="middle"
+                dy=".3em"
+                font-size="1.5em"
+              >
+                60%
+              </text>
+            </svg>
+          </div>
+          <div class="ded-progress-circle-container">
+            <svg class="ded-progress" width="100" height="100">
+              <circle
+                class="ded-progress-circle-track"
+                fill="transparent"
+                stroke-width="10"
+                r="45"
+                cx="50"
+                cy="50"
+              ></circle>
+              <circle
+                class="ded-progress-circle-percent-form ded-progress-circle-percent-form-primary"
+                fill="transparent"
+                stroke-width="10"
+                stroke-dasharray="282.7433388230814"
+                stroke-dashoffset="169.64600329384882"
+                stroke-linecap="round"
+                r="45"
+                cx="50"
+                cy="50"
+                transform="rotate(-90 50 50)"
+                style="transition: stroke-dashoffset 0.35s"
+              ></circle>
+              <text
+                class="ded-progress-label"
+                x="50%"
+                y="45%"
+                text-anchor="middle"
+                font-size="1em"
+              >
+                Label
+              </text>
+              <text
+                class="ded-progress-percent-text ded-progress-percent-text-primary"
+                x="50%"
+                y="60%"
+                text-anchor="middle"
+                dy=".3em"
+                font-size="1.5em"
+              >
+                40%
+              </text>
+            </svg>
+          </div>
+          <div class="ded-progress-circle-container">
+            <svg class="ded-progress" width="100" height="100">
+              <circle
+                class="ded-progress-circle-track"
+                fill="transparent"
+                stroke-width="10"
+                r="45"
+                cx="50"
+                cy="50"
+              ></circle>
+              <circle
+                class="ded-progress-circle-percent-form ded-progress-circle-percent-form-secondary"
+                fill="transparent"
+                stroke-width="10"
+                stroke-dasharray="282.7433388230814"
+                stroke-dashoffset="141.3716694115407"
+                stroke-linecap="round"
+                r="45"
+                cx="50"
+                cy="50"
+                transform="rotate(-90 50 50)"
+                style="transition: stroke-dashoffset 0.35s"
+              ></circle>
+              <text
+                class="ded-progress-label"
+                x="50%"
+                y="45%"
+                text-anchor="middle"
+                font-size="1em"
+              >
+                Label
+              </text>
+              <text
+                class="ded-progress-percent-text ded-progress-percent-text-secondary"
+                x="50%"
+                y="60%"
+                text-anchor="middle"
+                dy=".3em"
+                font-size="1.5em"
+              >
+                50%
+              </text>
+            </svg>
+          </div>
+          <div class="ded-progress-circle-container">
+            <svg class="ded-progress" width="100" height="100">
+              <circle
+                class="ded-progress-circle-track"
+                fill="transparent"
+                stroke-width="10"
+                r="45"
+                cx="50"
+                cy="50"
+              ></circle>
+              <circle
+                class="ded-progress-circle-percent-form ded-progress-circle-percent-form-info"
+                fill="transparent"
+                stroke-width="10"
+                stroke-dasharray="282.7433388230814"
+                stroke-dashoffset="84.82300164692444"
+                stroke-linecap="round"
+                r="45"
+                cx="50"
+                cy="50"
+                transform="rotate(-90 50 50)"
+                style="transition: stroke-dashoffset 0.35s"
+              ></circle>
+              <text
+                class="ded-progress-label"
+                x="50%"
+                y="45%"
+                text-anchor="middle"
+                font-size="1em"
+              >
+                Label
+              </text>
+              <text
+                class="ded-progress-percent-text ded-progress-percent-text-info"
+                x="50%"
+                y="60%"
+                text-anchor="middle"
+                dy=".3em"
+                font-size="1.5em"
+              >
+                70%
+              </text>
+            </svg>
+          </div>
+          <div class="ded-progress-circle-container">
+            <svg class="ded-progress" width="100" height="100">
+              <circle
+                class="ded-progress-circle-track"
+                fill="transparent"
+                stroke-width="10"
+                r="45"
+                cx="50"
+                cy="50"
+              ></circle>
+              <circle
+                class="ded-progress-circle-percent-form ded-progress-circle-percent-form-success"
+                fill="transparent"
+                stroke-width="10"
+                stroke-dasharray="282.7433388230814"
+                stroke-dashoffset="56.548667764616255"
+                stroke-linecap="round"
+                r="45"
+                cx="50"
+                cy="50"
+                transform="rotate(-90 50 50)"
+                style="transition: stroke-dashoffset 0.35s"
+              ></circle>
+              <text
+                class="ded-progress-label"
+                x="50%"
+                y="45%"
+                text-anchor="middle"
+                font-size="1em"
+              >
+                Label
+              </text>
+              <text
+                class="ded-progress-percent-text ded-progress-percent-text-success"
+                x="50%"
+                y="60%"
+                text-anchor="middle"
+                dy=".3em"
+                font-size="1.5em"
+              >
+                80%
+              </text>
+            </svg>
+          </div>
+          <div class="ded-progress-circle-container">
+            <svg class="ded-progress" width="100" height="100">
+              <circle
+                class="ded-progress-circle-track"
+                fill="transparent"
+                stroke-width="10"
+                r="45"
+                cx="50"
+                cy="50"
+              ></circle>
+              <circle
+                class="ded-progress-circle-percent-form ded-progress-circle-percent-form-warning"
+                fill="transparent"
+                stroke-width="10"
+                stroke-dasharray="282.7433388230814"
+                stroke-dashoffset="28.274333882308127"
+                stroke-linecap="round"
+                r="45"
+                cx="50"
+                cy="50"
+                transform="rotate(-90 50 50)"
+                style="transition: stroke-dashoffset 0.35s"
+              ></circle>
+              <text
+                class="ded-progress-label"
+                x="50%"
+                y="45%"
+                text-anchor="middle"
+                font-size="1em"
+              >
+                Label
+              </text>
+              <text
+                class="ded-progress-percent-text ded-progress-percent-text-warning"
+                x="50%"
+                y="60%"
+                text-anchor="middle"
+                dy=".3em"
+                font-size="1.5em"
+              >
+                90%
+              </text>
+            </svg>
+          </div>
+          <div class="ded-progress-circle-container">
+            <svg class="ded-progress" width="100" height="100">
+              <circle
+                class="ded-progress-circle-track"
+                fill="transparent"
+                stroke-width="10"
+                r="45"
+                cx="50"
+                cy="50"
+              ></circle>
+              <circle
+                class="ded-progress-circle-percent-form ded-progress-circle-percent-form-error"
+                fill="transparent"
+                stroke-width="10"
+                stroke-dasharray="282.7433388230814"
+                stroke-dashoffset="0"
+                stroke-linecap="round"
+                r="45"
+                cx="50"
+                cy="50"
+                transform="rotate(-90 50 50)"
+                style="transition: stroke-dashoffset 0.35s"
+              ></circle>
+              <text
+                class="ded-progress-label"
+                x="50%"
+                y="45%"
+                text-anchor="middle"
+                font-size="1em"
+              >
+                Label
+              </text>
+              <text
+                class="ded-progress-percent-text ded-progress-percent-text-error"
+                x="50%"
+                y="60%"
+                text-anchor="middle"
+                dy=".3em"
+                font-size="1.5em"
+              >
+                100%
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../public/styles/globals.css" />
+    <link rel="stylesheet" href="../public/styles/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+  </head>
+  <body>
+    <div id="app" style="padding: 1rem">
+      <button style="margin-bottom: 24px">
+        <a href="../index.html">Back</a>
+      </button>
+      <div>
+        <h2 style="font-size: 24px">Radio</h2>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          預設項目
+        </h3>
+        <div
+          class="ded-radio-container ded-radio-container-row"
+          style="margin-bottom: 24px"
+        >
+          <label for="option1" class="ded-radio ded-text-medium"
+            ><input
+              class="ded-radio-input"
+              id="option1"
+              name="option"
+              type="radio"
+              value="option1"
+            />
+            <div class="ded-radio-icon ded-radio-checked ded-icon-medium"></div>
+            <span class="ded-radio-text">Option1</span></label
+          ><label for="option2" class="ded-radio ded-text-medium"
+            ><input
+              class="ded-radio-input"
+              id="option2"
+              name="option"
+              type="radio"
+              value="option2"
+            />
+            <div
+              class="ded-radio-icon ded-radio-unchecked ded-icon-medium"
+            ></div>
+            <span class="ded-radio-text">Option2</span></label
+          ><label
+            for="option3"
+            class="ded-radio ded-text-medium ded-radio-input-disabled"
+            ><input
+              class="ded-radio-input"
+              id="option3"
+              name="option"
+              type="radio"
+              value="option3"
+            />
+            <div
+              class="ded-radio-icon ded-radio-unchecked ded-icon-medium ded-radio-icon-disabled"
+            ></div>
+            <span class="ded-radio-text ded-radio-text-disabled"
+              >Option3</span
+            ></label
+          >
+        </div>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          直向排列
+        </h3>
+        <div
+          class="ded-radio-container ded-radio-container-column"
+          style="margin-bottom: 24px"
+        >
+          <label for="option1" class="ded-radio ded-text-medium"
+            ><input
+              class="ded-radio-input"
+              id="option1"
+              name="option"
+              type="radio"
+              value="option1"
+            />
+            <div class="ded-radio-icon ded-radio-checked ded-icon-medium"></div>
+            <span class="ded-radio-text">Option1</span></label
+          ><label for="option2" class="ded-radio ded-text-medium"
+            ><input
+              class="ded-radio-input"
+              id="option2"
+              name="option"
+              type="radio"
+              value="option2"
+            />
+            <div
+              class="ded-radio-icon ded-radio-unchecked ded-icon-medium"
+            ></div>
+            <span class="ded-radio-text">Option2</span></label
+          ><label
+            for="option3"
+            class="ded-radio ded-text-medium ded-radio-input-disabled"
+            ><input
+              class="ded-radio-input"
+              id="option3"
+              name="option"
+              type="radio"
+              value="option3"
+            />
+            <div
+              class="ded-radio-icon ded-radio-unchecked ded-icon-medium ded-radio-icon-disabled"
+            ></div>
+            <span class="ded-radio-text ded-radio-text-disabled"
+              >Option3</span
+            ></label
+          >
+        </div>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          Radio大小 ( small, medium, large )
+        </h3>
+        <div
+          class="ded-radio-container ded-radio-container-row"
+          style="margin-bottom: 16px"
+        >
+          <label for="option1" class="ded-radio ded-text-small"
+            ><input
+              class="ded-radio-input"
+              id="option1"
+              name="option"
+              type="radio"
+              value="option1"
+            />
+            <div class="ded-radio-icon ded-radio-checked ded-icon-small"></div>
+            <span class="ded-radio-text">Option1</span></label
+          ><label for="option2" class="ded-radio ded-text-small"
+            ><input
+              class="ded-radio-input"
+              id="option2"
+              name="option"
+              type="radio"
+              value="option2"
+            />
+            <div
+              class="ded-radio-icon ded-radio-unchecked ded-icon-small"
+            ></div>
+            <span class="ded-radio-text">Option2</span></label
+          ><label
+            for="option3"
+            class="ded-radio ded-text-small ded-radio-input-disabled"
+            ><input
+              class="ded-radio-input"
+              id="option3"
+              name="option"
+              type="radio"
+              value="option3"
+            />
+            <div
+              class="ded-radio-icon ded-radio-unchecked ded-icon-small ded-radio-icon-disabled"
+            ></div>
+            <span class="ded-radio-text ded-radio-text-disabled"
+              >Option3</span
+            ></label
+          >
+        </div>
+        <div>
+          <div
+            class="ded-radio-container ded-radio-container-row"
+            style="margin-bottom: 16px"
+          >
+            <label for="option1" class="ded-radio ded-text-medium"
+              ><input
+                class="ded-radio-input"
+                id="option1"
+                name="option"
+                type="radio"
+                value="option1"
+              />
+              <div
+                class="ded-radio-icon ded-radio-checked ded-icon-medium"
+              ></div>
+              <span class="ded-radio-text">Option1</span></label
+            ><label for="option2" class="ded-radio ded-text-medium"
+              ><input
+                class="ded-radio-input"
+                id="option2"
+                name="option"
+                type="radio"
+                value="option2"
+              />
+              <div
+                class="ded-radio-icon ded-radio-unchecked ded-icon-medium"
+              ></div>
+              <span class="ded-radio-text">Option2</span></label
+            ><label
+              for="option3"
+              class="ded-radio ded-text-medium ded-radio-input-disabled"
+              ><input
+                class="ded-radio-input"
+                id="option3"
+                name="option"
+                type="radio"
+                value="option3"
+              />
+              <div
+                class="ded-radio-icon ded-radio-unchecked ded-icon-medium ded-radio-icon-disabled"
+              ></div>
+              <span class="ded-radio-text ded-radio-text-disabled"
+                >Option3</span
+              ></label
+            >
+          </div>
+        </div>
+        <div
+          class="ded-radio-container ded-radio-container-row"
+          style="margin-bottom: 16px"
+        >
+          <label for="option1" class="ded-radio ded-text-large"
+            ><input
+              class="ded-radio-input"
+              id="option1"
+              name="option"
+              type="radio"
+              value="option1"
+            />
+            <div class="ded-radio-icon ded-radio-checked ded-icon-large"></div>
+            <span class="ded-radio-text">Option1</span></label
+          ><label for="option2" class="ded-radio ded-text-large"
+            ><input
+              class="ded-radio-input"
+              id="option2"
+              name="option"
+              type="radio"
+              value="option2"
+            />
+            <div
+              class="ded-radio-icon ded-radio-unchecked ded-icon-large"
+            ></div>
+            <span class="ded-radio-text">Option2</span></label
+          ><label
+            for="option3"
+            class="ded-radio ded-text-large ded-radio-input-disabled"
+            ><input
+              class="ded-radio-input"
+              id="option3"
+              name="option"
+              type="radio"
+              value="option3"
+            />
+            <div
+              class="ded-radio-icon ded-radio-unchecked ded-icon-large ded-radio-icon-disabled"
+            ></div>
+            <span class="ded-radio-text ded-radio-text-disabled"
+              >Option3</span
+            ></label
+          >
+        </div>
+        <div>
+          <div
+            class="ded-radio-container ded-radio-container-column"
+            style="margin-bottom: 24px; margin-right: 16px"
+          >
+            <label for="option1" class="ded-radio ded-text-small"
+              ><input
+                class="ded-radio-input"
+                id="option1"
+                name="option"
+                type="radio"
+                value="option1"
+              />
+              <div
+                class="ded-radio-icon ded-radio-checked ded-icon-small"
+              ></div>
+              <span class="ded-radio-text">Option1</span></label
+            ><label for="option2" class="ded-radio ded-text-small"
+              ><input
+                class="ded-radio-input"
+                id="option2"
+                name="option"
+                type="radio"
+                value="option2"
+              />
+              <div
+                class="ded-radio-icon ded-radio-unchecked ded-icon-small"
+              ></div>
+              <span class="ded-radio-text">Option2</span></label
+            ><label
+              for="option3"
+              class="ded-radio ded-text-small ded-radio-input-disabled"
+              ><input
+                class="ded-radio-input"
+                id="option3"
+                name="option"
+                type="radio"
+                value="option3"
+              />
+              <div
+                class="ded-radio-icon ded-radio-unchecked ded-icon-small ded-radio-icon-disabled"
+              ></div>
+              <span class="ded-radio-text ded-radio-text-disabled"
+                >Option3</span
+              ></label
+            >
+          </div>
+          <div
+            class="ded-radio-container ded-radio-container-column"
+            style="margin-bottom: 24px; margin-right: 16px"
+          >
+            <label for="option1" class="ded-radio ded-text-medium"
+              ><input
+                class="ded-radio-input"
+                id="option1"
+                name="option"
+                type="radio"
+                value="option1"
+              />
+              <div
+                class="ded-radio-icon ded-radio-checked ded-icon-medium"
+              ></div>
+              <span class="ded-radio-text">Option1</span></label
+            ><label for="option2" class="ded-radio ded-text-medium"
+              ><input
+                class="ded-radio-input"
+                id="option2"
+                name="option"
+                type="radio"
+                value="option2"
+              />
+              <div
+                class="ded-radio-icon ded-radio-unchecked ded-icon-medium"
+              ></div>
+              <span class="ded-radio-text">Option2</span></label
+            ><label
+              for="option3"
+              class="ded-radio ded-text-medium ded-radio-input-disabled"
+              ><input
+                class="ded-radio-input"
+                id="option3"
+                name="option"
+                type="radio"
+                value="option3"
+              />
+              <div
+                class="ded-radio-icon ded-radio-unchecked ded-icon-medium ded-radio-icon-disabled"
+              ></div>
+              <span class="ded-radio-text ded-radio-text-disabled"
+                >Option3</span
+              ></label
+            >
+          </div>
+          <div
+            class="ded-radio-container ded-radio-container-column"
+            style="margin-bottom: 24px"
+          >
+            <label for="option1" class="ded-radio ded-text-large"
+              ><input
+                class="ded-radio-input"
+                id="option1"
+                name="option"
+                type="radio"
+                value="option1"
+              />
+              <div
+                class="ded-radio-icon ded-radio-checked ded-icon-large"
+              ></div>
+              <span class="ded-radio-text">Option1</span></label
+            ><label for="option2" class="ded-radio ded-text-large"
+              ><input
+                class="ded-radio-input"
+                id="option2"
+                name="option"
+                type="radio"
+                value="option2"
+              />
+              <div
+                class="ded-radio-icon ded-radio-unchecked ded-icon-large"
+              ></div>
+              <span class="ded-radio-text">Option2</span></label
+            ><label
+              for="option3"
+              class="ded-radio ded-text-large ded-radio-input-disabled"
+              ><input
+                class="ded-radio-input"
+                id="option3"
+                name="option"
+                type="radio"
+                value="option3"
+              />
+              <div
+                class="ded-radio-icon ded-radio-unchecked ded-icon-large ded-radio-icon-disabled"
+              ></div>
+              <span class="ded-radio-text ded-radio-text-disabled"
+                >Option3</span
+              ></label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
