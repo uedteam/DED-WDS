@@ -12,12 +12,20 @@
   <style>
     .ded-side-nav {
       width: 400px;
+      padding: 16px;
       transition: width 0.3s ease;
+      position: relative;
     }
-
     /* 縮小狀態，side-nav 寬度與 ul 最大寬度相符 */
     .ded-side-nav.minimized {
       width: fit-content; /* 根據內容調整寬度 */
+    }
+    .ded-side-nav .side-nav-toggle {
+      position: absolute;
+      top: 16px;
+      right: -14px;
+      background-color: #7cc6ff;
+      border-radius: 50%;
     }
     .side-nav-toggle svg {
       transition: transform 0.3s ease;
@@ -305,7 +313,7 @@
             border-bottom: 1px solid hsla(203, 50%, 30%, 0.15);
           "
         >
-          V1.2.16 (2025/01/12)
+          V1.0.3-beta (2025/02/09)
         </h2>
         <p
           style="
@@ -327,13 +335,15 @@
         >
           🆙 Update
         </p>
-        <ul style="padding-left: 30px; font-size: 16px; margin: 16px 0">
-          <li>
-            Modify Accordion, Avatar, Avatar-Group, Card, Card-Simple, Checkbox,
-            DatePicker, Dialog, Divider, Dropdown, Grid, Image, Input, Layout,
-            List, Menu, Navbar, Pagination, Progress-Circle, Progress-Line,
-            Radio component
-          </li>
+        <ul
+          style="
+            padding-left: 30px;
+            font-size: 16px;
+            margin: 16px 0;
+            list-style: disc;
+          "
+        >
+          <li>Update scss conversion css file in public/style path</li>
         </ul>
       </div>
     </div>
