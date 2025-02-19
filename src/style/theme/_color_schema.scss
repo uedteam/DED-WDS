@@ -1,5 +1,105 @@
 @use 'sass:list';
+@use 'sass:map';
+@use 'sass:color';
+@use 'sass:meta';
 
+@use './default_variable' as *;
+
+// 動態獲取新主題顏色
+@function getThemeColor($theme, $state) {
+  @return map.get(map.get($theme-colors, $theme), $state);
+}
+
+// 動態獲取文字顏色
+@function getTextColor($mode, $type) {
+  @return map.get(map.get($text-colors, $type), $mode);
+}
+
+// 動態獲取文字層級
+@function getTextLevel($type, $level) {
+  @return map.get(map.get($text-levels, $level), $type);
+}
+
+// 動態獲取邊框顏色
+@function getBorderColor($theme, $state) {
+  @return map.get(map.get($border-colors, $theme), $state);
+}
+
+// 動態獲取邊框樣式
+@function getBorderStyle($style, $type) {
+  @return map.get(map.get($border-styles, $style), $type);
+}
+
+// 動態獲取狀態顏色
+@function getStatusColor($type, $color) {
+  @return map.get(map.get($status-colors, $type), $color);
+}
+
+// 動態獲取 avatar 狀態顏色
+@function getAvatarStatusColor($status) {
+  @return map.get($avatar-status-colors, $status);
+}
+
+// 動態獲取 avatar 形狀
+@function getAvatarShape($shape) {
+  @return map.get($avatar-shape, $shape);
+}
+
+// 動態獲取圖片比例
+@function getAspectRatio($ratio) {
+  @return map.get($aspect-ratio, $ratio);
+}
+
+// 動態獲取 Tooltip Arrow 位置
+@function getArrowPosition($position, $attribute) {
+  @return map.get(map.get($arrow-position, $position), $attribute);
+}
+
+// 函式：判斷色彩是否為 RGBA，否則轉換為 RGBA
+@function to-rgba($color) {
+  @if meta.type-of($color)=='color' {
+    $alpha: color.alpha($color);
+    @return rgba(color.channel($color, 'red'), color.channel($color, 'green'), color.channel($color, 'blue'), $alpha);
+  }
+
+  @else {
+    @return rgba(0, 0, 0, 0); // 預設為透明黑色
+  }
+}
+
+// 函式：計算兩個 RGBA 色彩的疊加效果
+@function blend-rgba($color1, $color2) {
+  $rgba1: to-rgba($color1);
+  $rgba2: to-rgba($color2);
+
+  $r1: color.channel($rgba1, 'red');
+  $g1: color.channel($rgba1, 'green');
+  $b1: color.channel($rgba1, 'blue');
+  $a1: color.alpha($rgba1);
+
+  $r2: color.channel($rgba2, 'red');
+  $g2: color.channel($rgba2, 'green');
+  $b2: color.channel($rgba2, 'blue');
+  $a2: color.alpha($rgba2);
+
+  // 混合公式
+  $r: $r2 * $a2 + $r1 * (1 - $a2);
+  $g: $g2 * $a2 + $g1 * (1 - $a2);
+  $b: $b2 * $a2 + $b1 * (1 - $a2);
+
+  @return rgba($r, $g, $b, 1);
+}
+
+@function default($variable, $default: null) {
+  @if $variable !=null {
+    @return $variable;
+  }
+
+  @return $default;
+}
+
+// accordion 狀態
+$accordion-colors: blend-rgba($dark-color-primary, $lightness80);
 // AUO-Reshape
 $auo-blue: #005087;
 $auo-light-blue: #84D9ED;
@@ -108,7 +208,7 @@ $auo-form-active: blend-rgba($auo-form-default, $alpha-light-90);
 $auo-form-outline: blend-rgba($auo-form-default, $alpha-light-80);
 
 $auo-form-border: list.nth($neutral-300, $site);
-$auo-form-background: list.nth($neutral-0, $site);
+$auo-form-background: list.nth($neutral-50, $site);
 $auo-form-label: list.nth($neutral-700, $site);
 
 // AUO-Icon
@@ -116,3 +216,289 @@ $auo-icon-default: list.nth($neutral-700, $site);
 $auo-icon-dark: blend-rgba($auo-icon-default, $alpha-dark-20);
 $auo-icon-light: blend-rgba($auo-icon-default, $alpha-light-20);
 $auo-icon-soft: blend-rgba($auo-icon-default, $alpha-light-80);
+
+$text-levels: (
+  // 主要文字顏色
+  'level-1': ('size': $text-size-heading1, 'weight': $text-bold),
+  // 次要文字顏色
+  'level-2': ('size': $text-size-heading2, 'weight': $text-bold),
+  // 第三文字顏色
+  'level-3': ('size': $text-size-heading3, 'weight': $text-bold),
+  // 占位文字顏色
+  'level-4': ('size': $text-size-heading4, 'weight': $text-bold),
+  // 錯誤文字顏色
+  'level-5': ('size': $text-size-heading5, 'weight': $text-bold),
+  // 停用文字顏色
+  'level-6': ('size': $text-size-heading6, 'weight': $text-bold),
+  // 可以添加更多文字 level
+);
+
+// 定義 text 大小
+$text-size: (
+  'xsmall': $text-size-xsmall,
+  'small': $text-size-small,
+  'medium': $text-size-medium,
+  'large': $text-size-large,
+);
+
+// 定義 component 大小
+$component-size: (
+  'small': $component-size-small,
+  'medium': $component-size-medium,
+  'large': $component-size-large,
+);
+
+// 定義 icon 大小
+$avatar-size: (
+  'small': $avatar-size-small,
+  'medium': $avatar-size-medium,
+  'large': $avatar-size-large,
+);
+
+// 定義 avatar 狀態
+$avatar-status-colors: (
+  'online': $light-color-success,
+  'idle': $light-color-warning,
+  'busy': $light-color-error,
+  'offline': $color-gray20,
+);
+
+// 定義 avatar 形狀
+$avatar-shape: (
+  'circle': $size-circle,
+  'square': $avatar-size-rounded,
+);
+
+// 定義 icon 大小
+$icon-size: (
+  'small': $icon-size-small,
+  'medium': $icon-size-medium,
+  'large': $icon-size-large,
+);
+
+// 圖片比例
+$aspect-ratio: (
+  '11': $aspect-ratio-11,
+  '43': $aspect-ratio-43,
+  '54': $aspect-ratio-54,
+  '169': $aspect-ratio-169,
+);
+
+// 定義 icon 大小
+// $icon-position: (
+//   'top-left': $icon-size-small,
+//   'top-right': $icon-size-medium,
+//   'bottom-left': $icon-size-large,
+//   'bottom-right': $icon-size-large,
+// );
+
+$theme-colors: (
+  'neutral': ('default': $button-neutral-default,
+    'hover': $button-neutral-hover,
+    'focus': $button-neutral-focus,
+    'active': $button-neutral-active,
+    'outline': $button-neutral-outline,
+  ),
+  'primary': ('default': $button-primary-default,
+    'hover': $button-primary-hover,
+    'focus': $button-primary-focus,
+    'active': $button-primary-active,
+    'outline': $button-primary-outline,
+  ),
+  'secondary': ('default': $button-secondary-default,
+    'hover': $button-secondary-hover,
+    'focus': $button-secondary-focus,
+    'active': $button-secondary-active,
+    'outline': $button-secondary-outline,
+  ),
+  'info': ('default': $button-info-default,
+    'hover': $button-info-hover,
+    'focus': $button-info-focus,
+    'active': $button-info-active,
+    'outline': $button-info-outline,
+  ),
+  'success': ('default': $button-success-default,
+    'hover': $button-success-hover,
+    'focus': $button-success-focus,
+    'active': $button-success-active,
+    'outline': $button-success-outline,
+  ),
+  'warning': ('default': $button-warning-default,
+    'hover': $button-warning-hover,
+    'focus': $button-warning-focus,
+    'active': $button-warning-active,
+    'outline': $button-warning-outline,
+  ),
+  'error': ('default': $button-error-default,
+    'hover': $button-error-hover,
+    'focus': $button-error-focus,
+    'active': $button-error-active,
+    'outline': $button-error-outline,
+  ),
+);
+
+// 主題文字
+$text-colors: (
+  // 主要文字顏色
+  'primary': ('light': $color-gray90, 'dark': $color-white),
+  // 次要文字顏色
+  'secondary': ('light': $color-gray70, 'dark': $color-gray50),
+  // 第三文字顏色
+  'helper': ('light': $color-gray50, 'dark': $color-gray50),
+  // 占位文字顏色
+  'placeholder': ('light': $color-gray40, 'dark': $color-gray40),
+  // 錯誤文字顏色
+  'error': ('light': $light-color-error, 'dark': $dark-color-error),
+  // 停用文字顏色
+  'disabled': ('light': $color-gray20, 'dark': $color-gray20),
+  // 可以添加更多顏色主題
+);
+
+// 連結狀態
+$link-colors: (
+  'primary': ('light': ('default': $light-color-primary,
+      'hover': $light-color-primary,
+      'visited': $light-color-primary,
+    ))
+);
+
+// 主題邊框
+$border-colors: (
+  // 預設主題色
+  'neutral': ('default': $light-color-primary,
+    'hover': blend-rgba($light-color-primary, $lightness80),
+    'focus': blend-rgba($light-color-primary, $lightness50),
+    'selected': blend-rgba($light-color-primary, $darkness30)),
+  // 主要主題色
+  'primary': ('default': $light-color-primary,
+    'hover': blend-rgba($light-color-primary, $lightness80),
+    'focus': blend-rgba($light-color-primary, $lightness50),
+    'selected': blend-rgba($light-color-primary, $darkness30)),
+  // 次要主題色
+  'secondary': ('default': $light-color-secondary,
+    'hover': blend-rgba($light-color-secondary, $lightness80),
+    'focus': blend-rgba($light-color-secondary, $lightness50),
+    'selected': blend-rgba($light-color-secondary, $lightness50)),
+  // 第三主題色
+  'tertiary': ('default': $light-color-tertiary,
+    'hover': blend-rgba($light-color-tertiary, $lightness80),
+    'focus': blend-rgba($light-color-tertiary, $lightness50),
+    'selected': blend-rgba($light-color-tertiary, $darkness30)),
+  // 成功主題色
+  'success': ('default': $light-color-success,
+    'hover': blend-rgba($light-color-success, $lightness80),
+    'focus': blend-rgba($light-color-success, $lightness50),
+    'selected': blend-rgba($light-color-success, $lightness80)),
+  // 警告主題色
+  'warning': ('default': $light-color-warning,
+    'hover': blend-rgba($light-color-warning, $lightness80),
+    'focus': blend-rgba($light-color-warning, $lightness50),
+    'selected': blend-rgba($light-color-warning, $lightness80)),
+  // 錯誤主題色
+  'error': ('default': $light-color-error,
+    'hover': blend-rgba($light-color-error, $lightness80),
+    'focus': blend-rgba($light-color-error, $lightness50),
+    'selected': blend-rgba($light-color-error, $lightness80)),
+  // 資訊主題色
+  'info': ('default': $light-color-info,
+    'hover': blend-rgba($light-color-info, $lightness80),
+    'focus': blend-rgba($light-color-info, $lightness50),
+    'selected': blend-rgba($light-color-info, $lightness80)),
+  // 可以添加更多顏色主題
+);
+
+// 固定邊框樣式
+$border-styles: (
+  'line': ('light': ('width': 1px, 'style': solid, 'color': $color-gray30),
+    'dark': ('width': 1px, 'style': solid, 'color': $color-gray30)),
+  'shadow': ('light': ('fill': $shadow-dark2),
+    'dark': ('fill': $shadow-light2)),
+);
+
+// 定義 tooltip arrow 位置
+$arrow-position: (
+  'top-left': ('top': calc(100% - 2px), 'left': 50%, 'transform': translateX(-50%) rotate(0deg)),
+  'top': ('top': calc(100% - 2px), 'left': 50%, 'transform': translateX(-50%) rotate(0deg)),
+  'top-right': ('top': calc(100% - 2px), 'left': 50%, 'transform': translateX(-50%) rotate(0deg)),
+  'bottom-left': ('top': calc(0% - 4px), 'left': 50%, 'transform': translateX(-50%) rotate(180deg)),
+  'bottom': ('top': calc(0% - 4px), 'left': 50%, 'transform': translateX(-50%) rotate(180deg)),
+  'bottom-right': ('top': calc(0% - 4px), 'left': 50%, 'transform': translateX(-50%) rotate(180deg)),
+  'left-top': ('top': 50%, 'left': calc(100% - 2px), 'transform': translateY(-50%) rotate(-90deg)),
+  'left': ('top': 50%, 'left': calc(100% - 2px), 'transform': translateY(-50%) rotate(-90deg)),
+  'left-bottom': ('top': 50%, 'left': calc(100% - 2px), 'transform': translateY(-50%) rotate(-90deg)),
+  'right-top': ('top': 50%, 'left': calc(0% - 8px), 'transform': translateY(-50%) rotate(90deg)),
+  'right': ('top': 50%, 'left': calc(0% - 8px), 'transform': translateY(-50%) rotate(90deg)),
+  'right-bottom': ('top': 50%, 'left': calc(0% - 8px), 'transform': translateY(-50%) rotate(90deg)),
+);
+
+$status-colors: (
+  'primary': ('default': $primary-default,
+    'dark': $primary-dark,
+    'light': $primary-light,
+    'soft': $primary-soft,
+  ),
+  'secondary': ('default': $secondary-default,
+    'dark': $secondary-dark,
+    'light': $secondary-light,
+    'soft': $secondary-soft,
+  ),
+  'neutral': ('default': $neutral-default,
+    'dark': $neutral-dark,
+    'light': $neutral-light,
+    'soft': $neutral-soft,
+  ),
+  'info': ('default': $support-info,
+    'dark': $support-info-dark,
+    'light': $support-info-light,
+    'soft': $support-info-soft,
+  ),
+  'success': ('default': $support-success,
+    'dark': $support-success-dark,
+    'light': $support-success-light,
+    'soft': $support-success-soft,
+  ),
+  'warning': ('default': $support-warning,
+    'dark': $support-warning-dark,
+    'light': $support-warning-light,
+    'soft': $support-warning-soft,
+  ),
+  'error': ('default': $support-error,
+    'dark': $support-error-dark,
+    'light': $support-error-light,
+    'soft': $support-error-soft,
+  )
+);
+
+// Loop: 尺寸樣式
+@each $size in $sizes {
+  .ded-icon-#{$size} {
+    display: flex;
+    align-items: center;
+    width: map.get($icon-size, $size);
+    height: map.get($icon-size, $size);
+  }
+
+  .ded-text-#{$size} {
+    font-size: map.get($text-size, $size);
+  }
+
+  .ded-component-#{$size} {
+    height: map.get($component-size, $size);
+    width: map.get($component-size, $size);
+  }
+}
+
+// Loop: 邊框樣式
+@each $style in $borderStyles {
+  .#{$style}-border {
+    @if($style =='line') {
+      border-width: getBorderStyle($style, 'width');
+      border-style: getBorderStyle($style, 'style');
+      border-color: getBorderStyle($style, 'color');
+    }
+
+    @else {
+      box-shadow: getBorderStyle($style, 'fill');
+    }
+  }
+}

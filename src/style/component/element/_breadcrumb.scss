@@ -1,10 +1,10 @@
 @use 'sass:list';
+@use '../../theme/index' as *;
 
 .ded-breadcrumb-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 0.5em 1em;
-  margin-bottom: 1em;
+  padding: 0.5em 0;
   list-style: none;
 }
 
@@ -33,7 +33,7 @@
     }
 
     &-link {
-      color: $link-default;
+      color: list.nth($link-default, $site);
       text-decoration: none;
 
       &:hover {

@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use 'sass:list';
+@use '../../theme/index' as *;
 
 .ded-checkbox-container {
   display: inline-flex;

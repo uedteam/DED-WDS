@@ -1,18 +1,50 @@
+@use 'sass:list';
+@use '../../theme/index' as *;
+
 .ded-side-nav {
-  position: relative;
+  position: sticky;
+  // top: $header-h;
+  left: 0;
   display: inline-flex;
   flex-direction: column;
-  gap: 16px;
-  border-radius: 12px;
-  padding: 16px 12px;
+  gap: $spacing-16;
+  padding: 16px;
+  // height: calc(100vh - $header-h);
+  background-color: list.nth($sidebar, $site);
+
+  &-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 8px;
+    border-radius: $radius-8;
+    background-color: $alpha-dark-10;
+  }
+
+  &-mobile {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .ded-avatar-info-name {
+    color: list.nth($neutral-0, 1);
+  }
+
+  .ded-button {
+    color: list.nth($neutral-0, 1);
+  }
+
+  .ded-avatar-container {
+    transition: all 0.3s;
+  }
+
 
   .side-nav-toggle {
-    position: absolute;
-    top: 16px;
-    left: 100%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background-color: #7cc6ff;
+    width: 32px;
+    height: 32px;
+    border-radius: $radius;
+    background-color: $alpha-dark-10;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,49 +1,57 @@
-// .ded-select-container {
-//   position: relative;
-//   display: inline-block;
-//   width: 200px;
+@use 'sass:list';
+@use '../../theme/index' as *;
 
-//   .ded-select {
-//     appearance: none; // 移除原生樣式
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     width: 100%;
-//     padding: 10px 30px 10px 10px;
-//     border: 1px solid #d1d5db;
-//     border-radius: 4px;
-//     font-size: 16px;
-//     color: #333;
-//     background-color: #fff;
-//     cursor: pointer;
-//     outline: none;
+.ded-select-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 250px;
+  font-size: 16px;
+}
 
-//     &:focus {
-//       border-color: #4f46e5; // 藍色聚焦
-//       box-shadow: 0 0 5px rgba(79, 70, 229, 0.3);
-//     }
-//   }
+.ded-select {
+  width: 100%;
+  padding: 0.5em 2em 0.5em 1em;
+  /* 預留空間給圖示 */
+  border-width: 1px;
+  border-style: solid;
+  border-color: $neutral-200;
+  border-radius: $radius;
+  background-color: $neutral-0;
+  appearance: none;
+  /* 隱藏系統樣式 */
+  cursor: pointer;
+  outline: none;
+  color: list.nth($button-primary-default, $site);
+  font-size: 16px;
 
-//   // 添加一個下拉箭頭
-//   &::after {
-//     content: '▼';
-//     position: absolute;
-//     top: 50%;
-//     right: 10px;
-//     transform: translateY(-50%);
-//     pointer-events: none;
-//     color: #888;
-//   }
-// }
+  &:hover {
+    color: list.nth($button-primary-hover, $site);
+  }
 
-// 下拉選單的樣式
-// .ded-select option {
-//   background-color: #fff;
-//   color: #333;
-//   padding: 10px;
-//   font-size: 16px;
-// }
+  &-disabled {
+    background-color: list.nth($disabled-background, $site) !important;
+    color: list.nth($disabled-text, $site) !important;
+    cursor: not-allowed;
 
-// .ded-select option:hover,
-// .ded-select option:checked {
-//   background-color: #f0f4ff; // 藍色背景
-// }
+    .ded-select-icon {
+      color: list.nth($disabled-text, $site) !important;
+    }
+  }
+}
+
+.ded-select-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  /* 圖示位置 */
+  transform: translateY(-50%);
+  pointer-events: none;
+  /* 圖示不可點擊 */
+  font-size: 16px;
+  color: $auo-icon-default;
+
+  &-disabled {
+    color: list.nth($disabled-text, $site);
+  }
+}

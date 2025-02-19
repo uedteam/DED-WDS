@@ -1,3 +1,5 @@
+@use 'default_variable' as *;
+
 * {
   padding: 0;
   margin: 0;
@@ -10,11 +12,11 @@
 }
 
 @font-face {
-  font-family: "Mabry Pro";
+  font-family: 'Mabry Pro';
   // src: url('font/Mabry-Black-Pro.woff') format('woff');
   // src: url('font/Mabry-Bold-Pro.woff') format('woff');
-  src: url("/src/assets/font/Mabry-Italic-Pro.woff") format("woff");
-  src: url("/src/assets/font/Mabry-Medium-Pro.woff") format("woff");
+  src: url('/libs/src/assets/font/Mabry-Italic-Pro.woff') format('woff');
+  src: url('/libs/src/assets/font/Mabry-Medium-Pro.woff') format('woff');
   // src: url('font/Mabry-Regular-Pro.woff') format('woff');
   // src: url('font/Mabry-Black-Pro.woff') format('woff');
   // src: url('font/Mabry-BoldItalic-Pro.woff') format('woff');
@@ -38,4 +40,55 @@ svg {
   left: -50%;
   min-width: 200px;
   border-radius: 4px;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.ded-dropdown-input {
+  width: 100%;
+
+  .ded-input-group {
+    border: none;
+
+    &:focus-within {
+      box-shadow: none;
+      border: none;
+    }
+
+    &:hover {
+      box-shadow: none;
+      border: none;
+    }
+  }
+}
+
+.mask-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ded-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ded-multiline-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  overflow-wrap: break-word;
 }
