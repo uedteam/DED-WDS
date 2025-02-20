@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use '../../theme/index' as *;
 
 .ded-list {
   display: inline-flex;
@@ -15,15 +16,22 @@
   border-radius: $radius;
 }
 
+.ded-list-item-side {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: list.nth($neutral-100, $site);
+}
+
 .ded-list-item-text {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: $spacing-8;
   padding: 8px;
 
   .ded-list-item-label {
     width: 100%;
+    color: list.nth($text-secondary, $site);
   }
 }
 
@@ -52,4 +60,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $auo-icon-default;
 }

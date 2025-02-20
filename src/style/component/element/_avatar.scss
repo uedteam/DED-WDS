@@ -1,5 +1,6 @@
 @use 'sass:list';
 @use 'sass:map';
+@use '../../theme/index' as *;
 
 .ded-avatar-wrapper {
   display: flex;

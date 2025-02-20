@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use '../../theme/index' as *;
 
 .status-indicator {
   display: inline-flex;
@@ -7,6 +8,7 @@
   padding: 4px 8px;
   border-radius: 4px;
   color: list.nth($neutral-0, $site);
+  // background-color: transparent !important;
 
   &-content {
     display: inline-flex;

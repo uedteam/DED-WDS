@@ -1,29 +1,38 @@
+@use '../../theme/index' as *;
+
 .ded-layout {
   width: 100%;
+  // min-height: 30vh;
   display: flex;
   flex-wrap: wrap;
   flex: 1;
 }
 
-.ded-header {
+.ded-header,
+.ded-footer {
+  flex-shrink: 0;
   width: 100%;
-  min-height: 40px;
+  max-height: 120px;
 }
 
+.ded-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: $header-h;
+}
+
+.ded-footer {
+  height: $header-h;
+}
 
 .ded-side {
   display: flex;
-  min-width: 40px;
 }
-
 
 .ded-content {
   flex: 1;
   display: flex;
-  min-height: 80px;
-}
-
-.ded-footer {
   width: 100%;
-  min-height: 40px;
 }

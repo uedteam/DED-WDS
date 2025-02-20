@@ -1,3 +1,5 @@
+@use '../../theme/index' as *;
+
 .ded-search {
   display: flex;
   gap: $spacing-8;

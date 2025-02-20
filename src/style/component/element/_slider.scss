@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use '../../theme/index' as *;
 
 :root {
   --progress: 0%;

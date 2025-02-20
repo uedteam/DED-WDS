@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use '../../theme/index' as *;
 
 .ded-tab {
   color: $color-gray60;
@@ -37,7 +38,12 @@
       }
     }
 
-    &-card-#{$theme} {
+    &-#{$theme}-active {
+      color: getThemeColor($theme, 'default');
+      border-bottom: 2px solid getThemeColor($theme, 'default');
+    }
+
+    &-outline-#{$theme} {
       &:hover {
         background-color: getThemeColor($theme, 'hover');
         color: list.nth($neutral-0, $site);
@@ -48,17 +54,28 @@
       }
     }
 
-    &-#{$theme}-active {
-      color: getThemeColor($theme, 'default');
-      border-bottom: 2px solid getThemeColor($theme, 'default');
-    }
-
-    &-card-#{$theme}-active {
+    &-outline-#{$theme}-active {
       color: getThemeColor($theme, 'default');
       border-width: 1px;
       border-style: solid;
       border-color: list.nth($neutral-200, $site);
       border-bottom-width: 0px;
+    }
+
+    &-button-#{$theme} {
+      &:hover {
+        background-color: getThemeColor($theme, 'hover');
+        color: list.nth($neutral-0, $site);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px getThemeColor($theme, 'outline') inset;
+      }
+    }
+
+    &-button-#{$theme}-inactive {
+      background-color: list.nth($neutral-50, $site);
+      color: list.nth($text-secondary, $site);
     }
   }
 }
@@ -69,7 +86,10 @@
 
 .ded-tabs {
   display: inline-flex;
-  // border-bottom: 1px solid $color-gray40;
+
+  &-button {
+    gap: $spacing;
+  }
 }
 
 .ded-tab-disable {
@@ -77,4 +97,10 @@
   color: list.nth($disabled-text, $site) !important;
   background-color: transparent !important;
   border-bottom-color: list.nth($disabled-border, $site) !important;
+}
+
+.ded-tab-button-disable {
+  pointer-events: none !important;
+  color: list.nth($disabled-text, $site) !important;
+  background-color: list.nth($disabled-background, $site) !important;
 }

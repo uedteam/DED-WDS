@@ -1,3 +1,6 @@
+@use 'sass:list';
+@use '../style/theme/index' as *;
+
 .ded-button-custom {
   background-color: #0bc086aa;
   color: #ffffff;
@@ -87,4 +90,74 @@
 
 .link-button {
   color: #CA25FC;
+}
+
+.custom-border-color::after,
+.custom-border-color::before {
+  border-top-color: #FFFFFF !important;
+}
+
+.custom-background-color {
+  background-color: #005087;
+}
+
+.custom-primary-color {
+  color: #FFFFFF;
+}
+
+.custom-secondary-color {
+  color: #53CDE6;
+}
+
+.custom-primary {
+  .ded-progress-line-percent-form {
+    background-color: #53CDE6;
+  }
+}
+
+.custom-secondary {
+  .ded-progress-line-percent-form {
+    background-color: #53CDE6;
+  }
+}
+
+.custom-success {
+  .ded-progress-line-percent-form {
+    background-color: #28C76F;
+  }
+}
+
+.custom-info {
+  .ded-progress-line-percent-form {
+    background-color: #53CDE6;
+  }
+}
+
+.custom-warning {
+  .ded-progress-line-percent-form {
+    background-color: #FF9F43;
+  }
+}
+
+.custom-error {
+  .ded-progress-line-percent-form {
+    background-color: #FF4C51;
+  }
+}
+
+.ded-login-content {
+  .ded-custom-icon {
+    width: 55px;
+    height: 55px;
+    border-color: list.nth($neutral-200, $site);
+
+    &:hover {
+      border-color: list.nth($neutral-300, $site);
+    }
+
+    .ded-icon-medium {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }

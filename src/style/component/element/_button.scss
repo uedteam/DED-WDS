@@ -1,5 +1,6 @@
-@use "sass:list";
-@use "sass:color";
+@use 'sass:list';
+@use 'sass:color';
+@use '../../theme/index' as *;
 
 .ded-button {
   display: inline-flex;
@@ -87,9 +88,9 @@
     border-width: $border-width-5;
   }
 
-  &:hover {
-    box-shadow: $shadow-dark-100;
-  }
+  // &:hover {
+  //   box-shadow: $shadow-dark-100;
+  // }
 
   &:active {
     box-shadow: unset;
@@ -112,6 +113,7 @@
   &-text {
     background-color: transparent;
     color: list.nth($text-primary, $site);
+    border-width: 0;
 
     &:hover {
       box-shadow: unset;
@@ -122,59 +124,77 @@
   @each $variant in $variants {
     @each $theme in $themes {
       &-#{$variant}-#{$theme} {
-        @if ($variant == "filled") {
-          background-color: getThemeColor($theme, "default");
-        } @else if($variant == "soft") {
-          background-color: getThemeColor($theme, "active");
-          color: getThemeColor($theme, "default");
-        } @else {
-          border-color: getThemeColor($theme, "default");
-          color: getThemeColor($theme, "default");
+
+        @if($variant =='filled') {
+          background-color: getThemeColor($theme, 'default');
+        }
+
+        @else if($variant =='soft') {
+          background-color: getThemeColor($theme, 'active');
+          color: getThemeColor($theme, 'default');
+        }
+
+        @else {
+          border-color: getThemeColor($theme, 'default');
+          color: getThemeColor($theme, 'default');
         }
 
         &:hover {
-          @if ($variant == "filled") {
-            background-color: getThemeColor($theme, "hover");
-          } @else if($variant == "soft") {
-            background-color: blend-rgba(
-              $button-primary-default,
-              $alpha-light-40
-            );
+
+          @if($variant =='filled') {
+            background-color: getThemeColor($theme, 'hover');
+          }
+
+          @else if($variant =='soft') {
+            background-color: blend-rgba($button-primary-default, $alpha-light-40);
             color: list.nth($neutral-0, $site);
-          } @else {
-            border-color: getThemeColor($theme, "hover");
-            color: getThemeColor($theme, "hover");
+          }
+
+          @else {
+            border-color: getThemeColor($theme, 'hover');
+            color: getThemeColor($theme, 'hover');
           }
         }
 
         &:focus {
-          box-shadow: 0 0 0 3px getThemeColor($theme, "outline");
+          box-shadow: 0 0 0 3px getThemeColor($theme, 'outline');
 
-          @if ($variant == "filled") {
-            background-color: getThemeColor($theme, "focus");
-          } @else if($variant == "soft") {
-            background-color: getThemeColor($theme, "active");
+          @if($variant =='filled') {
+            background-color: getThemeColor($theme, 'focus');
+          }
+
+          @else if($variant =='soft') {
+            background-color: getThemeColor($theme, 'active');
             color: list.nth($neutral-0, $site);
-            background-color: getThemeColor($theme, "focus");
-          } @else {
-            border-color: getThemeColor($theme, "focus");
-            color: getThemeColor($theme, "focus");
+            background-color: getThemeColor($theme, 'focus');
+          }
+
+          @else {
+            border-color: getThemeColor($theme, 'focus');
+            color: getThemeColor($theme, 'focus');
           }
         }
 
         &:active {
-          @if ($variant == "filled") {
-            background-color: getThemeColor($theme, "active");
-            color: getThemeColor($theme, "default");
-          } @else if($variant == "soft") {
-            background-color: getThemeColor($theme, "default");
-            color: getThemeColor($theme, "active");
-          } @else if ($variant == "text") {
-            background-color: getThemeColor($theme, "active");
-            color: getThemeColor($theme, "default");
-          } @else {
-            border-color: getThemeColor($theme, "active");
-            color: getThemeColor($theme, "active");
+
+          @if($variant =='filled') {
+            background-color: getThemeColor($theme, 'active');
+            color: getThemeColor($theme, 'default');
+          }
+
+          @else if($variant =='soft') {
+            background-color: getThemeColor($theme, 'default');
+            color: getThemeColor($theme, 'active');
+          }
+
+          @else if ($variant =='text') {
+            background-color: getThemeColor($theme, 'active');
+            color: getThemeColor($theme, 'default');
+          }
+
+          @else {
+            border-color: getThemeColor($theme, 'active');
+            color: getThemeColor($theme, 'active');
           }
         }
       }

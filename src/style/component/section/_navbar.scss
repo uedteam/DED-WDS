@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use '../../theme/index' as *;
 
 .navbar {
   display: flex;
@@ -7,14 +8,15 @@
   padding-inline: 20px;
   background-color: list.nth($header, $site);
   box-shadow: $shadow-light-400;
+  height: 100%;
 
   .navbar-menu {
     display: flex;
     align-items: center;
 
-    .navbar-logo {
-      margin-right: 20px;
-    }
+    // .navbar-logo {
+    //   margin-right: 20px;
+    // }
 
     .navbar-links {
       list-style: none;

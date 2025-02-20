@@ -4,6 +4,9 @@
 
 // 動態獲取新主題顏色
 @function getThemeColor($theme, $state) {
+  @if ($theme == "secondary" and $state == "default") {
+    @return #059bff;
+  }
   @return map.get(map.get($theme-colors, $theme), $state);
 }
 
@@ -56,8 +59,13 @@
 @function to-rgba($color) {
   @if meta.type-of($color) == "color" {
     $alpha: color.alpha($color);
-    // @return rgba(color.channel($color, 'red'), color.channel($color, 'green'), color.channel($color, 'blue'), $alpha);
-    @return rgba(red($color), green($color), blue($color), $alpha);
+    @return rgba(
+      color.channel($color, "red"),
+      color.channel($color, "green"),
+      color.channel($color, "blue"),
+      $alpha
+    );
+    // @return rgba(red($color), green($color), blue($color), $alpha);
   } @else {
     @return rgba(0, 0, 0, 0); // 預設為透明黑色
   }
@@ -68,24 +76,24 @@
   $rgba1: to-rgba($color1);
   $rgba2: to-rgba($color2);
 
-  // $r1: color.channel($rgba1, "red");
-  // $g1: color.channel($rgba1, "green");
-  // $b1: color.channel($rgba1, "blue");
-  // $a1: color.alpha($rgba1);
+  $r1: color.channel($rgba1, "red");
+  $g1: color.channel($rgba1, "green");
+  $b1: color.channel($rgba1, "blue");
+  $a1: color.alpha($rgba1);
 
-  // $r2: color.channel($rgba2, "red");
-  // $g2: color.channel($rgba2, "green");
-  // $b2: color.channel($rgba2, "blue");
-  // $a2: color.alpha($rgba2);
-  $r1: red($rgba1);
-  $g1: green($rgba1);
-  $b1: blue($rgba1);
-  $a1: alpha($rgba1);
+  $r2: color.channel($rgba2, "red");
+  $g2: color.channel($rgba2, "green");
+  $b2: color.channel($rgba2, "blue");
+  $a2: color.alpha($rgba2);
+  // $r1: red($rgba1);
+  // $g1: green($rgba1);
+  // $b1: blue($rgba1);
+  // $a1: alpha($rgba1);
 
-  $r2: red($rgba2);
-  $g2: green($rgba2);
-  $b2: blue($rgba2);
-  $a2: alpha($rgba2);
+  // $r2: red($rgba2);
+  // $g2: green($rgba2);
+  // $b2: blue($rgba2);
+  // $a2: alpha($rgba2);
 
   // 混合公式
   $r: $r2 * $a2 + $r1 * (1 - $a2);

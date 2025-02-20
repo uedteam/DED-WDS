@@ -1,10 +1,14 @@
+@use 'sass:list';
+@use '../../theme/index' as *;
+
 .ded-nav-item {
+  position: relative;
   cursor: pointer;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  column-gap: 8px;
+  column-gap: $spacing-8;
   overflow: hidden;
   white-space: nowrap;
 
@@ -12,10 +16,18 @@
     flex: 1;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 8px;
-    gap: 8px;
+    padding: 8px 12px;
+    gap: $spacing-8;
+    border-radius: $spacing-8;
     text-decoration: none;
+
+    &:hover {
+      background-color: $lightness10;
+    }
+  }
+
+  &-link-mobile {
+    padding: 8px;
   }
 
   &-icon {
@@ -28,35 +40,55 @@
   &-label {
     flex: 1;
     transition: opacity 0.3s;
+    font-size: 14px;
   }
 
   &-arrow {
-    padding: 8px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding-block: 10px;
+    right: 12px;
   }
 }
 
 .ded-nav-item-side {
-  border-bottom: 1px solid #ccc;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: list.nth($neutral-100, $site);
 }
 
 .ded-nav-subitem {
   position: relative;
-  // margin-left: 24px;
   width: 100%;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
+  margin-left: 24px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: $lightness50;
+
 
   .ded-nav-item {
     &-link {
-      padding-left: 24px;
-    }
-
-    &:first-child {
-      border-top: 1px solid #ccc;
+      margin-left: 18px;
     }
 
     &:last-child {
       border-bottom: none;
+    }
+
+    &-label {
+      font-size: 12px;
+    }
+  }
+
+  .ded-nav-item-side {
+    &:first-child {
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: list.nth($neutral-100, $site);
     }
   }
 }
@@ -65,23 +97,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: $spacing-8;
   height: 100%;
+  overflow: auto;
 
   .ded-nav {
     transition: width 0.3s ease-in-out;
-    overflow: hidden;
     height: 100%;
 
     &-list {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-8;
       list-style: none;
       padding: 0;
-
-      &-horizontal {
-        display: flex;
-        flex-direction: row;
-        gap: 8px;
-      }
     }
   }
 }
