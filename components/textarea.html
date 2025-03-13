@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../public/styles/globals.css" />
+    <link rel="stylesheet" href="../public/styles/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+  </head>
+  <body>
+    <div id="app" style="padding: 1rem">
+      <button style="margin-bottom: 24px">
+        <a href="../index.html">Back</a>
+      </button>
+      <div>
+        <h2 style="font-size: 24px; margin-bottom: 16px">Textarea</h2>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          預設項目
+        </h3>
+        <div style="margin-bottom: 24px">
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <div class="ded-textarea-container">
+              <label class="ded-textarea-label" for=":r6:-textarea"
+                >Label</label
+              >
+              <div class="ded-textarea-group">
+                <textarea
+                  id=":r6:-textarea"
+                  class="ded-textarea"
+                  placeholder="Placeholder"
+                >
+Type something</textarea
+                >
+              </div>
+              <small class="ded-textarea-hint undefined"></small>
+            </div>
+          </div>
+        </div>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          字數限制
+        </h3>
+        <div style="margin-bottom: 24px">
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <div class="ded-textarea-container">
+              <label class="ded-textarea-label" for=":r7:-textarea"
+                >Label</label
+              >
+              <div class="ded-textarea-group">
+                <textarea
+                  id=":r7:-textarea"
+                  maxlength="30"
+                  class="ded-textarea"
+                  placeholder="Placeholder"
+                >
+Type something</textarea
+                ><small class="ded-textarea-hint-count">14/30</small>
+              </div>
+              <small class="ded-textarea-hint undefined"></small>
+            </div>
+          </div>
+        </div>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          輸入框狀態
+        </h3>
+        <div style="margin-bottom: 24px">
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <div class="ded-textarea-container">
+              <label class="ded-textarea-label" for=":r8:-textarea"
+                >Label</label
+              >
+              <div class="ded-textarea-group">
+                <textarea
+                  id=":r8:-textarea"
+                  maxlength="30"
+                  class="ded-textarea"
+                  placeholder="Placeholder"
+                >
+Type something</textarea
+                ><small class="ded-textarea-hint-count">14/30</small>
+              </div>
+              <small class="ded-textarea-hint ded-textarea-hint-desc"
+                >Prompt message</small
+              >
+            </div>
+            <div class="ded-textarea-container">
+              <label class="ded-textarea-label" for=":r9:-textarea"
+                >Label</label
+              >
+              <div class="ded-textarea-group ded-textarea-border-error">
+                <textarea
+                  id=":r9:-textarea"
+                  maxlength="30"
+                  class="ded-textarea"
+                  placeholder="Placeholder"
+                >
+Type something</textarea
+                ><small class="ded-textarea-hint-count">14/30</small>
+              </div>
+              <small class="ded-textarea-hint ded-textarea-hint-error"
+                >Error</small
+              >
+            </div>
+            <div class="ded-textarea-container">
+              <label
+                class="ded-textarea-label ded-textarea-disable"
+                for=":ra:-textarea"
+                >Label</label
+              >
+              <div class="ded-textarea-group ded-textarea-disable">
+                <textarea
+                  id=":ra:-textarea"
+                  maxlength="30"
+                  class="ded-textarea ded-textarea-disable"
+                  placeholder="Placeholder"
+                >
+Type something</textarea
+                ><small class="ded-textarea-hint-count ded-textarea-disable"
+                  >14/30</small
+                >
+              </div>
+              <small
+                class="ded-textarea-hint undefined ded-textarea-disable"
+              ></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
