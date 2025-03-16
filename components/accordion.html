@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../public/styles/globals.css" />
     <link rel="stylesheet" href="../public/styles/custom.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Button</title>
+    <title>Accoordion</title>
   </head>
   <body>
     <div id="app" style="padding: 1rem">
@@ -13,265 +13,48 @@
         <a href="../index.html">Back</a>
       </button>
       <div>
-        <h2 style="font-size: 24px">Accoordion</h2>
+        <h2 style="font-size: 24px; margin-bottom: 16px">Accoordion</h2>
         <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
-          highlight
+          預設項目
         </h3>
-        <ul
-          class="ded-accordion ded-accordion-highlight"
-          style="margin-bottom: 24px"
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+          "
         >
-          <li class="ded-accordion-item ded-accordion-item-highlight">
-            <details class="ded-accordion-detail">
-              <summary class="ded-accordion-title ded-accordion-title-default">
-                <div class="ded-accordion-title-content">
-                  <div class="ded-accordion-title-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span
-                    ><div class="ded-title ded-title-level-3">
-                      What is React?
-                    </div></span
+          <div class="ded-accordion-container">
+            <ul class="ded-accordion ded-accordion-highlight">
+              <li class="ded-accordion-item ded-accordion-item-highlight">
+                <details class="ded-accordion-detail">
+                  <summary
+                    class="ded-accordion-title ded-accordion-title-default"
                   >
-                </div>
-                <div class="ded-icon-medium ded-accordion-item-close">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="20"
-                    viewBox="0 -960 960 960"
-                    width="20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
-                    ></path>
-                  </svg>
-                </div>
-              </summary>
-              <div class="ded-accordion-detail-content">
-                <p>
-                  React is a JavaScript library for building user interfaces.
-                </p>
-                <button
-                  class="ded-button ded-button-fit ded-text-small ded-button-soft ded-button-soft-primary"
-                >
-                  <div class="ded-button-content">Button</div>
-                  <div class="ded-icon-small">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="20"
-                      viewBox="0 -960 960 960"
-                      width="20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </button>
-              </div>
-            </details>
-          </li>
-          <li class="ded-accordion-item ded-accordion-item-highlight">
-            <details class="ded-accordion-detail">
-              <summary class="ded-accordion-title ded-accordion-title-default">
-                <div class="ded-accordion-title-content">
-                  <div class="ded-accordion-title-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span
-                    ><div class="ded-title ded-title-level-3">
-                      What are the features of React ?
-                    </div></span
-                  >
-                </div>
-                <div class="ded-icon-medium ded-accordion-item-close">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="20"
-                    viewBox="0 -960 960 960"
-                    width="20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
-                    ></path>
-                  </svg>
-                </div>
-              </summary>
-              <div class="ded-accordion-detail-content">
-                <p>
-                  The features of React include component-based architecture,
-                  unidirectional data flow, and virtual DOM.
-                </p>
-              </div>
-            </details>
-          </li>
-          <li class="ded-accordion-item ded-accordion-item-highlight">
-            <details class="ded-accordion-detail">
-              <summary class="ded-accordion-title ded-accordion-title-default">
-                <div class="ded-accordion-title-content">
-                  <div class="ded-accordion-title-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span
-                    ><div class="ded-title ded-title-level-3">
-                      What is included in the React ecosystem ?
-                    </div></span
-                  >
-                </div>
-                <div class="ded-icon-medium ded-accordion-item-close">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="20"
-                    viewBox="0 -960 960 960"
-                    width="20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
-                    ></path>
-                  </svg>
-                </div>
-              </summary>
-              <div class="ded-accordion-detail-content">
-                <p>
-                  The React ecosystem includes React Router, Redux, and Axios.
-                </p>
-              </div>
-            </details>
-          </li>
-          <li class="ded-accordion-item ded-accordion-item-highlight">
-            <details class="ded-accordion-detail">
-              <summary class="ded-accordion-title ded-accordion-title-default">
-                <div class="ded-accordion-title-content">
-                  <div class="ded-accordion-title-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span
-                    ><div class="ded-title ded-title-level-3">
-                      What are the advantages of React ?
-                    </div></span
-                  >
-                </div>
-                <div class="ded-icon-medium ded-accordion-item-close">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="20"
-                    viewBox="0 -960 960 960"
-                    width="20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
-                    ></path>
-                  </svg>
-                </div>
-              </summary>
-              <div class="ded-accordion-detail-content">
-                <p>
-                  The advantages of React include component-based architecture,
-                  unidirectional data flow, and virtual DThese features provide
-                  efficiency, reusability, and better performance.
-                </p>
-              </div>
-            </details>
-          </li>
-        </ul>
-        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
-          solid
-        </h3>
-        <div class="ded-accordion-container">
-          <ul class="ded-accordion ded-accordion-solid">
-            <li class="ded-accordion-item ded-accordion-item-solid">
-              <details class="ded-accordion-detail">
-                <summary
-                  class="ded-accordion-title ded-accordion-title-default"
-                >
-                  <div class="ded-accordion-title-content">
-                    <div class="ded-accordion-title-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
+                    <div class="ded-accordion-title-content">
+                      <div class="ded-accordion-title-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="ded-accordion-title-content-default"
+                        ><div
+                          class="ded-title ded-title-level-0 ded-title-primary"
+                        >
+                          What is React?
+                        </div></span
                       >
-                        <path
-                          fill="currentColor"
-                          d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
-                        ></path>
-                      </svg>
                     </div>
-                    <span
-                      ><div class="ded-title ded-title-level-3">
-                        What is React?
-                      </div></span
-                    >
-                  </div>
-                  <div class="ded-icon-medium ded-accordion-item-close">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="20"
-                      viewBox="0 -960 960 960"
-                      width="20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </summary>
-                <div class="ded-accordion-detail-content">
-                  <p>
-                    React is a JavaScript library for building user interfaces.
-                  </p>
-                  <button
-                    class="ded-button ded-button-fit ded-text-small ded-button-soft ded-button-soft-primary"
-                  >
-                    <div class="ded-button-content">Button</div>
-                    <div class="ded-icon-small">
+                    <div class="ded-icon-medium ded-accordion-item-close">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="20"
@@ -284,153 +67,490 @@
                         ></path>
                       </svg>
                     </div>
-                  </button>
-                </div>
-              </details>
-            </li>
-            <li class="ded-accordion-item ded-accordion-item-solid">
-              <details class="ded-accordion-detail">
-                <summary
-                  class="ded-accordion-title ded-accordion-title-default"
-                >
-                  <div class="ded-accordion-title-content">
-                    <div class="ded-accordion-title-icon">
+                  </summary>
+                  <div class="ded-accordion-detail-content">
+                    <p>
+                      React is a JavaScript library for building user
+                      interfaces.
+                    </p>
+                    <button
+                      class="ded-button ded-button-fit ded-text-small ded-button-soft ded-button-soft-primary"
+                      type="button"
+                    >
+                      <div class="ded-button-content">Button</div>
+                      <div class="ded-icon-small">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          viewBox="0 -960 960 960"
+                          width="20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </details>
+              </li>
+              <li class="ded-accordion-item ded-accordion-item-highlight">
+                <details class="ded-accordion-detail">
+                  <summary
+                    class="ded-accordion-title ded-accordion-title-default"
+                  >
+                    <div class="ded-accordion-title-content">
+                      <div class="ded-accordion-title-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="ded-accordion-title-content-default"
+                        ><div
+                          class="ded-title ded-title-level-0 ded-title-primary"
+                        >
+                          What are the features of React ?
+                        </div></span
+                      >
+                    </div>
+                    <div class="ded-icon-medium ded-accordion-item-close">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="20"
                         height="20"
-                        viewBox="0 0 24 24"
+                        viewBox="0 -960 960 960"
+                        width="20"
+                        fill="currentColor"
                       >
                         <path
-                          fill="currentColor"
-                          d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
                         ></path>
                       </svg>
                     </div>
-                    <span
-                      ><div class="ded-title ded-title-level-3">
-                        What are the features of React ?
-                      </div></span
-                    >
+                  </summary>
+                  <div class="ded-accordion-detail-content">
+                    <p>
+                      The features of React include component-based
+                      architecture, unidirectional data flow, and virtual DOM.
+                    </p>
                   </div>
-                  <div class="ded-icon-medium ded-accordion-item-close">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="20"
-                      viewBox="0 -960 960 960"
-                      width="20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </summary>
-                <div class="ded-accordion-detail-content">
-                  <p>
-                    The features of React include component-based architecture,
-                    unidirectional data flow, and virtual DOM.
-                  </p>
-                </div>
-              </details>
-            </li>
-            <li class="ded-accordion-item ded-accordion-item-solid">
-              <details class="ded-accordion-detail">
-                <summary
-                  class="ded-accordion-title ded-accordion-title-default"
-                >
-                  <div class="ded-accordion-title-content">
-                    <div class="ded-accordion-title-icon">
+                </details>
+              </li>
+              <li class="ded-accordion-item ded-accordion-item-highlight">
+                <details class="ded-accordion-detail">
+                  <summary
+                    class="ded-accordion-title ded-accordion-title-default"
+                  >
+                    <div class="ded-accordion-title-content">
+                      <div class="ded-accordion-title-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="ded-accordion-title-content-default"
+                        ><div
+                          class="ded-title ded-title-level-0 ded-title-primary"
+                        >
+                          What is included in the React ecosystem ?
+                        </div></span
+                      >
+                    </div>
+                    <div class="ded-icon-medium ded-accordion-item-close">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="20"
                         height="20"
-                        viewBox="0 0 24 24"
+                        viewBox="0 -960 960 960"
+                        width="20"
+                        fill="currentColor"
                       >
                         <path
-                          fill="currentColor"
-                          d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
                         ></path>
                       </svg>
                     </div>
-                    <span
-                      ><div class="ded-title ded-title-level-3">
-                        What is included in the React ecosystem ?
-                      </div></span
-                    >
+                  </summary>
+                  <div class="ded-accordion-detail-content">
+                    <p>
+                      The React ecosystem includes React Router, Redux, and
+                      Axios.
+                    </p>
                   </div>
-                  <div class="ded-icon-medium ded-accordion-item-close">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="20"
-                      viewBox="0 -960 960 960"
-                      width="20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </summary>
-                <div class="ded-accordion-detail-content">
-                  <p>
-                    The React ecosystem includes React Router, Redux, and Axios.
-                  </p>
-                </div>
-              </details>
-            </li>
-            <li class="ded-accordion-item ded-accordion-item-solid">
-              <details class="ded-accordion-detail">
-                <summary
-                  class="ded-accordion-title ded-accordion-title-default"
-                >
-                  <div class="ded-accordion-title-content">
-                    <div class="ded-accordion-title-icon">
+                </details>
+              </li>
+              <li class="ded-accordion-item ded-accordion-item-highlight">
+                <details class="ded-accordion-detail">
+                  <summary
+                    class="ded-accordion-title ded-accordion-title-default"
+                  >
+                    <div class="ded-accordion-title-content">
+                      <div class="ded-accordion-title-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="ded-accordion-title-content-default"
+                        ><div
+                          class="ded-title ded-title-level-0 ded-title-primary"
+                        >
+                          What are the advantages of React ?
+                        </div></span
+                      >
+                    </div>
+                    <div class="ded-icon-medium ded-accordion-item-close">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="20"
                         height="20"
-                        viewBox="0 0 24 24"
+                        viewBox="0 -960 960 960"
+                        width="20"
+                        fill="currentColor"
                       >
                         <path
-                          fill="currentColor"
-                          d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
                         ></path>
                       </svg>
                     </div>
-                    <span
-                      ><div class="ded-title ded-title-level-3">
-                        What are the advantages of React ?
-                      </div></span
-                    >
+                  </summary>
+                  <div class="ded-accordion-detail-content">
+                    <p>
+                      The advantages of React include component-based
+                      architecture, unidirectional data flow, and virtual DThese
+                      features provide efficiency, reusability, and better
+                      performance.
+                    </p>
                   </div>
-                  <div class="ded-icon-medium ded-accordion-item-close">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="20"
-                      viewBox="0 -960 960 960"
-                      width="20"
-                      fill="currentColor"
+                </details>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          邊框樣式
+        </h3>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+          "
+        >
+          <div class="ded-accordion-container">
+            <ul class="ded-accordion ded-accordion-highlight">
+              <li class="ded-accordion-item ded-accordion-item-highlight">
+                <details class="ded-accordion-detail">
+                  <summary
+                    class="ded-accordion-title ded-accordion-title-default"
+                  >
+                    <div class="ded-accordion-title-content">
+                      <div class="ded-accordion-title-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="ded-accordion-title-content-default"
+                        ><div
+                          class="ded-title ded-title-level-0 ded-title-primary"
+                        >
+                          What is React?
+                        </div></span
+                      >
+                    </div>
+                    <div class="ded-icon-medium ded-accordion-item-close">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 -960 960 960"
+                        width="20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="ded-accordion-detail-content">
+                    <p>
+                      React is a JavaScript library for building user
+                      interfaces.
+                    </p>
+                    <button
+                      class="ded-button ded-button-fit ded-text-small ded-button-soft ded-button-soft-primary"
+                      type="button"
                     >
-                      <path
-                        d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
-                      ></path>
-                    </svg>
+                      <div class="ded-button-content">Button</div>
+                      <div class="ded-icon-small">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          viewBox="0 -960 960 960"
+                          width="20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
-                </summary>
-                <div class="ded-accordion-detail-content">
-                  <p>
-                    The advantages of React include component-based
-                    architecture, unidirectional data flow, and virtual DThese
-                    features provide efficiency, reusability, and better
-                    performance.
-                  </p>
-                </div>
-              </details>
-            </li>
-          </ul>
+                </details>
+              </li>
+            </ul>
+          </div>
+          <div class="ded-accordion-container">
+            <ul class="ded-accordion ded-accordion-solid">
+              <li class="ded-accordion-item ded-accordion-item-solid">
+                <details class="ded-accordion-detail">
+                  <summary
+                    class="ded-accordion-title ded-accordion-title-default"
+                  >
+                    <div class="ded-accordion-title-content">
+                      <div class="ded-accordion-title-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="ded-accordion-title-content-default"
+                        ><div
+                          class="ded-title ded-title-level-0 ded-title-primary"
+                        >
+                          What is React?
+                        </div></span
+                      >
+                    </div>
+                    <div class="ded-icon-medium ded-accordion-item-close">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 -960 960 960"
+                        width="20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="ded-accordion-detail-content">
+                    <p>
+                      React is a JavaScript library for building user
+                      interfaces.
+                    </p>
+                    <button
+                      class="ded-button ded-button-fit ded-text-small ded-button-soft ded-button-soft-primary"
+                      type="button"
+                    >
+                      <div class="ded-button-content">Button</div>
+                      <div class="ded-icon-small">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          viewBox="0 -960 960 960"
+                          width="20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </details>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          元件尺寸
+        </h3>
+        <div style="display: flex; flex-direction: column; gap: 16px">
+          <div class="ded-accordion-container">
+            <ul class="ded-accordion ded-accordion-solid">
+              <li class="ded-accordion-item ded-accordion-item-solid">
+                <details class="ded-accordion-detail">
+                  <summary
+                    class="ded-accordion-title ded-accordion-title-default"
+                  >
+                    <div class="ded-accordion-title-content">
+                      <div class="ded-accordion-title-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="ded-accordion-title-content-default"
+                        ><div
+                          class="ded-title ded-title-level-0 ded-title-primary"
+                        >
+                          What is React?
+                        </div></span
+                      >
+                    </div>
+                    <div class="ded-icon-medium ded-accordion-item-close">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 -960 960 960"
+                        width="20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="ded-accordion-detail-content">
+                    <p>
+                      React is a JavaScript library for building user
+                      interfaces.
+                    </p>
+                    <button
+                      class="ded-button ded-button-fit ded-text-small ded-button-soft ded-button-soft-primary"
+                      type="button"
+                    >
+                      <div class="ded-button-content">Button</div>
+                      <div class="ded-icon-small">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          viewBox="0 -960 960 960"
+                          width="20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </details>
+              </li>
+            </ul>
+          </div>
+          <div class="ded-accordion-container">
+            <ul class="ded-accordion ded-accordion-solid">
+              <li class="ded-accordion-item ded-accordion-item-solid">
+                <details class="ded-accordion-detail">
+                  <summary
+                    class="ded-accordion-title ded-accordion-title-small"
+                  >
+                    <div class="ded-accordion-title-content">
+                      <div class="ded-accordion-title-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M13.5 4A1.5 1.5 0 0 0 12 5.5A1.5 1.5 0 0 0 13.5 7A1.5 1.5 0 0 0 15 5.5A1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69c-.2.15-.14.14.02.42c.16.27.14.29.33.16c.2-.13.53-.34 1.08-.68c2.12-1.36.34 1.78-.57 7.07c-.36 2.62 2 1.27 2.61.87c.6-.39 2.21-1.5 2.37-1.61c.22-.15.06-.27-.11-.52c-.12-.17-.24-.05-.24-.05c-.65.43-1.84 1.33-2 .76c-.19-.57 1.03-4.48 1.7-7.17c.11-.64.41-2.04-.75-1.94"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="ded-accordion-title-content-small"
+                        ><div
+                          class="ded-title ded-title-level-0 ded-title-primary"
+                        >
+                          What is React?
+                        </div></span
+                      >
+                    </div>
+                    <div class="ded-icon-medium ded-accordion-item-close">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 -960 960 960"
+                        width="20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="ded-accordion-detail-content">
+                    <p>
+                      React is a JavaScript library for building user
+                      interfaces.
+                    </p>
+                    <button
+                      class="ded-button ded-button-fit ded-text-small ded-button-soft ded-button-soft-primary"
+                      type="button"
+                    >
+                      <div class="ded-button-content">Button</div>
+                      <div class="ded-icon-small">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          viewBox="0 -960 960 960"
+                          width="20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </details>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
