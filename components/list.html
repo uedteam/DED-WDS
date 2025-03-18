@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../public/styles/globals.css" />
     <link rel="stylesheet" href="../public/styles/custom.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Button</title>
+    <title>List</title>
   </head>
   <body>
     <div id="app" style="padding: 1rem">
@@ -13,12 +13,12 @@
         <a href="../index.html">Back</a>
       </button>
       <div>
-        <h2 style="font-size: 24px">List</h2>
+        <h2 style="font-size: 24px; margin-bottom: 16px">List</h2>
         <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
           預設項目
         </h3>
-        <ul class="ded-list" style="margin-bottom: 24px">
-          <li class="ded-list-item" style="border: 1px solid #e1e1e2">
+        <ul class="ded-list false" style="margin-bottom: 24px">
+          <li class="ded-list-item ded-list-item-disabled">
             <div class="ded-list-item-text">
               <div class="ded-list-icon">
                 <svg
@@ -54,7 +54,7 @@
               <div class="ded-list-item-label">Option1</div>
             </div>
           </li>
-          <li class="ded-list-item" style="border: 1px solid #e1e1e2">
+          <li class="ded-list-item">
             <a class="ded-list-item-text ded-list-item-link" href="#"
               ><div class="ded-list-icon">
                 <svg
@@ -90,7 +90,7 @@
               <div class="ded-list-item-label">Option2</div></a
             >
           </li>
-          <li class="ded-list-item" style="border: 1px solid #e1e1e2">
+          <li class="ded-list-item">
             <a class="ded-list-item-text ded-list-item-link" href="#"
               ><div class="ded-list-icon">
                 <svg
@@ -128,10 +128,10 @@
           </li>
         </ul>
         <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
-          選單樣式 ( outline, divider)
+          清單樣式-外框
         </h3>
         <ul class="ded-list ded-outline" style="margin-bottom: 24px">
-          <li class="ded-list-item">
+          <li class="ded-list-item ded-list-item-disabled">
             <div class="ded-list-item-text">
               <div class="ded-list-icon">
                 <svg
@@ -240,11 +240,11 @@
             >
           </li>
         </ul>
-        <ul class="ded-list ded-outline">
-          <li
-            class="ded-list-item ded-list-item-side"
-            style="border: 1px solid #e1e1e2"
-          >
+        <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
+          清單樣式-分隔線
+        </h3>
+        <ul class="ded-list false">
+          <li class="ded-list-item ded-list-item-side ded-list-item-disabled">
             <div class="ded-list-item-text">
               <div class="ded-list-icon">
                 <svg
@@ -280,10 +280,7 @@
               <div class="ded-list-item-label">Option1</div>
             </div>
           </li>
-          <li
-            class="ded-list-item ded-list-item-side"
-            style="border: 1px solid #e1e1e2"
-          >
+          <li class="ded-list-item ded-list-item-side">
             <a class="ded-list-item-text ded-list-item-link" href="#"
               ><div class="ded-list-icon">
                 <svg
@@ -319,10 +316,7 @@
               <div class="ded-list-item-label">Option2</div></a
             >
           </li>
-          <li
-            class="ded-list-item ded-list-item-side"
-            style="border: 1px solid #e1e1e2"
-          >
+          <li class="ded-list-item ded-list-item-side">
             <a class="ded-list-item-text ded-list-item-link" href="#"
               ><div class="ded-list-icon">
                 <svg
