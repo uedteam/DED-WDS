@@ -15,7 +15,7 @@
       <div>
         <h2 style="font-size: 24px; margin-bottom: 16px">Input</h2>
         <h3 style="font-size: 16px; margin-bottom: 8px; margin-left: 8px">
-          可操作
+          互動模式
         </h3>
         <div style="margin-bottom: 24px">
           <div class="ded-input-container">
@@ -145,7 +145,6 @@
                 </g></svg
             ></label>
             <input
-              id="ded-input"
               type="text"
               class="ded-input ded-text-medium ded-input-prefix"
               placeholder="Placeholder..."
@@ -581,6 +580,20 @@
           if (inputField1.value.trim() !== "") {
             if (!featIconContainer1.innerHTML.trim()) {
               featIconContainer1.innerHTML = svgClear + svgdefault;
+            } else {
+              // 綁定切換圖標功能
+              const toggleIcon = document.getElementById("toggle-icon");
+              if (toggleIcon) {
+                toggleIcon.addEventListener("click", function () {
+                  if (inputField1.type === "password") {
+                    inputField1.type = "text";
+                    toggleIcon.innerHTML = svgHide; // 更換圖標為隱藏
+                  } else {
+                    inputField1.type = "password";
+                    toggleIcon.innerHTML = svgShow; // 更換圖標為顯示
+                  }
+                });
+              }
             }
           } else {
             featIconContainer1.innerHTML = ""; // 清空圖標
@@ -590,22 +603,9 @@
           const clearIcon = document.getElementById("clear-icon");
           if (clearIcon) {
             clearIcon.addEventListener("click", function () {
+              inputField1.type = "password";
               inputField1.value = "";
               featIconContainer1.innerHTML = ""; // 清空圖標
-            });
-          }
-
-          // 綁定切換圖標功能
-          const toggleIcon = document.getElementById("toggle-icon");
-          if (toggleIcon) {
-            toggleIcon.addEventListener("click", function () {
-              if (inputField1.type === "password") {
-                inputField1.type = "text";
-                toggleIcon.innerHTML = svgHide; // 更換圖標為隱藏
-              } else {
-                inputField1.type = "password";
-                toggleIcon.innerHTML = svgShow; // 更換圖標為顯示
-              }
             });
           }
         });
